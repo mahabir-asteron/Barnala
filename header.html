@@ -160,6 +160,94 @@
     font-size: 9px;
   }
 }
+
+  /* CLASS 1 MODERN DROPDOWN */
+
+.class1-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.class1-trigger {
+  display: block;
+}
+
+.class1-dropdown {
+  position: absolute;
+  top: calc(100% + 30px);
+  left: -40px;
+  width: 620px;
+  background: #151515;
+  border: 1px solid #2d2d2d;
+  border-top: 3px solid #e86612;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.25s ease;
+  z-index: 99999;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+}
+
+.class1-menu:hover .class1-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown-label {
+  color: #e86612;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+.modern-links .class1-dropdown a {
+  width: 100%;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.modern-links .class1-dropdown a:hover {
+  color: #e86612;
+  padding-left: 7px;
+}
+
+@media (max-width: 1250px) {
+  .class1-menu {
+    width: 100%;
+    display: block;
+  }
+
+  .class1-dropdown {
+    position: static;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+    margin: 5px 0 15px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border-top: 2px solid #e86612;
+  }
+}
 </style>
 
 <header class="modern-header">
@@ -179,7 +267,27 @@
 
     <nav class="modern-links" id="barnalaMenu">
       <a href="#">ENROLL</a>
-      <a href="class-1-melt.html">CLASS 1</a>
+      <div class="class1-menu">
+  <a href="class-1-melt.html" class="class1-trigger">CLASS 1 ▾</a>
+
+  <div class="class1-dropdown">
+    <div class="dropdown-column">
+      <span class="dropdown-label">DRIVE INTO CLASS 1</span>
+      <a href="#">CLASS 1 (121.5 HRS)</a>
+      <a href="#">CLASS 1 (244 HRS)</a>
+    </div>
+
+    <div class="dropdown-column">
+      <span class="dropdown-label">MORE</span>
+      <a href="#">CHECK ELIGIBILITY</a>
+      <a href="#">ENROLL</a>
+      <a href="#">HANDBOOK</a>
+      <a href="#">QUIZ PRACTICE</a>
+      <a href="#">COMPARE</a>
+      <a href="#">FINANCING</a>
+    </div>
+  </div>
+</div>
       <a href="#">CLASS 3</a>
       <a href="#">CLASS 5</a>
       <a href="#">AIR BRAKE</a>

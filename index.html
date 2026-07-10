@@ -686,6 +686,56 @@ background-repeat: no-repeat;
     gap: 35px;
   }
 }
+
+    .site-footer {
+  background: #0f1010;
+  color: #ffffff;
+  padding: 60px 0 25px;
+}
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.site-footer h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.site-footer p {
+  color: #aaaaaa;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.site-footer a {
+  display: block;
+  color: #aaaaaa;
+  text-decoration: none;
+  margin: 8px 0;
+}
+
+.site-footer a:hover {
+  color: #e85d0f;
+}
+
+.site-footer .footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid #333333;
+  color: #888888;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
  </style>
 </head>
 

@@ -1,99 +1,202 @@
+
 <style>
-.top-header {
-  width: 100%;
-  background: #eef1f2;
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-.top-nav {
+.modern-header {
+  width: 100%;
+  background: #111111;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #292929;
+}
+
+.modern-nav {
   width: 94%;
   max-width: 1500px;
-  min-height: 64px;
+  min-height: 88px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 28px;
 }
 
-.top-logo {
+.modern-logo {
   display: flex;
   align-items: center;
+  gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.top-logo img {
-  width: 38px;
-  height: 38px;
+.modern-logo img {
+  width: 54px;
+  height: 54px;
   object-fit: contain;
+  border-radius: 6px;
 }
 
-.top-links {
+.logo-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.logo-subtitle {
+  color: #e86612;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.modern-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 34px;
+  gap: 20px;
   flex: 1;
 }
 
-.top-links a {
-  color: #17336f;
+.modern-links a {
+  color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   white-space: nowrap;
+  transition: color 0.25s ease;
 }
 
-.top-links a:hover {
+.modern-links a:hover {
   color: #e86612;
 }
 
-.login-btn {
-  padding: 10px 22px;
-  border-radius: 25px;
-  background: linear-gradient(90deg, #38a7dc, #17336f);
+.enroll-link {
+  background: #e86612;
   color: #ffffff !important;
+  padding: 15px 20px;
+  border-radius: 3px;
 }
 
-@media (max-width: 1100px) {
-  .top-nav {
-    padding: 12px 0;
-    flex-wrap: wrap;
+.enroll-link:hover {
+  background: #ffffff;
+  color: #111111 !important;
+}
+
+.menu-toggle {
+  display: none;
+  background: #e86612;
+  border: 0;
+  color: #ffffff;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+@media (max-width: 1250px) {
+  .modern-nav {
+    min-height: 76px;
+    justify-content: space-between;
   }
 
-  .top-links {
+  .menu-toggle {
+    display: block;
+  }
+
+  .modern-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
     width: 100%;
-    order: 3;
-    flex-wrap: wrap;
-    gap: 15px 25px;
+    background: #111111;
+    padding: 25px 4%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    z-index: 9999;
+    border-top: 1px solid #292929;
+  }
+
+  .modern-links.active {
+    display: flex;
+  }
+
+  .modern-links a {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #292929;
+    font-size: 14px;
+  }
+
+  .enroll-link {
+    margin-top: 15px;
+    padding: 15px 20px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .modern-nav {
+    width: 90%;
+  }
+
+  .modern-logo img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .logo-title {
+    font-size: 18px;
+  }
+
+  .logo-subtitle {
+    font-size: 9px;
   }
 }
 </style>
 
-<header class="top-header">
-  <div class="top-nav">
+<header class="modern-header">
+  <div class="modern-nav">
 
-    <a href="index.html" class="top-logo">
+    <a href="index.html" class="modern-logo">
       <img src="313274994_620903819822534_6596630732526167606_n.jpeg"
            alt="Barnala Driver Training Academy Logo">
+
+      <div class="logo-content">
+        <span class="logo-title">BARNALA</span>
+        <span class="logo-subtitle">DRIVER TRAINING ACADEMY</span>
+      </div>
     </a>
 
-    <nav class="top-links">
-      <a href="#">Enroll</a>
-      <a href="class-1-melt.html">Class 1</a>
-      <a href="#">Class 3</a>
-      <a href="#">Class 5</a>
-      <a href="#">Air Brake</a>
-      <a href="#">Exclusive Courses</a>
-      <a href="#">Course Schedule</a>
-      <a href="#">Corporate</a>
-      <a href="#">Excelerate</a>
-      <a href="#">Blogs</a>
-      <a href="#">Gallery</a>
-      <a href="#">Locations</a>
-    </nav>
+    <button class="menu-toggle" onclick="toggleBarnalaMenu()">☰</button>
 
-    <a href="#" class="login-btn">Login</a>
+    <nav class="modern-links" id="barnalaMenu">
+      <a href="#">ENROLL</a>
+      <a href="class-1-melt.html">CLASS 1</a>
+      <a href="#">CLASS 3</a>
+      <a href="#">CLASS 5</a>
+      <a href="#">AIR BRAKE</a>
+      <a href="#">EXCLUSIVE COURSES</a>
+      <a href="#">COURSE SCHEDULE</a>
+      <a href="#">CORPORATE</a>
+      <a href="#">EXCELERATE</a>
+      <a href="#">BLOGS</a>
+      <a href="#">GALLERY</a>
+      <a href="#">LOCATIONS</a>
+    </nav>
 
   </div>
 </header>
+
+<script>
+function toggleBarnalaMenu() {
+  document.getElementById("barnalaMenu").classList.toggle("active");
+}
+</script>

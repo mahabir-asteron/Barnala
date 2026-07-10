@@ -434,7 +434,211 @@ background-repeat: no-repeat;
         margin-bottom: 25px;
       }
     }
-  </style>
+
+    /* ===== REMAINING HOMEPAGE SECTIONS ===== */
+
+.extra-training,
+.training-locations,
+.career-cta,
+.graduation-section,
+.about-barnala {
+  padding: 95px 0;
+}
+
+.extra-training,
+.career-cta,
+.about-barnala {
+  background: #171817;
+  color: #ffffff;
+}
+
+.training-locations,
+.graduation-section {
+  background: #f7f3ed;
+  color: #171817;
+}
+
+.extra-training h2,
+.training-locations h2,
+.career-cta h2,
+.graduation-section h2,
+.about-barnala h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 52px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin: 18px 0 35px;
+}
+
+.extra-training-grid,
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 50px;
+}
+
+.extra-training-card,
+.about-card {
+  background: #222322;
+  border: 1px solid #343534;
+  padding: 38px;
+  min-height: 260px;
+}
+
+.extra-training-card span,
+.about-card span,
+.location-box span {
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.extra-training-card h3,
+.about-card h3,
+.location-box h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  text-transform: uppercase;
+  margin: 28px 0 15px;
+}
+
+.extra-training-card p,
+.about-card p {
+  color: #bdbdbd;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.locations-intro,
+.graduation-intro,
+.about-intro,
+.career-cta p {
+  max-width: 950px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.locations-intro,
+.graduation-intro {
+  color: #666666;
+}
+
+.about-intro,
+.career-cta p {
+  color: #c5c5c5;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.location-box {
+  background: #ffffff;
+  padding: 35px;
+  border-left: 4px solid var(--orange);
+  min-height: 240px;
+}
+
+.location-box p {
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.career-cta {
+  text-align: left;
+}
+
+.career-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.career-primary,
+.career-secondary {
+  display: inline-block;
+  padding: 18px 28px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.career-primary {
+  background: var(--orange);
+  color: #ffffff;
+}
+
+.career-secondary {
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+.graduation-table {
+  margin-top: 45px;
+  border: 1px solid #dddddd;
+}
+
+.graduation-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 22px 28px;
+  background: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  font-size: 16px;
+}
+
+.graduation-row:last-child {
+  border-bottom: none;
+}
+
+.graduation-head {
+  background: #171817;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.about-card {
+  min-height: 330px;
+}
+
+@media (max-width: 900px) {
+  .extra-training h2,
+  .training-locations h2,
+  .career-cta h2,
+  .graduation-section h2,
+  .about-barnala h2 {
+    font-size: 36px;
+  }
+
+  .extra-training-grid,
+  .location-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .graduation-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+ </style>
 </head>
 
 <body>
@@ -835,4 +1039,220 @@ background-repeat: no-repeat;
 </section>
 
 </body>
+
+  <!-- EXTRA TRAINING PROGRAMS -->
+<section class="extra-training">
+  <div class="container">
+
+    <div class="section-label">MORE TRAINING PROGRAMS</div>
+    <h2>BUILD YOUR SKILLS. DRIVE WITH CONFIDENCE.</h2>
+
+    <div class="extra-training-grid">
+
+      <div class="extra-training-card">
+        <span>01</span>
+        <h3>Winter Driving & Defensive Driving Courses</h3>
+        <p>
+          Gain the skills to drive confidently through Winnipeg's tough winters.
+          Build safer driving habits and prepare for challenging Manitoba road
+          and weather conditions.
+        </p>
+      </div>
+
+      <div class="extra-training-card">
+        <span>02</span>
+        <h3>Corporate & Customized Driving Programs</h3>
+        <p>
+          Need fleet training or employee licensing solutions? We offer corporate
+          programs tailored to businesses, transportation companies and logistics
+          operations.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- TRAINING LOCATIONS -->
+<section class="training-locations">
+  <div class="container">
+
+    <div class="section-label">TRAINING AVAILABLE NEAR YOU</div>
+
+    <h2>PROFESSIONAL DRIVER TRAINING ACROSS MANITOBA</h2>
+
+    <p class="locations-intro">
+      Looking for a truck driving school near you? Barnala Driver Training Academy
+      provides professional driver training for students in multiple Manitoba
+      communities.
+    </p>
+
+    <div class="location-grid">
+
+      <div class="location-box">
+        <span>01</span>
+        <h3>WINNIPEG</h3>
+        <p>
+          Professional commercial and basic driver training for students in
+          Winnipeg and surrounding communities.
+        </p>
+      </div>
+
+      <div class="location-box">
+        <span>02</span>
+        <h3>STEINBACH</h3>
+        <p>
+          Flexible driver training programs designed for students in Steinbach
+          and nearby Manitoba communities.
+        </p>
+      </div>
+
+      <div class="location-box">
+        <span>03</span>
+        <h3>MANITOBA COMMUNITIES</h3>
+        <p>
+          Training options for students from surrounding communities across
+          Manitoba.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CAREER CTA -->
+<section class="career-cta">
+  <div class="container">
+
+    <div class="section-label">START YOUR JOURNEY</div>
+
+    <h2>LAUNCH YOUR DRIVING CAREER TODAY.</h2>
+
+    <p>
+      Ready to take the first step toward becoming a confident, certified driver?
+      Whether you need driving classes in Winnipeg and Steinbach, professional
+      truck training, or commercial driver education, Barnala Driver Training
+      Academy is ready to help you move forward.
+    </p>
+
+    <div class="career-buttons">
+      <a href="tel:2042152222" class="career-primary">
+        CALL 204-215-2222 →
+      </a>
+
+      <a href="#" class="career-secondary">
+        ENROLL NOW →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- GRADUATION DATES -->
+<section class="graduation-section">
+  <div class="container">
+
+    <div class="section-label">PROGRAM INFORMATION</div>
+
+    <h2>GRADUATION DATE FOR ALL PROGRAMS</h2>
+
+    <p class="graduation-intro">
+      Explore program information and training schedules for Barnala Driver
+      Training Academy.
+    </p>
+
+    <div class="graduation-table">
+
+      <div class="graduation-row graduation-head">
+        <span>PROGRAM</span>
+        <span>TRAINING</span>
+      </div>
+
+      <div class="graduation-row">
+        <span>Class 1 MELT Program</span>
+        <span>121.5 Hours</span>
+      </div>
+
+      <div class="graduation-row">
+        <span>Class 1 Training Program</span>
+        <span>244 Hours</span>
+      </div>
+
+      <div class="graduation-row">
+        <span>Class 3 Driver Training</span>
+        <span>Professional Training</span>
+      </div>
+
+      <div class="graduation-row">
+        <span>Class 5 Basic Training</span>
+        <span>Driver Training</span>
+      </div>
+
+      <div class="graduation-row">
+        <span>Air Brake Endorsement</span>
+        <span>Endorsement Course</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT BARNALA -->
+<section class="about-barnala">
+  <div class="container">
+
+    <div class="section-label">ABOUT US</div>
+
+    <h2>WELCOME TO BARNALA DRIVER TRAINING ACADEMY</h2>
+
+    <p class="about-intro">
+      Barnala Driver Training Academy provides professional driver education and
+      commercial truck training in Manitoba. Our programs are designed to help
+      new and experienced drivers develop practical skills, confidence and
+      professional road knowledge.
+    </p>
+
+    <div class="about-grid">
+
+      <div class="about-card">
+        <span>01</span>
+        <h3>OUR COMMITMENT TO EXCELLENCE</h3>
+        <p>
+          We are committed to professional training, road safety and quality
+          driver education. Our goal is to prepare students for real driving
+          environments and professional transportation careers.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <span>02</span>
+        <h3>QUALITY INSTRUCTION IN A COMFORTABLE ENVIRONMENT</h3>
+        <p>
+          Students learn in a supportive training environment with experienced
+          instructors and practical instruction focused on confidence and safe
+          driving.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <span>03</span>
+        <h3>BUILDING CONFIDENCE AND ADVANCING CAREERS</h3>
+        <p>
+          From basic driver education to professional commercial truck training,
+          our programs help students build skills and prepare for new career
+          opportunities.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 </html>

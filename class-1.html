@@ -50,6 +50,102 @@ margin:auto;
 font-size:20px;
 color:#d2d2d2;
 }
+  /* ===== CLASS OPTIONS ===== */
+
+.class-options{
+    background:#ffffff;
+    padding:90px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-label{
+    color:#0d5cc0;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.class-options h2{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+    color:#171717;
+}
+
+.section-text{
+    max-width:760px;
+    color:#666;
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:55px;
+}
+
+.option-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.option-card{
+    background:#f8f8f8;
+    border-radius:16px;
+    padding:45px;
+    transition:.3s;
+}
+
+.option-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+.option-card h3{
+    font-size:32px;
+    margin-bottom:12px;
+    color:#171717;
+}
+
+.hours{
+    color:#0d5cc0;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.option-card p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.option-btn{
+    display:inline-block;
+    background:#0d5cc0;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:700;
+}
+
+.option-btn:hover{
+    background:#171717;
+}
+
+@media(max-width:768px){
+
+.option-grid{
+grid-template-columns:1fr;
+}
+
+.class-options h2{
+font-size:38px;
+}
 
 </style>
 
@@ -73,6 +169,69 @@ Choose the Class 1 driver training program that best fits your career goals.
 
 </section>
 
+  <section class="class-options">
+
+  <div class="container">
+
+    <div class="section-label">
+      CLASS 1 PROGRAMS
+    </div>
+
+    <h2>
+      Choose Your Training Program
+    </h2>
+
+    <p class="section-text">
+      Barnala Driver Training Academy offers two Class 1 training
+      programs approved in Manitoba. Choose the program that best
+      fits your career goals.
+    </p>
+
+    <div class="option-grid">
+
+      <div class="option-card">
+
+        <h3>Class 1 MELT</h3>
+
+        <p class="hours">
+          121.5 Hours
+        </p>
+
+        <p>
+          Complete the Mandatory Entry-Level Training program with
+          practical driving experience and classroom instruction.
+        </p>
+
+        <a href="class-1-121-hours.html" class="option-btn">
+          Learn More →
+        </a>
+
+      </div>
+
+      <div class="option-card">
+
+        <h3>Class 1 PVI</h3>
+
+        <p class="hours">
+          244 Hours
+        </p>
+
+        <p>
+          Advanced professional training designed for students
+          seeking additional commercial driving experience.
+        </p>
+
+        <a href="#" class="option-btn">
+          Learn More →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 <div id="site-footer"></div>
 
 <script>

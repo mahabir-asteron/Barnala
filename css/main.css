@@ -220,3 +220,59 @@ grid-template-columns:1fr;
 }
 
 }
+/* ===========================
+PRICE SECTION
+=========================== */
+
+.pricing-section{
+background:#f7f8fb;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:40px;
+margin-top:50px;
+}
+
+.price-card,
+.fee-card{
+
+background:#fff;
+padding:40px;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+}
+
+.price{
+font-size:54px;
+font-weight:800;
+color:#0057B8;
+margin:20px 0;
+}
+
+.fee-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.fee-table td{
+padding:16px;
+border-bottom:1px solid #ececec;
+font-size:18px;
+}
+
+.total-row td{
+font-weight:700;
+font-size:22px;
+color:#0057B8;
+}
+
+@media(max-width:900px){
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+}

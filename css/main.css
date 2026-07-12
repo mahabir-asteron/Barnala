@@ -229,9 +229,8 @@ background:#f7f8fb;
 }
 
 .pricing-grid{
-display:grid;
-grid-template-columns:1fr 2fr;
-gap:40px;
+display:flex;
+justify-content:center;
 margin-top:50px;
 }
 
@@ -242,6 +241,9 @@ background:#fff;
 padding:40px;
 border-radius:14px;
 box-shadow:0 15px 40px rgba(0,0,0,.06);
+   
+   max-width:500px;
+width:100%;
 
 }
 

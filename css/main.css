@@ -276,3 +276,51 @@ grid-template-columns:1fr;
 }
 
 }
+/* ===========================
+   WHAT'S INCLUDED
+=========================== */
+
+.included-section{
+    background:#ffffff;
+}
+
+.included-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.included-card{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.included-card:hover{
+    transform:translateY(-8px);
+}
+
+.included-card h3{
+    color:#0d5cc0;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.included-card p{
+    margin:0;
+}
+
+@media(max-width:992px){
+    .included-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .included-grid{
+        grid-template-columns:1fr;
+    }
+}

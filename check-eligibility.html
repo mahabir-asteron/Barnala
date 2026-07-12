@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Check Eligibility | Barnala Driver Training Academy</title>
+
+<meta name="description" content="Choose your Class 1 driver training program and check your eligibility.">
+
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container" style="text-align:center;">
+
+<p class="hero-label">
+CLASS 1 DRIVER TRAINING
+</p>
+
+<h1>
+Choose Your Class 1 Course
+</h1>
+
+<p>
+Select the Class 1 training program you wish to check eligibility for.
+</p>
+
+<div class="eligibility-buttons">
+
+<a href="class-1-121-eligibility.html" class="eligibility-btn">
+121.5 Hrs<sup>1</sup>
+</a>
+
+<a href="class-1-244-eligibility.html" class="eligibility-btn">
+244 Hrs<sup>2</sup>
+</a>
+
+</div>
+
+<div class="eligibility-notes">
+
+<p>1. M.E.L.T (Mandatory Entry-Level Training) is considered as Class 1 (121.5 Hrs) course.</p>
+
+<p>2. Entry Level Professional Truck Driver Training course is considered as Class 1 (244 Hrs) course.</p>
+
+<p>3. The Class 1 (244 Hrs) course is not offered in Portage la Prairie.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+fetch('header.html')
+.then(response => response.text())
+.then(data=>{
+document.getElementById('site-header').innerHTML=data;
+});
+</script>
+
+<script>
+fetch('footer.html')
+.then(response=>response.text())
+.then(data=>{
+document.getElementById('site-footer').innerHTML=data;
+});
+</script>
+
+</body>
+</html>

@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 1 (121.5 Hrs) Eligibility | Barnala Driver Training Academy</title>
+
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<section class="eligibility-hero">
+
+<div class="container">
+
+<div class="eligibility-grid">
+
+<div class="eligibility-content">
+
+<p class="hero-label">
+CLASS 1 (121.5 HOURS)
+</p>
+
+<h1>
+Eligibility Criteria
+</h1>
+
+<ul class="eligibility-list">
+
+<li>✓ Age</li>
+
+<li>✓ Driver License</li>
+
+<li>✓ Medical Fitness</li>
+
+<li>✓ Criminal Record</li>
+
+<li>✓ Abstract</li>
+
+<li>✓ Knowledge Test</li>
+
+</ul>
+
+</div>
+
+<div class="eligibility-image">
+
+<img src="eligibility-hero.png" alt="Eligibility Criteria">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch('header.html')
+.then(response=>response.text())
+.then(data=>{
+document.getElementById('site-header').innerHTML=data;
+});
+
+fetch('footer.html')
+.then(response=>response.text())
+.then(data=>{
+document.getElementById('site-footer').innerHTML=data;
+});
+
+</script>
+
+</body>
+</html>

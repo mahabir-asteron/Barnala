@@ -410,3 +410,38 @@ margin:0 auto 20px;
 background:#171717;
 
 }
+<!-- STUDENT SUCCESS -->
+
+<section class="student-section">
+
+<div class="container">
+
+<p class="section-label">
+SUCCESS STORIES
+</p>
+
+<h2>
+Student Success
+</h2>
+
+<p class="section-text">
+Our students complete their Class 1 training with confidence and begin rewarding careers throughout Manitoba and across Canada.
+</p>
+
+<div class="student-grid">
+
+<div class="student-card">
+<img src="student-gallery-1.png" alt="Class 1 Student Success">
+<h3>First Attempt Pass</h3>
+</div>
+
+<div class="student-card">
+<img src="student-gallery-2.png" alt="Class 1 Student Success">
+<h3>Career Ready Graduate</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>

@@ -324,3 +324,49 @@ grid-template-columns:1fr;
         grid-template-columns:1fr;
     }
 }
+/*==============================
+STUDENT SUCCESS
+==============================*/
+
+.student-success{
+    background:#f7f8fc;
+}
+
+.student-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:60px;
+}
+
+.student-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.student-card:hover{
+    transform:translateY(-8px);
+}
+
+.student-card img{
+    width:100%;
+    display:block;
+}
+
+.student-card h3{
+    padding:25px;
+    text-align:center;
+    color:#0d5cc0;
+    font-size:24px;
+}
+
+@media(max-width:768px){
+
+.student-grid{
+grid-template-columns:1fr;
+}
+
+}

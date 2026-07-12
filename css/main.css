@@ -445,3 +445,50 @@ Our students complete their Class 1 training with confidence and begin rewarding
 </div>
 
 </section>
+/* CONTENT SECTION */
+
+.content-section{
+padding:90px 0;
+background:#f7f8fb;
+}
+
+.content-block{
+background:#fff;
+padding:35px;
+border-radius:16px;
+margin-top:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.content-block h3{
+color:#0d5cc0;
+margin-bottom:15px;
+font-size:28px;
+}
+
+.content-block p{
+margin-bottom:15px;
+line-height:1.8;
+color:#555;
+}
+
+.content-block ul{
+padding-left:22px;
+}
+
+.content-block li{
+margin-bottom:12px;
+line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.content-block{
+padding:25px;
+}
+
+.content-block h3{
+font-size:22px;
+}
+
+}

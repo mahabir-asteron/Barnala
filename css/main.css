@@ -375,3 +375,36 @@ grid-template-columns:1fr;
 }
 
 }
+/* FINAL CTA */
+
+.final-cta,
+.advisor-section{
+
+background:#0d5cc0;
+color:#fff;
+text-align:center;
+
+}
+
+.final-cta h2,
+.advisor-section h2{
+
+color:#fff;
+margin-bottom:25px;
+
+}
+
+.final-cta p,
+.advisor-section p{
+
+color:#eef5ff;
+max-width:850px;
+margin:0 auto 20px;
+
+}
+
+.advisor-section{
+
+background:#171717;
+
+}

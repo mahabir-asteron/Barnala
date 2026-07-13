@@ -618,7 +618,7 @@ font-size:15px;
 =========================== */
 
 .eligibility-hero{
-    padding:120px 0 80px;
+    padding:70px 0 60px;
     background:#fff;
 }
 
@@ -634,9 +634,9 @@ font-size:15px;
 }
 
 .eligibility-content h1{
-    font-size:64px;
-    line-height:1.05;
-    margin:20px 0 30px;
+    font-size:clamp(40px,5vw,58px);
+    line-height:1.08;
+    margin:15px 0 25px;
 }
 
 .eligibility-list{
@@ -646,14 +646,15 @@ font-size:15px;
 }
 
 .eligibility-list li{
-    font-size:20px;
-    margin:18px 0;
+    font-size:22px;
+    margin:16px 0;
+    font-weight:600;
 }
 
 
 .requirements-section{
     background:#1f2f73;
-    padding:90px 0;
+    padding:70px 0;
 }
 
 .requirements-section .section-label{

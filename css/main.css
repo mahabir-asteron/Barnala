@@ -752,26 +752,3 @@ font-size:15px;
     }
 
 }
-/* =====================================
-   Graduation Table Mobile
-===================================== */
-
-@media (max-width:768px){
-
-.graduation-table{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-}
-
-.graduation-data-table{
-    min-width:650px;
-}
-
-.graduation-data-table th,
-.graduation-data-table td{
-    padding:14px;
-    font-size:14px;
-    white-space:nowrap;
-}
-
-}

@@ -752,3 +752,58 @@ font-size:15px;
     }
 
 }
+/* =========================================
+   GRADUATION TABLE
+========================================= */
+
+.graduation-section{
+    background:#ffffff;
+}
+
+.graduation-intro{
+    max-width:800px;
+    margin:20px auto 40px;
+}
+
+.graduation-table{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.graduation-data-table{
+    width:100%;
+    min-width:850px;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+.graduation-data-table th{
+    background:#0d5cc0;
+    color:#fff;
+    padding:18px;
+    text-align:left;
+    white-space:nowrap;
+}
+
+.graduation-data-table td{
+    padding:18px;
+    border-bottom:1px solid #e5e5e5;
+    white-space:nowrap;
+}
+
+.graduation-data-table tr:nth-child(even){
+    background:#f8f9fb;
+}
+
+@media(max-width:768px){
+
+    .graduation-table{
+        overflow-x:auto;
+    }
+
+    .graduation-data-table{
+        min-width:850px;
+    }
+
+}

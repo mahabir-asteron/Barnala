@@ -104,22 +104,22 @@
 }
 
 .dropdown-menu{
-
     position:absolute;
     top:100%;
-    left:0;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
 
-    width:620px;
+    width:760px;
+    max-width:90vw;
 
     background:#161616;
-
     border-top:3px solid #0057B8;
 
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:60px;
 
-    padding:35px;
+    padding:40px;
 
     opacity:0;
     visibility:hidden;

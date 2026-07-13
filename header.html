@@ -172,7 +172,7 @@
     border-radius:6px;
     cursor:pointer;
     position:relative;
-    z-index:100001;
+    z-index:99998;
 }
 
 .menu-toggle span{
@@ -270,24 +270,20 @@
     }
 
     .menu-close{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:20px;
 
-        display:block;
+    background:none;
+    border:none;
+    color:#fff;
 
-        position:absolute;
+    font-size:34px;
+    cursor:pointer;
 
-        top:18px;
-        right:20px;
-
-        background:none;
-        border:none;
-
-        color:#fff;
-
-        font-size:34px;
-
-        cursor:pointer;
-    }
-
+    z-index:100002;
+}
     .dropdown-menu{
 
         position:static;

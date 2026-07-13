@@ -752,3 +752,19 @@ font-size:15px;
     }
 
 }
+@media (max-width:768px){
+
+.graduation-data-table th:nth-child(3),
+.graduation-data-table td:nth-child(3),
+.graduation-data-table th:nth-child(4),
+.graduation-data-table td:nth-child(4){
+    display:none;
+}
+
+.graduation-data-table th,
+.graduation-data-table td{
+    padding:16px 10px;
+    font-size:15px;
+}
+
+}

@@ -622,11 +622,15 @@ font-size:15px;
     background:#fff;
 }
 
-.eligibility-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.eligibility-content{
+    max-width:700px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.eligibility-list{
+    display:inline-block;
+    text-align:left;
 }
 
 .eligibility-content h1{
@@ -646,11 +650,6 @@ font-size:15px;
     margin:18px 0;
 }
 
-.eligibility-image img{
-    width:100%;
-    display:block;
-    border-radius:20px;
-}
 
 .requirements-section{
     background:#1f2f73;

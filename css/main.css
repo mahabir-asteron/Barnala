@@ -667,29 +667,6 @@ font-size:15px;
     margin-bottom:50px;
 }
 
-.requirements-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-.requirement-card{
-    background:#19245a;
-    padding:40px 30px;
-    border-radius:16px;
-    text-align:center;
-}
-
-.requirement-card h3{
-    color:#fff;
-    margin-bottom:20px;
-}
-
-.requirement-card p{
-    color:#d7ddff;
-    line-height:1.8;
-}
-
 @media(max-width:768px){
 
     .eligibility-grid{
@@ -700,8 +677,76 @@ font-size:15px;
         font-size:44px;
     }
 
-    .requirements-grid{
-        grid-template-columns:1fr;
+}
+/* =========================================
+   ELIGIBILITY ACCORDION
+========================================= */
+
+.accordion{
+    max-width:1000px;
+    margin:60px auto 0;
+}
+
+.accordion-item{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.accordion-btn{
+    width:100%;
+    background:#fff;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:25px;
+    text-align:left;
+}
+
+.accordion-btn img{
+    width:180px;
+    border-radius:12px;
+}
+
+.accordion-btn span{
+    font-size:28px;
+    font-weight:700;
+    color:#171717;
+}
+
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+    padding:0 25px;
+}
+
+.accordion-content p{
+    padding:0 0 25px;
+}
+
+.accordion-item.active .accordion-content{
+    max-height:600px;
+}
+
+@media(max-width:768px){
+
+    .accordion-btn{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .accordion-btn img{
+        width:100%;
+        max-width:260px;
+    }
+
+    .accordion-btn span{
+        font-size:22px;
     }
 
 }

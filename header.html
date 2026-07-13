@@ -1,311 +1,549 @@
-
 <style>
-* {
-  box-sizing: border-box;
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.modern-header {
-  width: 100%;
-  background: #111111;
-  font-family: Arial, sans-serif;
-  border-bottom: 1px solid #292929;
+.modern-header{
+    position:sticky;
+    top:0;
+    z-index:99999;
+    background:#111;
+    border-bottom:1px solid #262626;
 }
 
-.modern-nav {
-  width: 94%;
-  max-width: 1500px;
-  min-height: 88px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 28px;
+.modern-nav{
+    width:min(94%,1400px);
+    margin:auto;
+    min-height:86px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
 }
 
-.modern-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  flex-shrink: 0;
+.modern-logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    flex-shrink:0;
 }
 
-.modern-logo img {
-  width: 54px;
-  height: 54px;
-  object-fit: contain;
-  border-radius: 6px;
+.modern-logo img{
+    width:56px;
+    height:56px;
+    object-fit:cover;
+    border-radius:8px;
 }
 
-.logo-content {
-  display: flex;
-  flex-direction: column;
+.logo-content{
+    display:flex;
+    flex-direction:column;
 }
 
-.logo-title {
-  color: #ffffff;
-  font-size: 21px;
-  line-height: 1;
-  font-weight: 800;
+.logo-title{
+    color:#fff;
+    font-size:22px;
+    font-weight:800;
+    line-height:1;
 }
 
-.logo-subtitle {
-    color: #0057B8;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-top: 5px;
+.logo-subtitle{
+    color:#0057B8;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
+    margin-top:6px;
 }
 
-.modern-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex: 1;
+.modern-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    margin-left:auto;
 }
 
-.modern-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: color 0.25s ease;
+.modern-links>a,
+.dropdown-toggle{
+
+    background:none;
+    border:none;
+    color:#fff;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:700;
+    transition:.25s;
 }
 
-.modern-links a:hover {
-  color: #0057B8;
+.modern-links>a:hover,
+.dropdown-toggle:hover{
+    color:#0057B8;
 }
 
-.enroll-link {
-  background: #0057B8;
-  color: #ffffff !important;
-  padding: 15px 20px;
-  border-radius: 3px;
+/* =========================
+   DROPDOWN
+========================= */
+
+.menu-item{
+    position:relative;
 }
 
-.enroll-link:hover {
-  background: #ffffff;
-  color: #111111 !important;
+.dropdown-toggle{
+    display:flex;
+    align-items:center;
+    gap:8px;
 }
 
-.menu-toggle {
-  display: none;
-  background: #0057B8;
-  border: 0;
-  color: #ffffff;
-  font-size: 24px;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
+.dropdown-menu{
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    width:620px;
+
+    background:#161616;
+
+    border-top:3px solid #0057B8;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+
+    padding:35px;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+
+    transition:.3s;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
 }
 
-@media (max-width: 1250px) {
-  .modern-nav {
-    min-height: 76px;
-    justify-content: space-between;
-  }
+.has-dropdown:hover .dropdown-menu{
 
-  .menu-toggle {
-    display: block;
-  }
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
 
-  .modern-links {
-    display: none;
-    position: absolute;
-    top: 76px;
-    left: 0;
-    width: 100%;
-    background: #111111;
-    padding: 25px 4%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    z-index: 9999;
-    border-top: 1px solid #292929;
-  }
-
-  .modern-links.active {
-    display: flex;
-  }
-
-  .modern-links a {
-    width: 100%;
-    padding: 15px 0;
-    border-bottom: 1px solid #292929;
-    font-size: 14px;
-  }
-
-  .enroll-link {
-    margin-top: 15px;
-    padding: 15px 20px !important;
-    width: auto !important;
-  }
 }
 
-@media (max-width: 600px) {
-  .modern-nav {
-    width: 90%;
-  }
-
-  .modern-logo img {
-    width: 46px;
-    height: 46px;
-  }
-
-  .logo-title {
-    font-size: 18px;
-  }
-
-  .logo-subtitle {
-    font-size: 9px;
-  }
+.dropdown-column{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
 
-  /* CLASS 1 MODERN DROPDOWN */
-
-.class1-menu {
-  position: relative;
-  display: flex;
-  align-items: center;
+.dropdown-column h4{
+    color:#0057B8;
+    font-size:13px;
+    margin-bottom:10px;
 }
 
-.class1-trigger {
-  display: block;
+.dropdown-column a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
 }
 
-.class1-dropdown {
-  position: absolute;
-  top: calc(100% + 30px);
-  left: -40px;
-  width: 620px;
-  background: #151515;
-  border: 1px solid #2d2d2d;
-  border-top: 3px solid #0057B8;
-  padding: 35px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: all 0.25s ease;
-  z-index: 99999;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+.dropdown-column a:hover{
+    color:#0057B8;
+}
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle{
+    display:none;
+    width:52px;
+    height:52px;
+    background:#0057B8;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    position:relative;
+    z-index:100001;
 }
 
-.class1-menu:hover .class1-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.menu-toggle span{
+    position:absolute;
+    left:12px;
+    width:28px;
+    height:3px;
+    background:#fff;
+    transition:.3s;
 }
 
-.dropdown-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.menu-toggle span:nth-child(1){top:16px;}
+.menu-toggle span:nth-child(2){top:24px;}
+.menu-toggle span:nth-child(3){top:32px;}
+
+.menu-toggle.active span:nth-child(1){
+    transform:rotate(45deg);
+    top:24px;
 }
 
-.dropdown-label {
-  color: #0057B8;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 16px;
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
 }
 
-.modern-links .class1-dropdown a {
-  width: 100%;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 11px 0;
-  border-bottom: 1px solid #292929;
+.menu-toggle.active span:nth-child(3){
+    transform:rotate(-45deg);
+    top:24px;
 }
 
-.modern-links .class1-dropdown a:hover {
-  color: #0057B8;
-  padding-left: 7px;
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:99998;
 }
 
-@media (max-width: 1250px) {
-  .class1-menu {
-    width: 100%;
-    display: block;
-  }
-
-  .class1-dropdown {
-    position: static;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 20px;
-    margin: 5px 0 15px;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border-top: 2px solid #0057B8;
-  }
+.menu-overlay.active{
+    opacity:1;
+    visibility:visible;
 }
+
+.menu-close{
+    display:none;
+}
+
+@media(max-width:1200px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .modern-links{
+
+        position:fixed;
+        top:0;
+        right:-100%;
+
+        width:320px;
+        max-width:90%;
+
+        height:100vh;
+
+        background:#111;
+
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:0;
+
+        padding:90px 28px 40px;
+
+        overflow-y:auto;
+
+        transition:right .35s ease;
+
+        z-index:100000;
+    }
+
+    .modern-links.active{
+        right:0;
+    }
+
+    .modern-links>a,
+    .dropdown-toggle{
+
+        width:100%;
+        text-align:left;
+        padding:18px 0;
+        border-bottom:1px solid #2d2d2d;
+        font-size:17px;
+    }
+
+    .menu-close{
+
+        display:block;
+
+        position:absolute;
+
+        top:18px;
+        right:20px;
+
+        background:none;
+        border:none;
+
+        color:#fff;
+
+        font-size:34px;
+
+        cursor:pointer;
+    }
+
+    .dropdown-menu{
+
+        position:static;
+
+        width:100%;
+
+        display:none;
+
+        opacity:1;
+        visibility:visible;
+        transform:none;
+
+        grid-template-columns:1fr;
+
+        background:#1b1b1b;
+
+        padding:20px;
+
+        margin:10px 0 20px;
+
+        box-shadow:none;
+    }
+
+    .has-dropdown.open .dropdown-menu{
+        display:grid;
+    }
+
+}
+
+@media(min-width:1201px){
+
+.has-dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+}
+
 </style>
-
 <header class="modern-header">
-  <div class="modern-nav">
 
-    <a href="index.html" class="modern-logo">
-      <img src="313274994_620903819822534_6596630732526167606_n.jpeg"
-           alt="Barnala Driver Training Academy Logo">
+    <div class="modern-nav">
 
-      <div class="logo-content">
-        <span class="logo-title">BARNALA</span>
-        <span class="logo-subtitle">DRIVER TRAINING ACADEMY</span>
-      </div>
-    </a>
+        <!-- Logo -->
 
-    <button class="menu-toggle" onclick="toggleBarnalaMenu()">☰</button>
+        <a href="index.html" class="modern-logo">
 
-    <nav class="modern-links" id="barnalaMenu">
-      <a href="#">ENROLL</a>
-      <div class="class1-menu">
-  <a href="javascript:void(0);" class="class1-trigger">CLASS 1 ▾</a>
+            <img src="313274994_620903819822534_6596630732526167606_n.jpeg"
+                 alt="Barnala Driver Training Academy">
 
-  <div class="class1-dropdown">
-    <div class="dropdown-column">
-      <span class="dropdown-label">DRIVE INTO CLASS 1</span>
-      <a href="class-1-121-hours.html">CLASS 1 (121.5 HRS)</a>
-      <a href="class-1-244-hours.html">CLASS 1 (244 HRS)</a>
+            <div class="logo-content">
+                <span class="logo-title">BARNALA</span>
+                <span class="logo-subtitle">DRIVER TRAINING ACADEMY</span>
+            </div>
+
+        </a>
+
+        <!-- Mobile Button -->
+
+        <button class="menu-toggle" id="menuToggle">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <!-- Overlay -->
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+        <!-- Navigation -->
+
+        <nav class="modern-links" id="mainMenu">
+
+            <button class="menu-close" id="menuClose">✕</button>
+
+            <a href="#">ENROLL</a>
+
+            <!-- CLASS 1 -->
+
+            <div class="menu-item has-dropdown">
+
+                <button class="dropdown-toggle">
+
+                    CLASS 1
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="dropdown-menu">
+
+                    <div class="dropdown-column">
+
+                        <h4>CLASS 1 PROGRAMS</h4>
+
+                        <a href="class-1-121-hours.html">Class 1 (121.5 Hrs)</a>
+
+                        <a href="class-1-244-hours.html">Class 1 (244 Hrs)</a>
+
+                    </div>
+
+                    <div class="dropdown-column">
+
+                        <h4>MORE</h4>
+
+                        <a href="check-eligibility.html">Check Eligibility</a>
+
+                        <a href="#">Handbook</a>
+
+                        <a href="#">Quiz Practice</a>
+
+                        <a href="#">Compare</a>
+
+                        <a href="#">Financing</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="#">CLASS 3</a>
+
+            <a href="#">CLASS 5</a>
+
+            <a href="#">AIR BRAKE</a>
+
+            <a href="#">EXCLUSIVE COURSES</a>
+
+            <a href="#">COURSE SCHEDULE</a>
+
+            <a href="#">CORPORATE</a>
+
+            <a href="#">EXCELERATE</a>
+
+            <a href="#">BLOGS</a>
+
+            <a href="#">GALLERY</a>
+
+            <a href="#">LOCATIONS</a>
+
+        </nav>
+
     </div>
 
-    <div class="dropdown-column">
-      <span class="dropdown-label">MORE</span>
-      <a href="check-eligibility.html">CHECK ELIGIBILITY</a>
-      <a href="#">ENROLL</a>
-      <a href="#">HANDBOOK</a>
-      <a href="#">QUIZ PRACTICE</a>
-      <a href="#">COMPARE</a>
-      <a href="#">FINANCING</a>
-    </div>
-  </div>
-</div>
-      <a href="#">CLASS 3</a>
-      <a href="#">CLASS 5</a>
-      <a href="#">AIR BRAKE</a>
-      <a href="#">EXCLUSIVE COURSES</a>
-      <a href="#">COURSE SCHEDULE</a>
-      <a href="#">CORPORATE</a>
-      <a href="#">EXCELERATE</a>
-      <a href="#">BLOGS</a>
-      <a href="#">GALLERY</a>
-      <a href="#">LOCATIONS</a>
-    </nav>
-
-  </div>
 </header>
-
 <script>
-function toggleBarnalaMenu() {
-  document.getElementById("barnalaMenu").classList.toggle("active");
+
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("mainMenu");
+const closeBtn = document.getElementById("menuClose");
+const overlay = document.getElementById("menuOverlay");
+
+/* =========================
+   OPEN MENU
+========================= */
+
+menuToggle.addEventListener("click", function(){
+
+    menu.classList.add("active");
+    overlay.classList.add("active");
+    menuToggle.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+});
+
+/* =========================
+   CLOSE FUNCTION
+========================= */
+
+function closeMenu(){
+
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    menuToggle.classList.remove("active");
+
+    document.body.style.overflow = "";
+
 }
+
+/* Close Button */
+
+closeBtn.addEventListener("click", closeMenu);
+
+/* Overlay */
+
+overlay.addEventListener("click", closeMenu);
+
+/* ESC Key */
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key==="Escape"){
+        closeMenu();
+    }
+
+});
+
+/* Close when clicking a normal menu link */
+
+document.querySelectorAll("#mainMenu > a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        if(window.innerWidth<=1200){
+            closeMenu();
+        }
+
+    });
+
+});
+
+/* =========================
+   MOBILE DROPDOWN
+========================= */
+
+document.querySelectorAll(".dropdown-toggle").forEach(function(btn){
+
+    btn.addEventListener("click", function(e){
+
+        if(window.innerWidth<=1200){
+
+            e.preventDefault();
+
+            this.parentElement.classList.toggle("open");
+
+        }
+
+    });
+
+});
+
+/* =========================
+   RESET ON DESKTOP
+========================= */
+
+window.addEventListener("resize", function(){
+
+    if(window.innerWidth>1200){
+
+        closeMenu();
+
+        document.querySelectorAll(".has-dropdown").forEach(function(item){
+
+            item.classList.remove("open");
+
+        });
+
+    }
+
+});
+
 </script>

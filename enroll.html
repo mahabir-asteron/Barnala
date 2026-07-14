@@ -11,110 +11,176 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 :root{
-    --blue:#0057B8;
-    --dark:#171817;
-    --light:#f7f3ed;
-    --white:#ffffff;
+--blue:#0057B8;
+--dark:#171817;
+--white:#ffffff;
 }
 
 body{
-    font-family:"Inter",sans-serif;
-    background:var(--light);
-    color:var(--dark);
+font-family:"Inter",sans-serif;
+background:#28357D;
+color:#fff;
 }
 
 .container{
-    width:min(92%,1400px);
-    margin:auto;
+width:min(92%,1200px);
+margin:auto;
 }
 
-h1,h2,h3{
-    font-family:"Manrope",sans-serif;
-}
+.enroll-section{
 
-/* HERO */
+min-height:calc(100vh - 180px);
 
-.hero-section{
+display:flex;
+align-items:center;
+justify-content:center;
 
-    background:#171817;
-    color:#fff;
-
-    padding:120px 0 100px;
+padding:120px 0 80px;
 
 }
 
-.hero-content{
+.enroll-content{
 
-    max-width:900px;
+width:100%;
+max-width:900px;
 
-}
-
-.hero-label{
-
-    color:var(--blue);
-
-    font-size:14px;
-    font-weight:800;
-
-    text-transform:uppercase;
-    letter-spacing:1px;
-
-    margin-bottom:20px;
+text-align:center;
 
 }
 
-.hero-section h1{
+.enroll-content h1{
 
-    font-size:clamp(42px,5vw,68px);
+font-family:"Manrope",sans-serif;
 
-    line-height:1.05;
+font-size:clamp(42px,5vw,62px);
 
-    margin-bottom:25px;
+font-weight:800;
 
-    text-transform:uppercase;
+margin-bottom:70px;
 
 }
 
-.hero-section p{
+.course-buttons{
 
-    max-width:760px;
+display:flex;
+justify-content:center;
+gap:120px;
 
-    color:#d2d2d2;
+flex-wrap:wrap;
 
-    font-size:18px;
+margin-bottom:90px;
 
-    line-height:1.8;
+}
+
+.course-btn{
+
+width:270px;
+height:95px;
+
+border:1px solid rgba(255,255,255,.45);
+
+border-radius:50px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:30px;
+font-weight:700;
+
+transition:.3s;
+
+background:rgba(255,255,255,.03);
+
+}
+
+.course-btn:hover{
+
+background:#0057B8;
+
+border-color:#0057B8;
+
+transform:translateY(-4px);
+
+}
+
+.notes{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:left;
+
+font-size:19px;
+
+line-height:2;
+
+color:#fff;
+
+}
+
+.notes ol{
+
+padding-left:28px;
 
 }
 
 @media(max-width:768px){
 
-.hero-section{
+.enroll-section{
 
-    padding:80px 0 60px;
-
-}
-
-.hero-section h1{
-
-    font-size:36px;
+padding:70px 0;
 
 }
 
-.hero-section p{
+.enroll-content h1{
 
-    font-size:16px;
+font-size:42px;
+
+margin-bottom:45px;
+
+}
+
+.course-buttons{
+
+gap:30px;
+
+margin-bottom:50px;
+
+}
+
+.course-btn{
+
+width:100%;
+max-width:320px;
+
+font-size:24px;
+
+height:80px;
+
+}
+
+.notes{
+
+font-size:16px;
+
+line-height:1.8;
 
 }
 
@@ -128,23 +194,39 @@ h1,h2,h3{
 
 <div id="site-header"></div>
 
-<section class="hero-section">
+<section class="enroll-section">
 
 <div class="container">
 
-<div class="hero-content">
+<div class="enroll-content">
 
-<div class="hero-label">
-CLASS 1 DRIVER TRAINING
+<h1>Choose Your Class 1 Course</h1>
+
+<div class="course-buttons">
+
+<a href="enroll-121hrs.html" class="course-btn">
+121.5Hrs¹
+</a>
+
+<a href="enroll-244hrs.html" class="course-btn">
+244Hrs²
+</a>
+
 </div>
 
-<h1>
-Choose Your Class 1 Course
-</h1>
+<div class="notes">
 
-<p>
-Select the Class 1 training program that best fits your career goals. Whether you're enrolling in the 121.5 Hour MELT Program or the comprehensive 244 Hour Professional Driver Training Program, Barnala Driver Training Academy provides industry-leading instruction and hands-on experience.
-</p>
+<ol>
+
+<li>M.E.L.T (Mandatory Entry-Level Training) is considered as Class 1 (121.5 Hrs) course.</li>
+
+<li>Entry Level Professional Truck Driver Training course is considered as Class 1 (244 Hrs) course.</li>
+
+<li>The Class 1 (244 hrs) course is not offered in Portage la Prairie.</li>
+
+</ol>
+
+</div>
 
 </div>
 

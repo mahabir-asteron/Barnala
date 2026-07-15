@@ -740,6 +740,359 @@ font-size:11px;
 }
 
 }
+  /*=====================================================
+ELIGIBILITY SECTION
+=====================================================*/
+
+.eligibility-section{
+
+padding:20px 0 100px;
+
+}
+
+.eligibility-card{
+
+max-width:950px;
+
+margin:auto;
+
+background:#ffffff;
+
+padding:60px;
+
+border-radius:28px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.eligibility-card h2{
+
+font-size:clamp(34px,4vw,52px);
+
+text-align:center;
+
+margin-bottom:15px;
+
+line-height:1.15;
+
+}
+
+.eligibility-card>p{
+
+text-align:center;
+
+font-size:18px;
+
+color:#666;
+
+margin-bottom:50px;
+
+}
+
+/*=====================================================
+QUESTION BOX
+=====================================================*/
+
+.question-box{
+
+padding:35px 0;
+
+border-top:1px solid #ececec;
+
+animation:fadeQuestion .45s ease;
+
+}
+
+.question-box:first-of-type{
+
+border-top:none;
+
+padding-top:0;
+
+}
+
+.question-box h3{
+
+font-size:30px;
+
+font-weight:800;
+
+line-height:1.35;
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+/*=====================================================
+BUTTONS
+=====================================================*/
+
+.option-group{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.option-btn{
+
+width:220px;
+
+height:65px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.option-btn.yes{
+
+background:#0057B8;
+
+color:#fff;
+
+}
+
+.option-btn.no{
+
+background:#171817;
+
+color:#fff;
+
+}
+
+.option-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 16px 35px rgba(0,0,0,.15);
+
+}
+
+/*=====================================================
+LICENCE BUTTONS
+=====================================================*/
+
+.licence-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.licence-btn{
+
+height:70px;
+
+border:none;
+
+border-radius:18px;
+
+background:#0057B8;
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.licence-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(0,87,184,.25);
+
+}
+
+/*=====================================================
+RESULT BOXES
+=====================================================*/
+
+.result-box{
+
+margin-top:50px;
+
+padding:45px;
+
+border-radius:22px;
+
+text-align:center;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.success-box{
+
+background:#eef8ef;
+
+border:2px solid #7bc67e;
+
+}
+
+.info-box{
+
+background:#fff5e8;
+
+border:2px solid #f3b35a;
+
+}
+
+.result-box h2{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.result-box p{
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:650px;
+
+margin-bottom:35px;
+
+}
+
+.continue-btn{
+
+padding:18px 38px;
+
+border:none;
+
+border-radius:50px;
+
+background:#0057B8;
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.continue-btn:hover{
+
+background:#171817;
+
+}
+
+/*=====================================================
+ANIMATION
+=====================================================*/
+
+@keyframes fadeQuestion{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=====================================================
+MOBILE
+=====================================================*/
+
+@media(max-width:768px){
+
+.eligibility-card{
+
+padding:35px 25px;
+
+}
+
+.question-box h3{
+
+font-size:24px;
+
+}
+
+.option-btn{
+
+width:100%;
+
+}
+
+.licence-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.licence-btn{
+
+width:100%;
+
+}
+
+.result-box{
+
+padding:35px 25px;
+
+}
+
+.result-box h2{
+
+font-size:32px;
+
+}
+
+}
 
 </style>
 
@@ -822,89 +1175,45 @@ COURSE SECTION
 
 </section>
 
-<!-- ===========================
-ELIGIBILITY WIZARD
-=========================== -->
-
-<section class="wizard-section">
+<section class="eligibility-section">
 
 <div class="container">
 
-<div class="wizard-card">
+<div class="eligibility-card">
 
-<div id="wizard">
+<h2>
 
-    <div class="wizard-progress">
+Let's see if you are eligible for this course
 
-        <div class="progress-bar">
+</h2>
 
-            <div class="progress-fill" id="progressFill"></div>
+<p>
 
-        </div>
+Answer the questions below.
 
-        <span id="progressText">
-            Step 1 of 6
-        </span>
+</p>
 
-    </div>
+<!-- QUESTION 1 -->
 
-    <div class="wizard-body">
+<div class="question-box" id="q1">
 
-        <h2 id="questionTitle">
-            Are you 18 or plus?
-        </h2>
+<h3>
 
-        <p id="questionSubtitle">
+Are you 18 or plus?
 
-            Answer the following questions to check your eligibility.
+</h3>
 
-        </p>
+<div class="option-group">
 
-        <div id="answerContainer">
+<button class="option-btn yes">
 
-            <button class="wizard-btn" data-value="yes">
+Yes
 
-                Yes
+</button>
 
-            </button>
+<button class="option-btn no">
 
-            <button class="wizard-btn secondary" data-value="no">
-
-                No
-
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ===========================
-RESULT
-=========================== -->
-
-<section
-id="resultSection"
-style="display:none;">
-
-<div class="container">
-
-<div class="result-card">
-
-<h2 id="resultTitle"></h2>
-
-<p id="resultText"></p>
-
-<button id="resultButton">
-
-Continue
+No
 
 </button>
 
@@ -912,11 +1221,214 @@ Continue
 
 </div>
 
-</section>
+<!-- QUESTION 2 -->
 
-<!-- ===========================
-REGISTRATION FORM
-=========================== -->
+<div class="question-box" id="q2" style="display:none;">
+
+<h3>
+
+Which class of License do you have?
+
+</h3>
+
+<div class="licence-grid">
+
+<button class="licence-btn">
+
+Class 5L
+
+</button>
+
+<button class="licence-btn">
+
+Class 5I
+
+</button>
+
+<button class="licence-btn">
+
+Class 5F
+
+</button>
+
+<button class="licence-btn">
+
+Class 3
+
+</button>
+
+<button class="licence-btn">
+
+Class 2
+
+</button>
+
+</div>
+
+</div>
+  <!-- QUESTION 3 -->
+
+<div class="question-box" id="q3" style="display:none;">
+
+    <h3>
+
+        Have you passed Air Brake Knowledge Test?
+
+    </h3>
+
+    <div class="option-group">
+
+        <button class="option-btn yes">
+
+            Yes
+
+        </button>
+
+        <button class="option-btn no">
+
+            No
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- QUESTION 4 -->
+
+<div class="question-box" id="q4" style="display:none;">
+
+    <h3>
+
+        Have you passed Class 1 Knowledge Test?
+
+    </h3>
+
+    <div class="option-group">
+
+        <button class="option-btn yes">
+
+            Yes
+
+        </button>
+
+        <button class="option-btn no">
+
+            No
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- QUESTION 5 -->
+
+<div class="question-box" id="q5" style="display:none;">
+
+    <h3>
+
+        Have you completed your Medical Examination?
+
+    </h3>
+
+    <div class="option-group">
+
+        <button class="option-btn yes">
+
+            Yes
+
+        </button>
+
+        <button class="option-btn no">
+
+            No
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- QUESTION 6 -->
+
+<div class="question-box" id="q6" style="display:none;">
+
+    <h3>
+
+        Are you proficient in English language?
+
+    </h3>
+
+    <div class="option-group">
+
+        <button class="option-btn yes">
+
+            Yes
+
+        </button>
+
+        <button class="option-btn no">
+
+            No
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SUCCESS -->
+
+<div class="result-box success-box" id="successBox" style="display:none;">
+
+    <h2>
+
+        Congratulations!
+
+    </h2>
+
+    <p>
+
+        You are eligible to enrol in the Class 1 (121.5 Hrs) Program.
+
+    </p>
+
+    <button class="continue-btn" id="continueBtn">
+
+        Proceed with Enrollment
+
+    </button>
+
+</div>
+
+<!-- NOT ELIGIBLE -->
+
+<div class="result-box info-box" id="infoBox" style="display:none;">
+
+    <h2>
+
+        No worries
+
+    </h2>
+
+    <p id="infoMessage">
+
+    </p>
+
+    <button class="continue-btn" id="connectBtn">
+
+        Let's Connect and Make it Possible
+
+    </button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <section
 id="registrationSection"
@@ -1100,432 +1612,240 @@ fetch("footer.html")
 document.getElementById("site-footer").innerHTML=data;
 });
 
-</script>
+/*=====================================================
+ELEMENTS
+=====================================================*/
 
-<script>
+const q1=document.getElementById("q1");
+const q2=document.getElementById("q2");
+const q3=document.getElementById("q3");
+const q4=document.getElementById("q4");
+const q5=document.getElementById("q5");
+const q6=document.getElementById("q6");
 
-/* ==========================================
-   ENROLL 121.5 HRS WIZARD
-========================================== */
+const successBox=document.getElementById("successBox");
+const infoBox=document.getElementById("infoBox");
 
-const questions = [
+const infoMessage=document.getElementById("infoMessage");
 
-{
-title:"Are you 18 or plus?",
-subtitle:"Answer the following questions to check your eligibility.",
-type:"yesno",
-step:1
-},
+const registration=document.getElementById("registrationSection");
 
-{
-title:"Which class of License do you have?",
-subtitle:"Select your current Manitoba licence.",
-type:"license",
-step:2
-},
+/*=====================================================
+QUESTION 1
+=====================================================*/
 
-{
-title:"Have you passed Air Brake Knowledge Test?",
-subtitle:"",
-type:"yesno",
-step:3
-},
+q1.querySelector(".yes").onclick=function(){
 
-{
-title:"Have you passed Class 1 Knowledge Test?",
-subtitle:"",
-type:"yesno",
-step:4
-},
+q2.style.display="block";
 
-{
-title:"Have you completed your Medical Examination?",
-subtitle:"",
-type:"yesno",
-step:5
-},
+q2.scrollIntoView({
 
-{
-title:"Do you meet the English Language Requirement?",
-subtitle:"",
-type:"yesno",
-step:6
-}
-
-];
-
-let currentQuestion = 0;
-let licence = "";
-
-const title = document.getElementById("questionTitle");
-const subtitle = document.getElementById("questionSubtitle");
-const answers = document.getElementById("answerContainer");
-const progress = document.getElementById("progressFill");
-const progressText = document.getElementById("progressText");
-
-loadQuestion();
-
-function loadQuestion(){
-
-let q = questions[currentQuestion];
-
-title.innerHTML = q.title;
-subtitle.innerHTML = q.subtitle;
-
-progress.style.width=((q.step)/6*100)+"%";
-progressText.innerHTML="Step "+q.step+" of 6";
-
-answers.innerHTML="";
-
-if(q.type==="yesno"){
-createYesNo();
-}
-
-if(q.type==="license"){
-createLicenceButtons();
-}
-
-}
-  /*=========================================
-CREATE YES / NO BUTTONS
-=========================================*/
-
-function createYesNo(){
-
-answers.innerHTML=`
-
-<button class="wizard-btn" onclick="answerYes()">
-
-Yes
-
-</button>
-
-<button class="wizard-btn secondary" onclick="answerNo()">
-
-No
-
-</button>
-
-`;
-
-}
-
-/*=========================================
-CREATE LICENCE BUTTONS
-=========================================*/
-
-function createLicenceButtons(){
-
-answers.innerHTML=`
-
-<button class="wizard-btn licence-btn"
-onclick="selectLicence('5L')">
-
-Class 5L
-
-</button>
-
-<button class="wizard-btn licence-btn"
-onclick="selectLicence('5I')">
-
-Class 5I
-
-</button>
-
-<button class="wizard-btn licence-btn"
-onclick="selectLicence('5F')">
-
-Class 5F
-
-</button>
-
-<button class="wizard-btn licence-btn"
-onclick="selectLicence('3')">
-
-Class 3
-
-</button>
-
-<button class="wizard-btn licence-btn"
-onclick="selectLicence('2')">
-
-Class 2
-
-</button>
-
-`;
-
-}
-
-/*=========================================
-SAVE LICENCE
-=========================================*/
-
-function selectLicence(type){
-
-licence=type;
-
-document.getElementById("selectedLicence").value=type;
-
-currentQuestion++;
-
-loadQuestion();
-
-}
-  /*=========================================
-YES BUTTON
-=========================================*/
-
-function answerYes(){
-
-switch(currentQuestion){
-
-case 0:
-
-currentQuestion=1;
-loadQuestion();
-break;
-
-case 2:
-
-currentQuestion=3;
-loadQuestion();
-break;
-
-case 3:
-
-currentQuestion=4;
-loadQuestion();
-break;
-
-case 4:
-
-currentQuestion=5;
-loadQuestion();
-break;
-
-case 5:
-
-showCongratulations();
-break;
-
-}
-
-}
-
-/*=========================================
-NO BUTTON
-=========================================*/
-
-function answerNo(){
-
-switch(currentQuestion){
-
-case 0:
-
-showNoWorries(
-"Sorry, you must be at least 18 years old to enrol in this program."
-);
-
-break;
-
-case 2:
-
-showNoWorries(
-"You must pass the Air Brake Knowledge Test before enrolling."
-);
-
-break;
-
-case 3:
-
-showNoWorries(
-"You must pass the Class 1 Knowledge Test before enrolling."
-);
-
-break;
-
-case 4:
-
-showNoWorries(
-"You must complete your Medical Examination before enrolling."
-);
-
-break;
-
-case 5:
-
-showNoWorries(
-"You must meet the English language requirement before enrolling."
-);
-
-break;
-
-}
-
-}
-
-/*=========================================
-CONGRATULATIONS
-=========================================*/
-
-function showCongratulations(){
-
-document.querySelector(".wizard-section").style.display="none";
-
-document.getElementById("resultSection").style.display="block";
-
-document.getElementById("resultTitle").innerHTML=
-"Congratulations!";
-
-document.getElementById("resultText").innerHTML=
-"You are eligible to enrol in the Class 1 (121.5 Hrs) program.";
-
-document.getElementById("eligibilityResult").value="Eligible";
-
-const btn=document.getElementById("resultButton");
-
-btn.innerHTML="Proceed to Registration";
-
-btn.onclick=function(){
-
-document.getElementById("resultSection").style.display="none";
-
-document.getElementById("registrationSection").style.display="block";
-
-window.scrollTo({
-
-top:document.getElementById("registrationSection").offsetTop-80,
-
-behavior:"smooth"
+behavior:"smooth",
+block:"center"
 
 });
 
 };
 
-}
+q1.querySelector(".no").onclick=function(){
 
-/*=========================================
-NO WORRIES
-=========================================*/
+infoMessage.innerHTML=
+"Sorry, you must be at least 18 years old to enrol in this program.";
 
-function showNoWorries(message){
+infoBox.style.display="block";
 
-document.querySelector(".wizard-section").style.display="none";
+infoBox.scrollIntoView({
 
-document.getElementById("resultSection").style.display="block";
-
-document.getElementById("resultTitle").innerHTML=
-"No Worries";
-
-document.getElementById("resultText").innerHTML=
-message;
-
-document.getElementById("eligibilityResult").value="Not Eligible";
-
-const btn=document.getElementById("resultButton");
-
-btn.innerHTML="Let's Connect";
-
-btn.onclick=function(){
-
-document.getElementById("resultSection").style.display="none";
-
-document.getElementById("registrationSection").style.display="block";
-
-window.scrollTo({
-
-top:document.getElementById("registrationSection").offsetTop-80,
-
-behavior:"smooth"
+behavior:"smooth",
+block:"center"
 
 });
 
 };
+  /*=====================================================
+QUESTION 2
+=====================================================*/
 
-}
-  /*=========================================
+document.querySelectorAll("#q2 .licence-btn").forEach(function(btn){
+
+    btn.onclick=function(){
+
+        document.getElementById("selectedLicence").value=this.innerText;
+
+        q3.style.display="block";
+
+        q3.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    };
+
+});
+
+/*=====================================================
+QUESTION 3
+=====================================================*/
+
+q3.querySelector(".yes").onclick=function(){
+
+    q4.style.display="block";
+
+    q4.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+q3.querySelector(".no").onclick=function(){
+
+    infoMessage.innerHTML=
+    "You must pass the Air Brake Knowledge Test before enrolling.";
+
+    infoBox.style.display="block";
+
+    infoBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+/*=====================================================
+QUESTION 4
+=====================================================*/
+
+q4.querySelector(".yes").onclick=function(){
+
+    q5.style.display="block";
+
+    q5.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+q4.querySelector(".no").onclick=function(){
+
+    infoMessage.innerHTML=
+    "You must pass the Class 1 Knowledge Test before enrolling.";
+
+    infoBox.style.display="block";
+
+    infoBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+  /*=====================================================
+QUESTION 5
+=====================================================*/
+
+q5.querySelector(".yes").onclick=function(){
+
+    q6.style.display="block";
+
+    q6.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+q5.querySelector(".no").onclick=function(){
+
+    infoMessage.innerHTML=
+    "You must complete your Medical Examination before enrolling.";
+
+    infoBox.style.display="block";
+
+    infoBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+/*=====================================================
+QUESTION 6
+=====================================================*/
+
+q6.querySelector(".yes").onclick=function(){
+
+    document.getElementById("eligibilityResult").value="Eligible";
+
+    successBox.style.display="block";
+
+    successBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+q6.querySelector(".no").onclick=function(){
+
+    infoMessage.innerHTML=
+    "You must be proficient in English language before enrolling.";
+
+    infoBox.style.display="block";
+
+    infoBox.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+};
+
+/*=====================================================
+SUCCESS BUTTON
+=====================================================*/
+
+document.getElementById("continueBtn").onclick=function(){
+
+    registration.style.display="block";
+
+    registration.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+
+};
+
+/*=====================================================
+LET'S CONNECT BUTTON
+=====================================================*/
+
+document.getElementById("connectBtn").onclick=function(){
+
+    document.getElementById("eligibilityResult").value="Not Eligible";
+
+    registration.style.display="block";
+
+    registration.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+
+};
+
+/*=====================================================
 FORM
-=========================================*/
+=====================================================*/
 
-const registrationForm=document.getElementById("registrationForm");
+document.getElementById("registrationForm").addEventListener("submit",function(e){
 
-if(registrationForm){
+    e.preventDefault();
 
-registrationForm.addEventListener("submit",function(e){
+    alert("Thank you! Your registration request has been submitted successfully. Our team will contact you shortly.");
 
-e.preventDefault();
-
-alert(
-"Thank you! Your registration request has been submitted successfully. Our team will contact you shortly."
-);
-
-registrationForm.reset();
-
-document.getElementById("eligibilityResult").value="";
-document.getElementById("selectedLicence").value="";
+    this.reset();
 
 });
 
-}
-
-/*=========================================
-BUTTON ANIMATION
-=========================================*/
-
-document.addEventListener("click",function(e){
-
-if(e.target.classList.contains("wizard-btn")){
-
-e.target.style.transform="scale(.97)";
-
-setTimeout(function(){
-
-e.target.style.transform="";
-
-},120);
-
-}
-
-});
-
-/*=========================================
-FADE BETWEEN QUESTIONS
-=========================================*/
-
-function fadeQuestion(){
-
-const body=document.querySelector(".wizard-body");
-
-body.style.opacity="0";
-
-body.style.transform="translateY(20px)";
-
-setTimeout(function(){
-
-loadQuestion();
-
-body.style.opacity="1";
-
-body.style.transform="translateY(0)";
-
-},220);
-
-}
-
-/*=========================================
-SMOOTH SCROLL
-=========================================*/
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-console.log("Barnala Enroll Wizard Loaded Successfully");
 
 </script>
 </body>

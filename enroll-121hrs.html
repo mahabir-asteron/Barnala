@@ -33,26 +33,19 @@ box-sizing:border-box;
 --dark:#171817;
 --light:#f7f3ed;
 --white:#ffffff;
---grey:#666666;
+--grey:#6b6b6b;
 
 }
 
 html{
-
 scroll-behavior:smooth;
-
 }
 
 body{
 
 font-family:"Inter",sans-serif;
-
 background:var(--light);
-
 color:var(--dark);
-
-line-height:1.7;
-
 overflow-x:hidden;
 
 }
@@ -60,7 +53,6 @@ overflow-x:hidden;
 .container{
 
 width:min(92%,1400px);
-
 margin:auto;
 
 }
@@ -69,32 +61,21 @@ h1,h2,h3{
 
 font-family:"Manrope",sans-serif;
 
-font-weight:800;
-
 }
 
-section{
-
-position:relative;
-
-}
-  /*=====================================================
+/*=====================================================
 HERO
 =====================================================*/
 
-.hero-section{
+.hero{
 
 position:relative;
 
-height:72vh;
-
+height:75vh;
 min-height:650px;
 
 display:flex;
-
 align-items:center;
-
-justify-content:center;
 
 overflow:hidden;
 
@@ -106,13 +87,12 @@ background:#000;
 
 position:absolute;
 
-width:100%;
+inset:0;
 
+width:100%;
 height:100%;
 
 object-fit:cover;
-
-inset:0;
 
 }
 
@@ -123,13 +103,9 @@ position:absolute;
 inset:0;
 
 background:linear-gradient(
-
 90deg,
-
-rgba(0,0,0,.72),
-
+rgba(0,0,0,.75),
 rgba(0,0,0,.45)
-
 );
 
 }
@@ -146,15 +122,15 @@ color:#fff;
 
 }
 
-.hero-badge{
+.hero-tag{
 
 display:inline-block;
 
-padding:10px 22px;
-
-border-radius:50px;
+padding:10px 20px;
 
 background:#0057B8;
+
+border-radius:50px;
 
 font-size:13px;
 
@@ -162,66 +138,75 @@ font-weight:700;
 
 letter-spacing:1px;
 
-text-transform:uppercase;
-
-margin-bottom:24px;
+margin-bottom:25px;
 
 }
 
 .hero-content h1{
 
-font-size:clamp(56px,7vw,90px);
+font-size:clamp(58px,7vw,90px);
 
 line-height:1;
 
-margin-bottom:18px;
+margin-bottom:15px;
 
 }
 
 .hero-content p{
 
-font-size:24px;
+font-size:22px;
 
-color:#e6e6e6;
+color:#e8e8e8;
 
 }
-  /*=====================================================
+
+/*=====================================================
 COURSE
 =====================================================*/
 
 .course-section{
 
-padding:100px 0 70px;
+padding:100px 0 80px;
 
 text-align:center;
 
 }
 
-.course-section h2{
+.section-heading{
 
-font-size:clamp(34px,4vw,52px);
+max-width:720px;
 
-margin-bottom:18px;
+margin:auto auto 55px;
 
 }
 
-.course-section p{
+.section-heading h2{
 
-font-size:18px;
+font-size:clamp(36px,4vw,58px);
+
+margin-bottom:20px;
+
+line-height:1.1;
+
+}
+
+.section-heading p{
+
+font-size:19px;
 
 color:#666;
 
-margin-bottom:45px;
+line-height:1.8;
 
 }
 
-.course-buttons{
+.course-switch{
 
 display:flex;
 
 justify-content:center;
 
-gap:28px;
+gap:25px;
 
 flex-wrap:wrap;
 
@@ -229,17 +214,15 @@ flex-wrap:wrap;
 
 .course-btn{
 
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
 width:230px;
-
 height:74px;
 
 border-radius:60px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
 
 text-decoration:none;
 
@@ -249,9 +232,9 @@ font-weight:700;
 
 border:2px solid #0057B8;
 
-transition:.35s;
-
 cursor:pointer;
+
+transition:.35s;
 
 }
 
@@ -275,14 +258,16 @@ color:#0057B8;
 
 transform:translateY(-4px);
 
+box-shadow:0 15px 35px rgba(0,87,184,.18);
+
 }
   /*=====================================================
-WIZARD
+WIZARD SECTION
 =====================================================*/
 
 .wizard-section{
 
-padding-bottom:100px;
+padding:0 0 100px;
 
 }
 
@@ -296,9 +281,9 @@ background:#fff;
 
 border-radius:28px;
 
-padding:65px;
+padding:60px;
 
-box-shadow:0 18px 60px rgba(0,0,0,.08);
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 }
 
@@ -310,15 +295,15 @@ text-align:center;
 
 #questionTitle{
 
-font-size:42px;
+font-size:clamp(34px,4vw,52px);
+
+line-height:1.2;
 
 margin-bottom:45px;
 
-line-height:1.3;
-
 }
 
-#answers{
+#questionButtons{
 
 display:flex;
 
@@ -330,15 +315,15 @@ flex-wrap:wrap;
 
 }
 
-.answer-btn{
+#questionButtons button{
 
 width:220px;
 
-height:70px;
-
-border-radius:50px;
+height:68px;
 
 border:none;
+
+border-radius:50px;
 
 background:#0057B8;
 
@@ -354,24 +339,27 @@ transition:.35s;
 
 }
 
-.answer-btn:last-child{
+#questionButtons button:last-child{
 
 background:#171817;
 
 }
 
-.answer-btn:hover{
+#questionButtons button:hover{
 
 transform:translateY(-4px);
 
+box-shadow:0 18px 35px rgba(0,0,0,.15);
+
 }
-  /*=====================================================
+
+/*=====================================================
 RESULT
 =====================================================*/
 
 #resultSection{
 
-padding-bottom:100px;
+padding:0 0 100px;
 
 }
 
@@ -389,21 +377,27 @@ border-radius:28px;
 
 text-align:center;
 
-box-shadow:0 18px 60px rgba(0,0,0,.08);
+box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 }
 
 #resultTitle{
 
-font-size:54px;
+font-size:clamp(40px,5vw,60px);
 
-margin-bottom:22px;
+margin-bottom:20px;
 
 }
 
 #resultText{
 
-font-size:20px;
+max-width:650px;
+
+margin:auto;
+
+font-size:19px;
+
+line-height:1.9;
 
 color:#666;
 
@@ -413,7 +407,7 @@ margin-bottom:40px;
 
 #resultButton{
 
-padding:18px 40px;
+padding:18px 45px;
 
 border:none;
 
@@ -437,16 +431,19 @@ transition:.35s;
 
 background:#171817;
 
+transform:translateY(-4px);
+
 }
-  /*=====================================================
-REGISTRATION SECTION
+
+/*=====================================================
+REGISTRATION FORM
 =====================================================*/
 
 #registrationSection{
 
 padding:110px 0;
 
-background:#ffffff;
+background:#fff;
 
 }
 
@@ -468,9 +465,9 @@ box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 .registration-card h2{
 
-font-size:clamp(36px,4vw,54px);
-
 text-align:center;
+
+font-size:clamp(34px,4vw,54px);
 
 margin-bottom:18px;
 
@@ -478,11 +475,11 @@ margin-bottom:18px;
 
 .registration-card p{
 
-text-align:center;
-
 max-width:700px;
 
 margin:0 auto 45px;
+
+text-align:center;
 
 font-size:18px;
 
@@ -492,17 +489,13 @@ line-height:1.8;
 
 }
 
-/*=====================================================
-FORM
-=====================================================*/
-
 .form-grid{
 
 display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
-gap:25px;
+gap:24px;
 
 }
 
@@ -516,11 +509,11 @@ flex-direction:column;
 
 .form-grid label{
 
+font-size:15px;
+
 font-weight:700;
 
 margin-bottom:10px;
-
-font-size:15px;
 
 }
 
@@ -541,8 +534,6 @@ font-size:16px;
 font-family:inherit;
 
 transition:.3s;
-
-background:#fff;
 
 }
 
@@ -570,9 +561,9 @@ box-shadow:0 0 0 4px rgba(0,87,184,.12);
 
 grid-column:1/-1;
 
-margin-top:20px;
+height:66px;
 
-height:65px;
+margin-top:15px;
 
 border:none;
 
@@ -582,7 +573,7 @@ background:#0057B8;
 
 color:#fff;
 
-font-size:19px;
+font-size:18px;
 
 font-weight:700;
 
@@ -601,7 +592,7 @@ transform:translateY(-3px);
 }
 
 /*=====================================================
-ANIMATIONS
+ANIMATION
 =====================================================*/
 
 .hero-content,
@@ -616,7 +607,7 @@ animation:fadeUp .8s ease;
 
 @keyframes fadeUp{
 
-0%{
+from{
 
 opacity:0;
 
@@ -624,7 +615,7 @@ transform:translateY(35px);
 
 }
 
-100%{
+to{
 
 opacity:1;
 
@@ -635,24 +626,18 @@ transform:translateY(0);
 }
 
 /*=====================================================
-MOBILE
+RESPONSIVE
 =====================================================*/
 
 @media(max-width:992px){
 
-.hero-section{
+.hero{
 
 min-height:520px;
 
 height:auto;
 
 padding:120px 0;
-
-}
-
-.hero-content h1{
-
-font-size:58px;
 
 }
 
@@ -686,19 +671,35 @@ text-align:center;
 
 .hero-content h1{
 
-font-size:44px;
+font-size:46px;
 
 }
 
-.hero-content p{
+.section-heading h2{
 
-font-size:18px;
+font-size:34px;
 
 }
 
-.course-section{
+#questionTitle{
 
-padding:70px 0 50px;
+font-size:30px;
+
+}
+
+#questionButtons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+#questionButtons button{
+
+width:100%;
+
+max-width:320px;
 
 }
 
@@ -710,27 +711,9 @@ max-width:320px;
 
 }
 
-#wizardCard{
+.registration-card{
 
-padding:30px;
-
-}
-
-#questionTitle{
-
-font-size:30px;
-
-}
-
-#answers{
-
-flex-direction:column;
-
-}
-
-.answer-btn{
-
-width:100%;
+padding:35px 25px;
 
 }
 
@@ -740,33 +723,19 @@ padding:40px 25px;
 
 }
 
-.registration-card{
-
-padding:35px 25px;
-
-}
-
 }
 
 @media(max-width:480px){
 
 .hero-content h1{
 
-font-size:38px;
+font-size:36px;
 
 }
 
-.hero-badge{
+.hero-tag{
 
 font-size:11px;
-
-padding:8px 18px;
-
-}
-
-.registration-card h2{
-
-font-size:32px;
 
 }
 
@@ -788,88 +757,73 @@ HEADER
 HERO
 =========================== -->
 
-<section class="hero-section">
+<section class="hero">
 
-<div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
-<img
-src="images/class1-hero.jpg"
-alt="Class 1 Truck Training"
-class="hero-image">
+    <img
+        src="images/class1-hero.jpg"
+        alt="Class 1 Training"
+        class="hero-image">
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-content">
+        <div class="hero-content">
 
-<div class="hero-badge">
+            <span class="hero-tag">
+                CLASS 1
+            </span>
 
-CLASS 1
+            <h1>121.5 Hrs</h1>
 
-</div>
+        </div>
 
-<h1>
-
-121.5 Hrs
-
-</h1>
-
-<p>
-
-Choose Your Class 1 Course
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 <!-- ===========================
-COURSE
+COURSE SECTION
 =========================== -->
 
 <section class="course-section">
 
-<div class="container">
+    <div class="container">
 
-<h2>
+        <div class="section-heading">
 
-Choose Your Class 1 Course
+            <h2>
+                Choose Your Class 1 Course
+            </h2>
 
-</h2>
+            <p>
+                Let's see if you are eligible for this course
+            </p>
 
-<p>
+        </div>
 
-Let's see if you are eligible for this course
+        <div class="course-switch">
 
-</p>
+            <button class="course-btn active">
+                121.5 Hrs
+            </button>
 
-<div class="course-buttons">
+            <a
+                href="enroll-244hrs.html"
+                class="course-btn">
 
-<button
-class="course-btn active">
+                244 Hrs
 
-121.5 Hrs
+            </a>
 
-</button>
+        </div>
 
-<a
-href="enroll-244hrs.html"
-class="course-btn">
-
-244 Hrs
-
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 <!-- ===========================
-WIZARD
+ELIGIBILITY WIZARD
 =========================== -->
 
 <section class="wizard-section">
@@ -880,31 +834,49 @@ WIZARD
 
 <div id="wizard">
 
-<h2 id="questionTitle">
+    <div class="wizard-progress">
 
-Are you 18 or plus?
+        <div class="progress-bar">
 
-</h2>
+            <div class="progress-fill" id="progressFill"></div>
 
-<div id="answers">
+        </div>
 
-<button
-class="answer-btn"
-id="yesBtn">
+        <span id="progressText">
+            Step 1 of 6
+        </span>
 
-Yes
+    </div>
 
-</button>
+    <div class="wizard-body">
 
-<button
-class="answer-btn"
-id="noBtn">
+        <h2 id="questionTitle">
+            Are you 18 or plus?
+        </h2>
 
-No
+        <p id="questionSubtitle">
 
-</button>
+            Answer the following questions to check your eligibility.
 
-</div>
+        </p>
+
+        <div id="answerContainer">
+
+            <button class="wizard-btn" data-value="yes">
+
+                Yes
+
+            </button>
+
+            <button class="wizard-btn secondary" data-value="no">
+
+                No
+
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -930,8 +902,7 @@ style="display:none;">
 
 <p id="resultText"></p>
 
-<button
-id="resultButton">
+<button id="resultButton">
 
 Continue
 
@@ -944,7 +915,7 @@ Continue
 </section>
 
 <!-- ===========================
-FORM
+REGISTRATION FORM
 =========================== -->
 
 <section
@@ -961,11 +932,13 @@ Registration Request for Class 1
 
 </h2>
 
-<p id="formDescription">
+<p id="formText">
 
 Complete the form below and our team will contact you.
 
 </p>
+
+<form id="registrationForm">
 
 <input
 type="hidden"
@@ -974,8 +947,6 @@ id="selectedLicence">
 <input
 type="hidden"
 id="eligibilityResult">
-
-<form id="registrationForm">
 
 <div class="form-grid">
 
@@ -1052,29 +1023,13 @@ Branch
 
 <select>
 
-<option>
+<option>Select Branch</option>
 
-Choose Branch
+<option>Winnipeg</option>
 
-</option>
+<option>Steinbach</option>
 
-<option>
-
-Winnipeg
-
-</option>
-
-<option>
-
-Steinbach
-
-</option>
-
-<option>
-
-Portage la Prairie
-
-</option>
+<option>Portage la Prairie</option>
 
 </select>
 
@@ -1090,11 +1045,7 @@ Preferred Intake
 
 <select>
 
-<option>
-
-Choose Intake
-
-</option>
+<option>Select Intake</option>
 
 </select>
 
@@ -1112,9 +1063,12 @@ Message
 
 </div>
 
-<button type="submit">
+</div>
 
-Submit Registration
+<button
+type="submit">
+
+Submit Registration Request
 
 </button>
 
@@ -1135,19 +1089,445 @@ FOOTER
 <script>
 
 fetch("header.html")
-.then(res=>res.text())
+.then(response=>response.text())
 .then(data=>{
 document.getElementById("site-header").innerHTML=data;
 });
 
 fetch("footer.html")
-.then(res=>res.text())
+.then(response=>response.text())
 .then(data=>{
 document.getElementById("site-footer").innerHTML=data;
 });
 
 </script>
 
+<script>
+
+/* ==========================================
+   ENROLL 121.5 HRS WIZARD
+========================================== */
+
+const questions = [
+
+{
+title:"Are you 18 or plus?",
+subtitle:"Answer the following questions to check your eligibility.",
+type:"yesno",
+step:1
+},
+
+{
+title:"Which class of License do you have?",
+subtitle:"Select your current Manitoba licence.",
+type:"license",
+step:2
+},
+
+{
+title:"Have you passed Air Brake Knowledge Test?",
+subtitle:"",
+type:"yesno",
+step:3
+},
+
+{
+title:"Have you passed Class 1 Knowledge Test?",
+subtitle:"",
+type:"yesno",
+step:4
+},
+
+{
+title:"Have you completed your Medical Examination?",
+subtitle:"",
+type:"yesno",
+step:5
+},
+
+{
+title:"Do you meet the English Language Requirement?",
+subtitle:"",
+type:"yesno",
+step:6
+}
+
+];
+
+let currentQuestion = 0;
+let licence = "";
+
+const title = document.getElementById("questionTitle");
+const subtitle = document.getElementById("questionSubtitle");
+const answers = document.getElementById("answerContainer");
+const progress = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
+
+loadQuestion();
+
+function loadQuestion(){
+
+let q = questions[currentQuestion];
+
+title.innerHTML = q.title;
+subtitle.innerHTML = q.subtitle;
+
+progress.style.width=((q.step)/6*100)+"%";
+progressText.innerHTML="Step "+q.step+" of 6";
+
+answers.innerHTML="";
+
+if(q.type==="yesno"){
+createYesNo();
+}
+
+if(q.type==="license"){
+createLicenceButtons();
+}
+
+}
+  /*=========================================
+CREATE YES / NO BUTTONS
+=========================================*/
+
+function createYesNo(){
+
+answers.innerHTML=`
+
+<button class="wizard-btn" onclick="answerYes()">
+
+Yes
+
+</button>
+
+<button class="wizard-btn secondary" onclick="answerNo()">
+
+No
+
+</button>
+
+`;
+
+}
+
+/*=========================================
+CREATE LICENCE BUTTONS
+=========================================*/
+
+function createLicenceButtons(){
+
+answers.innerHTML=`
+
+<button class="wizard-btn licence-btn"
+onclick="selectLicence('5L')">
+
+Class 5L
+
+</button>
+
+<button class="wizard-btn licence-btn"
+onclick="selectLicence('5I')">
+
+Class 5I
+
+</button>
+
+<button class="wizard-btn licence-btn"
+onclick="selectLicence('5F')">
+
+Class 5F
+
+</button>
+
+<button class="wizard-btn licence-btn"
+onclick="selectLicence('3')">
+
+Class 3
+
+</button>
+
+<button class="wizard-btn licence-btn"
+onclick="selectLicence('2')">
+
+Class 2
+
+</button>
+
+`;
+
+}
+
+/*=========================================
+SAVE LICENCE
+=========================================*/
+
+function selectLicence(type){
+
+licence=type;
+
+document.getElementById("selectedLicence").value=type;
+
+currentQuestion++;
+
+loadQuestion();
+
+}
+  /*=========================================
+YES BUTTON
+=========================================*/
+
+function answerYes(){
+
+switch(currentQuestion){
+
+case 0:
+
+currentQuestion=1;
+loadQuestion();
+break;
+
+case 2:
+
+currentQuestion=3;
+loadQuestion();
+break;
+
+case 3:
+
+currentQuestion=4;
+loadQuestion();
+break;
+
+case 4:
+
+currentQuestion=5;
+loadQuestion();
+break;
+
+case 5:
+
+showCongratulations();
+break;
+
+}
+
+}
+
+/*=========================================
+NO BUTTON
+=========================================*/
+
+function answerNo(){
+
+switch(currentQuestion){
+
+case 0:
+
+showNoWorries(
+"Sorry, you must be at least 18 years old to enrol in this program."
+);
+
+break;
+
+case 2:
+
+showNoWorries(
+"You must pass the Air Brake Knowledge Test before enrolling."
+);
+
+break;
+
+case 3:
+
+showNoWorries(
+"You must pass the Class 1 Knowledge Test before enrolling."
+);
+
+break;
+
+case 4:
+
+showNoWorries(
+"You must complete your Medical Examination before enrolling."
+);
+
+break;
+
+case 5:
+
+showNoWorries(
+"You must meet the English language requirement before enrolling."
+);
+
+break;
+
+}
+
+}
+
+/*=========================================
+CONGRATULATIONS
+=========================================*/
+
+function showCongratulations(){
+
+document.querySelector(".wizard-section").style.display="none";
+
+document.getElementById("resultSection").style.display="block";
+
+document.getElementById("resultTitle").innerHTML=
+"Congratulations!";
+
+document.getElementById("resultText").innerHTML=
+"You are eligible to enrol in the Class 1 (121.5 Hrs) program.";
+
+document.getElementById("eligibilityResult").value="Eligible";
+
+const btn=document.getElementById("resultButton");
+
+btn.innerHTML="Proceed to Registration";
+
+btn.onclick=function(){
+
+document.getElementById("resultSection").style.display="none";
+
+document.getElementById("registrationSection").style.display="block";
+
+window.scrollTo({
+
+top:document.getElementById("registrationSection").offsetTop-80,
+
+behavior:"smooth"
+
+});
+
+};
+
+}
+
+/*=========================================
+NO WORRIES
+=========================================*/
+
+function showNoWorries(message){
+
+document.querySelector(".wizard-section").style.display="none";
+
+document.getElementById("resultSection").style.display="block";
+
+document.getElementById("resultTitle").innerHTML=
+"No Worries";
+
+document.getElementById("resultText").innerHTML=
+message;
+
+document.getElementById("eligibilityResult").value="Not Eligible";
+
+const btn=document.getElementById("resultButton");
+
+btn.innerHTML="Let's Connect";
+
+btn.onclick=function(){
+
+document.getElementById("resultSection").style.display="none";
+
+document.getElementById("registrationSection").style.display="block";
+
+window.scrollTo({
+
+top:document.getElementById("registrationSection").offsetTop-80,
+
+behavior:"smooth"
+
+});
+
+};
+
+}
+  /*=========================================
+FORM
+=========================================*/
+
+const registrationForm=document.getElementById("registrationForm");
+
+if(registrationForm){
+
+registrationForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert(
+"Thank you! Your registration request has been submitted successfully. Our team will contact you shortly."
+);
+
+registrationForm.reset();
+
+document.getElementById("eligibilityResult").value="";
+document.getElementById("selectedLicence").value="";
+
+});
+
+}
+
+/*=========================================
+BUTTON ANIMATION
+=========================================*/
+
+document.addEventListener("click",function(e){
+
+if(e.target.classList.contains("wizard-btn")){
+
+e.target.style.transform="scale(.97)";
+
+setTimeout(function(){
+
+e.target.style.transform="";
+
+},120);
+
+}
+
+});
+
+/*=========================================
+FADE BETWEEN QUESTIONS
+=========================================*/
+
+function fadeQuestion(){
+
+const body=document.querySelector(".wizard-body");
+
+body.style.opacity="0";
+
+body.style.transform="translateY(20px)";
+
+setTimeout(function(){
+
+loadQuestion();
+
+body.style.opacity="1";
+
+body.style.transform="translateY(0)";
+
+},220);
+
+}
+
+/*=========================================
+SMOOTH SCROLL
+=========================================*/
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+console.log("Barnala Enroll Wizard Loaded Successfully");
+
+</script>
 </body>
 
 </html>

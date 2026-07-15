@@ -1093,6 +1093,107 @@ font-size:32px;
 }
 
 }
+  /*=====================================================
+COMPLETED QUESTIONS
+=====================================================*/
+
+.question-box.completed{
+
+background:#f8fbff;
+
+border:2px solid #dbeafe;
+
+border-radius:18px;
+
+padding:25px;
+
+margin-bottom:25px;
+
+}
+
+.question-box.completed h3{
+
+margin-bottom:18px;
+
+font-size:26px;
+
+}
+
+.answer-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+background:#e8f5e9;
+
+color:#18794e;
+
+border-radius:40px;
+
+font-size:16px;
+
+font-weight:700;
+
+}
+
+.answer-badge::before{
+
+content:"✓";
+
+width:28px;
+
+height:28px;
+
+border-radius:50%;
+
+background:#22c55e;
+
+color:#fff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:800;
+
+}
+
+.option-btn.selected{
+
+background:#22c55e !important;
+
+color:#fff;
+
+pointer-events:none;
+
+}
+
+.licence-btn.selected{
+
+background:#22c55e !important;
+
+pointer-events:none;
+
+}
+
+.question-box{
+
+transition:.35s;
+
+}
+
+.fade-show{
+
+animation:fadeQuestion .45s ease;
+
+}
 
 </style>
 
@@ -1636,15 +1737,11 @@ QUESTION 1
 
 q1.querySelector(".yes").onclick=function(){
 
-q2.style.display="block";
+completeQuestion(q1,"YES");
 
-q2.scrollIntoView({
+showNext(q2);
 
-behavior:"smooth",
-block:"center"
-
-});
-
+};
 };
 
 q1.querySelector(".no").onclick=function(){
@@ -1670,18 +1767,13 @@ document.querySelectorAll("#q2 .licence-btn").forEach(function(btn){
 
     btn.onclick=function(){
 
-        document.getElementById("selectedLicence").value=this.innerText;
+document.getElementById("selectedLicence").value=this.innerText;
 
-        q3.style.display="block";
+completeQuestion(q2,this.innerText);
 
-        q3.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
+showNext(q3);
 
-    };
-
-});
+};
 
 /*=====================================================
 QUESTION 3
@@ -1689,12 +1781,9 @@ QUESTION 3
 
 q3.querySelector(".yes").onclick=function(){
 
-    q4.style.display="block";
+completeQuestion(q3,"YES");
 
-    q4.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-    });
+showNext(q4);
 
 };
 
@@ -1718,15 +1807,11 @@ QUESTION 4
 
 q4.querySelector(".yes").onclick=function(){
 
-    q5.style.display="block";
+completeQuestion(q4,"YES");
 
-    q5.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-    });
+showNext(q5);
 
 };
-
 q4.querySelector(".no").onclick=function(){
 
     infoMessage.innerHTML=
@@ -1746,12 +1831,9 @@ QUESTION 5
 
 q5.querySelector(".yes").onclick=function(){
 
-    q6.style.display="block";
+completeQuestion(q5,"YES");
 
-    q6.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-    });
+showNext(q6);
 
 };
 
@@ -1775,14 +1857,11 @@ QUESTION 6
 
 q6.querySelector(".yes").onclick=function(){
 
-    document.getElementById("eligibilityResult").value="Eligible";
+completeQuestion(q6,"YES");
 
-    successBox.style.display="block";
+document.getElementById("eligibilityResult").value="Eligible";
 
-    successBox.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-    });
+showNext(successBox);
 
 };
 
@@ -1845,9 +1924,45 @@ document.getElementById("registrationForm").addEventListener("submit",function(e
     this.reset();
 
 });
+  /*=====================================================
+UX HELPERS
+=====================================================*/
+
+function completeQuestion(question,answer){
+
+question.classList.add("completed");
+
+const group=question.querySelector(".option-group") ||
+question.querySelector(".licence-grid");
+
+if(group){
+
+group.innerHTML=
+'<div class="answer-badge">'+answer+'</div>';
+
+}
+
+}
+
+function showNext(nextQuestion){
+
+nextQuestion.style.display="block";
+
+nextQuestion.classList.add("fade-show");
+
+nextQuestion.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+}
 
 
 </script>
+  
 </body>
 
 </html>

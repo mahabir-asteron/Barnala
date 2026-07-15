@@ -4,20 +4,22 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Enroll - Class 1 (121.5 Hrs) | Barnala Driver Training Academy</title>
+<title>Class 1 (121.5 Hrs) | Barnala Driver Training Academy</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================
+/*=====================================================
 RESET
-========================= */
+=====================================================*/
 
 *{
 margin:0;
@@ -35,17 +37,30 @@ box-sizing:border-box;
 
 }
 
+html{
+
+scroll-behavior:smooth;
+
+}
+
 body{
 
 font-family:"Inter",sans-serif;
+
 background:var(--light);
+
 color:var(--dark);
+
+line-height:1.7;
+
+overflow-x:hidden;
 
 }
 
 .container{
 
 width:min(92%,1400px);
+
 margin:auto;
 
 }
@@ -54,24 +69,50 @@ h1,h2,h3{
 
 font-family:"Manrope",sans-serif;
 
+font-weight:800;
+
 }
-  /* =====================================================
-   HERO SECTION
-===================================================== */
+
+section{
+
+position:relative;
+
+}
+  /*=====================================================
+HERO
+=====================================================*/
 
 .hero-section{
 
 position:relative;
 
-height:75vh;
-min-height:620px;
+height:72vh;
+
+min-height:650px;
 
 display:flex;
+
 align-items:center;
 
-background:url("images/class1-truck-hero.jpg") center center/cover no-repeat;
+justify-content:center;
 
 overflow:hidden;
+
+background:#000;
+
+}
+
+.hero-image{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+inset:0;
 
 }
 
@@ -82,9 +123,13 @@ position:absolute;
 inset:0;
 
 background:linear-gradient(
+
 90deg,
-rgba(0,0,0,.78),
-rgba(0,0,0,.55)
+
+rgba(0,0,0,.72),
+
+rgba(0,0,0,.45)
+
 );
 
 }
@@ -101,15 +146,15 @@ color:#fff;
 
 }
 
-.hero-label{
+.hero-badge{
 
 display:inline-block;
 
-padding:10px 18px;
-
-background:#0057B8;
+padding:10px 22px;
 
 border-radius:50px;
+
+background:#0057B8;
 
 font-size:13px;
 
@@ -119,41 +164,125 @@ letter-spacing:1px;
 
 text-transform:uppercase;
 
-margin-bottom:22px;
+margin-bottom:24px;
 
 }
 
 .hero-content h1{
 
-font-size:clamp(48px,6vw,72px);
+font-size:clamp(56px,7vw,90px);
 
-line-height:1.05;
+line-height:1;
 
-margin-bottom:28px;
-
-text-transform:uppercase;
+margin-bottom:18px;
 
 }
 
 .hero-content p{
 
-font-size:20px;
+font-size:24px;
 
-line-height:1.9;
+color:#e6e6e6;
 
-color:#e3e3e3;
+}
+  /*=====================================================
+COURSE
+=====================================================*/
 
-max-width:680px;
+.course-section{
+
+padding:100px 0 70px;
+
+text-align:center;
 
 }
 
-/* =====================================================
-   WIZARD
-===================================================== */
+.course-section h2{
+
+font-size:clamp(34px,4vw,52px);
+
+margin-bottom:18px;
+
+}
+
+.course-section p{
+
+font-size:18px;
+
+color:#666;
+
+margin-bottom:45px;
+
+}
+
+.course-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:28px;
+
+flex-wrap:wrap;
+
+}
+
+.course-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:230px;
+
+height:74px;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-size:20px;
+
+font-weight:700;
+
+border:2px solid #0057B8;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.course-btn.active{
+
+background:#0057B8;
+
+color:#fff;
+
+}
+
+.course-btn:not(.active){
+
+background:#fff;
+
+color:#0057B8;
+
+}
+
+.course-btn:hover{
+
+transform:translateY(-4px);
+
+}
+  /*=====================================================
+WIZARD
+=====================================================*/
 
 .wizard-section{
 
-padding:100px 0;
+padding-bottom:100px;
 
 }
 
@@ -167,88 +296,41 @@ background:#fff;
 
 border-radius:28px;
 
-padding:60px;
+padding:65px;
 
-box-shadow:0 25px 60px rgba(0,0,0,.08);
-
-}
-
-.progress-wrapper{
-
-margin-bottom:55px;
+box-shadow:0 18px 60px rgba(0,0,0,.08);
 
 }
 
-.progress-top{
-
-display:flex;
-
-justify-content:space-between;
-
-margin-bottom:14px;
-
-font-weight:700;
-
-color:#555;
-
-}
-
-.progress-bar{
-
-height:8px;
-
-background:#ececec;
-
-border-radius:20px;
-
-overflow:hidden;
-
-}
-
-.progress-fill{
-
-width:16%;
-
-height:100%;
-
-background:#0057B8;
-
-border-radius:20px;
-
-transition:.4s;
-
-}
-
-.question-area{
+#wizard{
 
 text-align:center;
 
 }
 
-.question-area h2{
+#questionTitle{
 
-font-size:clamp(34px,4vw,52px);
-
-line-height:1.2;
+font-size:42px;
 
 margin-bottom:45px;
 
+line-height:1.3;
+
 }
 
-.button-group{
+#answers{
 
 display:flex;
 
 justify-content:center;
 
-gap:28px;
+gap:25px;
 
 flex-wrap:wrap;
 
 }
 
-.primary-answer,
-.secondary-answer{
+.answer-btn{
 
 width:220px;
 
@@ -256,184 +338,163 @@ height:70px;
 
 border-radius:50px;
 
+border:none;
+
+background:#0057B8;
+
+color:#fff;
+
 font-size:20px;
 
 font-weight:700;
 
 cursor:pointer;
 
-transition:.3s;
+transition:.35s;
 
 }
 
-.primary-answer{
+.answer-btn:last-child{
 
-background:#0057B8;
-
-color:#fff;
-
-border:none;
+background:#171817;
 
 }
 
-.primary-answer:hover{
-
-transform:translateY(-4px);
-
-background:#00479a;
-
-}
-
-.secondary-answer{
-
-background:#fff;
-
-border:2px solid #d6d6d6;
-
-}
-
-.secondary-answer:hover{
-
-border-color:#0057B8;
-
-color:#0057B8;
+.answer-btn:hover{
 
 transform:translateY(-4px);
 
 }
+  /*=====================================================
+RESULT
+=====================================================*/
 
-/* =====================================================
-   RESULT
-===================================================== */
+#resultSection{
 
-.result-section{
-
-padding:90px 0;
+padding-bottom:100px;
 
 }
 
 .result-card{
 
-max-width:850px;
+max-width:900px;
 
 margin:auto;
 
 background:#fff;
 
-border-radius:24px;
-
 padding:70px;
+
+border-radius:28px;
 
 text-align:center;
 
-box-shadow:0 20px 60px rgba(0,0,0,.08);
+box-shadow:0 18px 60px rgba(0,0,0,.08);
 
 }
 
-.result-card h2{
+#resultTitle{
 
 font-size:54px;
 
-margin-bottom:25px;
+margin-bottom:22px;
 
 }
 
-.result-card p{
+#resultText{
 
 font-size:20px;
 
-line-height:1.9;
-
-max-width:650px;
-
-margin:0 auto 45px;
-
 color:#666;
+
+margin-bottom:40px;
 
 }
 
-.main-button{
+#resultButton{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:50px;
 
 background:#0057B8;
 
 color:#fff;
 
-border:none;
-
-padding:18px 42px;
-
 font-size:18px;
 
 font-weight:700;
 
-border-radius:50px;
-
 cursor:pointer;
 
-transition:.3s;
+transition:.35s;
 
 }
 
-.main-button:hover{
+#resultButton:hover{
 
 background:#171817;
 
-transform:translateY(-3px);
-
 }
-  /* =====================================================
-   REGISTRATION FORM
-===================================================== */
+  /*=====================================================
+REGISTRATION SECTION
+=====================================================*/
 
-.form-section{
+#registrationSection{
 
 padding:110px 0;
 
-background:#f7f3ed;
+background:#ffffff;
 
 }
 
-.form-card{
+.registration-card{
 
 max-width:1100px;
 
 margin:auto;
 
-background:#ffffff;
-
-border-radius:28px;
+background:#fff;
 
 padding:60px;
+
+border-radius:28px;
 
 box-shadow:0 20px 60px rgba(0,0,0,.08);
 
 }
 
-.form-card h2{
+.registration-card h2{
 
-font-size:clamp(34px,4vw,50px);
+font-size:clamp(36px,4vw,54px);
+
+text-align:center;
 
 margin-bottom:18px;
 
-text-align:center;
-
 }
 
-.form-card p{
+.registration-card p{
+
+text-align:center;
 
 max-width:700px;
 
-margin:0 auto 50px;
-
-text-align:center;
-
-color:#666;
+margin:0 auto 45px;
 
 font-size:18px;
+
+color:#666;
 
 line-height:1.8;
 
 }
+
+/*=====================================================
+FORM
+=====================================================*/
 
 .form-grid{
 
@@ -441,11 +502,11 @@ display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
-gap:28px;
+gap:25px;
 
 }
 
-.form-group{
+.form-grid div{
 
 display:flex;
 
@@ -453,25 +514,23 @@ flex-direction:column;
 
 }
 
-.form-group label{
-
-font-size:15px;
+.form-grid label{
 
 font-weight:700;
 
 margin-bottom:10px;
 
-color:#171817;
+font-size:15px;
 
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea{
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
 
 width:100%;
 
-padding:18px 20px;
+padding:18px;
 
 border:1px solid #d8d8d8;
 
@@ -481,15 +540,23 @@ font-size:16px;
 
 font-family:inherit;
 
-background:#fff;
-
 transition:.3s;
+
+background:#fff;
 
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
+.form-grid textarea{
+
+resize:vertical;
+
+min-height:180px;
+
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus{
 
 outline:none;
 
@@ -499,47 +566,33 @@ box-shadow:0 0 0 4px rgba(0,87,184,.12);
 
 }
 
-.full-width{
+.form-grid button{
 
 grid-column:1/-1;
 
-}
+margin-top:20px;
 
-.form-group textarea{
+height:65px;
 
-resize:vertical;
+border:none;
 
-min-height:160px;
-
-}
-
-.submit-btn{
-
-margin-top:35px;
-
-width:100%;
-
-padding:20px;
+border-radius:50px;
 
 background:#0057B8;
 
 color:#fff;
 
-border:none;
-
-border-radius:14px;
-
-font-size:18px;
+font-size:19px;
 
 font-weight:700;
 
 cursor:pointer;
 
-transition:.3s;
+transition:.35s;
 
 }
 
-.submit-btn:hover{
+.form-grid button:hover{
 
 background:#171817;
 
@@ -547,14 +600,15 @@ transform:translateY(-3px);
 
 }
 
-/* =====================================================
-   ANIMATIONS
-===================================================== */
+/*=====================================================
+ANIMATIONS
+=====================================================*/
 
 .hero-content,
+.course-section,
 .wizard-card,
 .result-card,
-.form-card{
+.registration-card{
 
 animation:fadeUp .8s ease;
 
@@ -562,7 +616,7 @@ animation:fadeUp .8s ease;
 
 @keyframes fadeUp{
 
-from{
+0%{
 
 opacity:0;
 
@@ -570,7 +624,7 @@ transform:translateY(35px);
 
 }
 
-to{
+100%{
 
 opacity:1;
 
@@ -580,9 +634,9 @@ transform:translateY(0);
 
 }
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/*=====================================================
+MOBILE
+=====================================================*/
 
 @media(max-width:992px){
 
@@ -590,7 +644,15 @@ transform:translateY(0);
 
 min-height:520px;
 
-padding:120px 0 80px;
+height:auto;
+
+padding:120px 0;
+
+}
+
+.hero-content h1{
+
+font-size:58px;
 
 }
 
@@ -600,13 +662,7 @@ padding:40px;
 
 }
 
-.result-card{
-
-padding:45px;
-
-}
-
-.form-card{
+.registration-card{
 
 padding:40px;
 
@@ -622,42 +678,31 @@ grid-template-columns:1fr;
 
 @media(max-width:768px){
 
-.hero-section{
+.hero-content{
 
-height:auto;
-
-min-height:480px;
+text-align:center;
 
 }
 
 .hero-content h1{
 
-font-size:42px;
+font-size:44px;
 
 }
 
 .hero-content p{
 
-font-size:17px;
+font-size:18px;
 
 }
 
-.question-area h2{
+.course-section{
 
-font-size:32px;
-
-}
-
-.button-group{
-
-flex-direction:column;
-
-align-items:center;
+padding:70px 0 50px;
 
 }
 
-.primary-answer,
-.secondary-answer{
+.course-btn{
 
 width:100%;
 
@@ -665,21 +710,39 @@ max-width:320px;
 
 }
 
-.result-card h2{
+#wizardCard{
 
-font-size:38px;
-
-}
-
-.result-card p{
-
-font-size:17px;
+padding:30px;
 
 }
 
-.form-card h2{
+#questionTitle{
 
-font-size:34px;
+font-size:30px;
+
+}
+
+#answers{
+
+flex-direction:column;
+
+}
+
+.answer-btn{
+
+width:100%;
+
+}
+
+.result-card{
+
+padding:40px 25px;
+
+}
+
+.registration-card{
+
+padding:35px 25px;
 
 }
 
@@ -687,39 +750,23 @@ font-size:34px;
 
 @media(max-width:480px){
 
-.hero-section{
-
-padding:100px 0 70px;
-
-}
-
-.hero-label{
-
-font-size:12px;
-
-}
-
 .hero-content h1{
 
-font-size:34px;
+font-size:38px;
 
 }
 
-.wizard-card{
+.hero-badge{
 
-padding:28px;
+font-size:11px;
 
-}
-
-.result-card{
-
-padding:28px;
+padding:8px 18px;
 
 }
 
-.form-card{
+.registration-card h2{
 
-padding:28px;
+font-size:32px;
 
 }
 
@@ -731,36 +778,44 @@ padding:28px;
 
 <body>
 
+<!-- ===========================
+HEADER
+=========================== -->
+
 <div id="site-header"></div>
 
-<!-- =========================
+<!-- ===========================
 HERO
-========================= -->
+=========================== -->
 
 <section class="hero-section">
 
 <div class="hero-overlay"></div>
 
+<img
+src="images/class1-hero.jpg"
+alt="Class 1 Truck Training"
+class="hero-image">
+
 <div class="container">
 
 <div class="hero-content">
 
-<div class="hero-label">
+<div class="hero-badge">
 
-CLASS 1 (121.5 HOURS)
+CLASS 1
 
 </div>
 
 <h1>
 
-Check Your Eligibility
+121.5 Hrs
 
 </h1>
 
 <p>
 
-Before enrolling in the Class 1 (121.5 Hours) program,
-answer a few questions below to determine your eligibility.
+Choose Your Class 1 Course
 
 </p>
 
@@ -770,9 +825,52 @@ answer a few questions below to determine your eligibility.
 
 </section>
 
-<!-- =========================
-ELIGIBILITY WIZARD
-========================= -->
+<!-- ===========================
+COURSE
+=========================== -->
+
+<section class="course-section">
+
+<div class="container">
+
+<h2>
+
+Choose Your Class 1 Course
+
+</h2>
+
+<p>
+
+Let's see if you are eligible for this course
+
+</p>
+
+<div class="course-buttons">
+
+<button
+class="course-btn active">
+
+121.5 Hrs
+
+</button>
+
+<a
+href="enroll-244hrs.html"
+class="course-btn">
+
+244 Hrs
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+WIZARD
+=========================== -->
 
 <section class="wizard-section">
 
@@ -780,50 +878,30 @@ ELIGIBILITY WIZARD
 
 <div class="wizard-card">
 
-<div class="progress-wrapper">
-
-<div class="progress-top">
-
-<span id="stepText">
-
-Step 1 of 6
-
-</span>
-
-<span id="progressPercent">
-
-16%
-
-</span>
-
-</div>
-
-<div class="progress-bar">
-
-<div class="progress-fill" id="progressFill"></div>
-
-</div>
-
-</div>
-
-<div class="question-area" id="wizardContainer">
+<div id="wizard">
 
 <h2 id="questionTitle">
+
 Are you 18 or plus?
+
 </h2>
 
-<p id="questionDescription">
-Please answer the following questions to determine your eligibility.
-</p>
+<div id="answers">
 
-<div class="button-group" id="answerButtons">
+<button
+class="answer-btn"
+id="yesBtn">
 
-<button class="primary-answer" data-answer="yes">
-YES
+Yes
+
 </button>
 
-<button class="secondary-answer" data-answer="no">
-NO
+<button
+class="answer-btn"
+id="noBtn">
+
+No
+
 </button>
 
 </div>
@@ -836,43 +914,26 @@ NO
 
 </section>
 
-<!-- =========================
-RESULT SECTION
-========================= -->
+<!-- ===========================
+RESULT
+=========================== -->
 
-<section class="result-section"
-
+<section
 id="resultSection"
-
 style="display:none;">
 
 <div class="container">
 
 <div class="result-card">
 
-<div id="resultIcon">
+<h2 id="resultTitle"></h2>
 
-✅
-
-</div>
-
-<h2 id="resultTitle">
-
-Congratulations
-
-</h2>
-
-<p id="resultDescription">
-
-</p>
+<p id="resultText"></p>
 
 <button
-
-class="main-button"
-
 id="resultButton">
 
-Proceed with Enrollment
+Continue
 
 </button>
 
@@ -882,19 +943,17 @@ Proceed with Enrollment
 
 </section>
 
-  <!-- =========================
-REGISTRATION FORM
-========================= -->
+<!-- ===========================
+FORM
+=========================== -->
 
-<section class="form-section"
-
-id="formSection"
-
+<section
+id="registrationSection"
 style="display:none;">
 
 <div class="container">
 
-<div class="form-card">
+<div class="registration-card">
 
 <h2 id="formHeading">
 
@@ -904,127 +963,158 @@ Registration Request for Class 1
 
 <p id="formDescription">
 
-Complete the form below and our team will contact you shortly.
+Complete the form below and our team will contact you.
 
 </p>
 
-  <input
+<input
 type="hidden"
-id="eligibilityResult"
-value="">
+id="selectedLicence">
 
 <input
 type="hidden"
-id="selectedLicence"
-value="">
+id="eligibilityResult">
 
 <form id="registrationForm">
 
 <div class="form-grid">
 
-<div class="form-group">
+<div>
 
-<label>First Name *</label>
+<label>
+
+First Name
+
+</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>
+
+Last Name
+
+</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>
+
+Phone
+
+</label>
+
+<input type="tel">
+
+</div>
+
+<div>
+
+<label>
+
+Email
+
+</label>
+
+<input type="email">
+
+</div>
+
+<div>
+
+<label>
+
+Selected Course
+
+</label>
 
 <input
 type="text"
-id="firstName"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Last Name *</label>
-
-<input
-type="text"
-id="lastName"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Phone *</label>
-
-<input
-type="tel"
-id="phone"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Email *</label>
-
-<input
-type="email"
-id="email"
-required>
-
-</div>
-
-<div class="form-group">
-
-<label>Selected Course</label>
-
-<input
-type="text"
-id="selectedCourse"
 value="Class 1 (121.5 Hrs)"
 readonly>
 
 </div>
 
-<div class="form-group">
+<div>
 
-<label>Preferred Branch</label>
+<label>
 
-<select id="branch">
+Branch
 
-<option value="">Select Branch</option>
+</label>
 
-<option>Winnipeg</option>
+<select>
 
-<option>Steinbach</option>
+<option>
 
-<option>Portage la Prairie</option>
+Choose Branch
+
+</option>
+
+<option>
+
+Winnipeg
+
+</option>
+
+<option>
+
+Steinbach
+
+</option>
+
+<option>
+
+Portage la Prairie
+
+</option>
 
 </select>
 
 </div>
 
-<div class="form-group">
+<div>
 
-<label>Preferred Intake</label>
+<label>
 
-<select id="intake">
+Preferred Intake
 
-<option value="">Select Intake</option>
+</label>
+
+<select>
+
+<option>
+
+Choose Intake
+
+</option>
 
 </select>
 
 </div>
 
-<div class="form-group full-width">
+<div>
 
-<label>Message</label>
+<label>
 
-<textarea
-id="message"
-rows="6"></textarea>
+Message
+
+</label>
+
+<textarea rows="6"></textarea>
 
 </div>
 
-</div>
+<button type="submit">
 
-<button
-type="submit"
-class="submit-btn">
-
-Submit Registration Request
+Submit Registration
 
 </button>
 
@@ -1036,411 +1126,27 @@ Submit Registration Request
 
 </section>
 
+<!-- ===========================
+FOOTER
+=========================== -->
+
 <div id="site-footer"></div>
 
 <script>
 
-fetch('header.html')
-.then(response=>response.text())
+fetch("header.html")
+.then(res=>res.text())
 .then(data=>{
-document.getElementById('site-header').innerHTML=data;
+document.getElementById("site-header").innerHTML=data;
 });
 
-fetch('footer.html')
-.then(response=>response.text())
+fetch("footer.html")
+.then(res=>res.text())
 .then(data=>{
-document.getElementById('site-footer').innerHTML=data;
+document.getElementById("site-footer").innerHTML=data;
 });
 
 </script>
-  <script>
-
-/*====================================================
-  ENROLL 121.5 HRS - WIZARD
-====================================================*/
-
-const wizard = document.getElementById("eligibilityWizard");
-
-const licenseSection = document.getElementById("licenseSection");
-const airBrakeSection = document.getElementById("airBrakeSection");
-const knowledgeSection = document.getElementById("knowledgeSection");
-const medicalSection = document.getElementById("medicalSection");
-const englishSection = document.getElementById("englishSection");
-
-const successSection = document.getElementById("successSection");
-const failSection = document.getElementById("failSection");
-
-const registrationSection = document.getElementById("registrationSection");
-
-const hiddenLicense =
-document.getElementById("selectedLicence");
-
-const hiddenEligibility =
-document.getElementById("eligibilityResult");
-
-let selectedLicence = "";
-let passedAirBrake = false;
-let passedKnowledge = false;
-let passedMedical = false;
-let passedEnglish = false;
-
-/*====================================================
-  SMALL HELPER FUNCTIONS
-====================================================*/
-
-function hideAllQuestions(){
-
-    airBrakeSection.style.display="none";
-    knowledgeSection.style.display="none";
-    medicalSection.style.display="none";
-    englishSection.style.display="none";
-
-}
-
-function hideResults(){
-
-    successSection.style.display="none";
-    failSection.style.display="none";
-    registrationSection.style.display="none";
-
-}
-
-function scrollToElement(el){
-
-    window.scrollTo({
-
-        top:el.offsetTop-110,
-        behavior:"smooth"
-
-    });
-
-}
-
-hideAllQuestions();
-hideResults();
-/*====================================================
-  LICENSE BUTTONS
-====================================================*/
-
-document.querySelectorAll(".license-btn").forEach(function(btn){
-
-    btn.addEventListener("click",function(){
-
-        /* Remove previous selection */
-
-        document.querySelectorAll(".license-btn").forEach(function(b){
-
-            b.classList.remove("active");
-
-        });
-
-        this.classList.add("active");
-
-        selectedLicence = this.dataset.license;
-
-        hiddenLicense.value = selectedLicence;
-
-        hideResults();
-
-        /* Hide remaining questions */
-
-        hideAllQuestions();
-
-        /*----------------------------------
-          Class 5L
-        ----------------------------------*/
-
-        if(selectedLicence==="5L"){
-
-            airBrakeSection.style.display="block";
-
-            scrollToElement(airBrakeSection);
-
-        }
-
-        /*----------------------------------
-          Class 5I
-        ----------------------------------*/
-
-        else if(selectedLicence==="5I"){
-
-            airBrakeSection.style.display="block";
-
-            scrollToElement(airBrakeSection);
-
-        }
-
-        /*----------------------------------
-          Class 5F
-        ----------------------------------*/
-
-        else if(selectedLicence==="5F"){
-
-            airBrakeSection.style.display="block";
-
-            scrollToElement(airBrakeSection);
-
-        }
-
-        /*----------------------------------
-          Class 3
-        ----------------------------------*/
-
-        else if(selectedLicence==="3"){
-
-            airBrakeSection.style.display="block";
-
-            scrollToElement(airBrakeSection);
-
-        }
-
-        /*----------------------------------
-          Class 2
-        ----------------------------------*/
-
-        else if(selectedLicence==="2"){
-
-            airBrakeSection.style.display="block";
-
-            scrollToElement(airBrakeSection);
-
-        }
-
-    });
-
-});
-/*====================================================
-  AIR BRAKE QUESTION
-====================================================*/
-
-document.querySelectorAll(".air-btn").forEach(function(btn){
-
-    btn.addEventListener("click",function(){
-
-        document.querySelectorAll(".air-btn").forEach(function(b){
-            b.classList.remove("active");
-        });
-
-        this.classList.add("active");
-
-        passedAirBrake = this.dataset.answer==="yes";
-
-        hideResults();
-
-        if(passedAirBrake){
-
-            knowledgeSection.style.display="block";
-            scrollToElement(knowledgeSection);
-
-        }else{
-
-            failSection.style.display="block";
-
-            hiddenEligibility.value="Need Air Brake";
-
-            scrollToElement(failSection);
-
-        }
-
-    });
-
-});
-
-
-/*====================================================
-  CLASS 1 KNOWLEDGE TEST
-====================================================*/
-
-document.querySelectorAll(".knowledge-btn").forEach(function(btn){
-
-    btn.addEventListener("click",function(){
-
-        document.querySelectorAll(".knowledge-btn").forEach(function(b){
-            b.classList.remove("active");
-        });
-
-        this.classList.add("active");
-
-        passedKnowledge = this.dataset.answer==="yes";
-
-        hideResults();
-
-        if(passedKnowledge){
-
-            medicalSection.style.display="block";
-            scrollToElement(medicalSection);
-
-        }else{
-
-            failSection.style.display="block";
-
-            hiddenEligibility.value="Need Knowledge Test";
-
-            scrollToElement(failSection);
-
-        }
-
-    });
-
-});
-
-
-/*====================================================
-  MEDICAL QUESTION
-====================================================*/
-
-document.querySelectorAll(".medical-btn").forEach(function(btn){
-
-    btn.addEventListener("click",function(){
-
-        document.querySelectorAll(".medical-btn").forEach(function(b){
-            b.classList.remove("active");
-        });
-
-        this.classList.add("active");
-
-        passedMedical = this.dataset.answer==="yes";
-
-        hideResults();
-
-        if(passedMedical){
-
-            englishSection.style.display="block";
-            scrollToElement(englishSection);
-
-        }else{
-
-            failSection.style.display="block";
-
-            hiddenEligibility.value="Medical Pending";
-
-            scrollToElement(failSection);
-
-        }
-
-    });
-
-});
-
-
-/*====================================================
-  ENGLISH QUESTION
-====================================================*/
-
-document.querySelectorAll(".english-btn").forEach(function(btn){
-
-    btn.addEventListener("click",function(){
-
-        document.querySelectorAll(".english-btn").forEach(function(b){
-            b.classList.remove("active");
-        });
-
-        this.classList.add("active");
-
-        passedEnglish = this.dataset.answer==="yes";
-
-        hideResults();
-
-        if(passedEnglish){
-
-            successSection.style.display="block";
-
-            hiddenEligibility.value="Eligible";
-
-            scrollToElement(successSection);
-
-        }else{
-
-            failSection.style.display="block";
-
-            hiddenEligibility.value="English Assistance";
-
-            scrollToElement(failSection);
-
-        }
-
-    });
-
-});
-    /*====================================================
-  OPEN REGISTRATION FORM
-====================================================*/
-
-const proceedBtn = document.getElementById("proceedEnrollment");
-const connectBtn = document.getElementById("letsConnect");
-
-/* Show Registration Form */
-
-function openRegistrationForm(){
-
-    registrationSection.style.display = "block";
-
-    scrollToElement(registrationSection);
-
-}
-
-/*====================================================
-  CONGRATULATIONS BUTTON
-====================================================*/
-
-if(proceedBtn){
-
-    proceedBtn.addEventListener("click",function(){
-
-        openRegistrationForm();
-
-    });
-
-}
-
-/*====================================================
-  NO WORRIES BUTTON
-====================================================*/
-
-if(connectBtn){
-
-    connectBtn.addEventListener("click",function(){
-
-        openRegistrationForm();
-
-    });
-
-}
-
-/*====================================================
-  AUTO FILL COURSE NAME
-====================================================*/
-
-const courseField = document.getElementById("selectedCourse");
-
-if(courseField){
-
-    courseField.value = "Class 1 (121.5 Hrs)";
-
-}
-
-/*====================================================
-  SAVE HIDDEN VALUES
-====================================================*/
-
-const licenceHidden =
-document.getElementById("selectedLicence");
-
-if(licenceHidden){
-
-    licenceHidden.value = selectedLicence;
-
-}
-
-const eligibilityHidden =
-document.getElementById("eligibilityResult");
-
-if(eligibilityHidden){
-
-    eligibilityHidden.value = hiddenEligibility.value;
-
-}
-  
 
 </body>
 

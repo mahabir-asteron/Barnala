@@ -806,26 +806,24 @@ Step 1 of 6
 
 </div>
 
-<div class="question-area">
+<div class="question-area" id="wizardContainer">
 
 <h2 id="questionTitle">
-
 Are you 18 or plus?
-
 </h2>
 
-<div class="button-group">
+<p id="questionDescription">
+Please answer the following questions to determine your eligibility.
+</p>
 
-<button class="primary-answer" id="yesBtn">
+<div class="button-group" id="answerButtons">
 
+<button class="primary-answer" data-answer="yes">
 YES
-
 </button>
 
-<button class="secondary-answer" id="noBtn">
-
+<button class="secondary-answer" data-answer="no">
 NO
-
 </button>
 
 </div>
@@ -852,17 +850,29 @@ style="display:none;">
 
 <div class="result-card">
 
-<h2 id="resultTitle"></h2>
+<div id="resultIcon">
 
-<p id="resultDescription"></p>
+✅
+
+</div>
+
+<h2 id="resultTitle">
+
+Congratulations
+
+</h2>
+
+<p id="resultDescription">
+
+</p>
 
 <button
 
-id="resultButton"
+class="main-button"
 
-class="main-button">
+id="resultButton">
 
-Continue
+Proceed with Enrollment
 
 </button>
 
@@ -897,6 +907,16 @@ Registration Request for Class 1
 Complete the form below and our team will contact you shortly.
 
 </p>
+
+  <input
+type="hidden"
+id="eligibilityResult"
+value="">
+
+<input
+type="hidden"
+id="selectedLicence"
+value="">
 
 <form id="registrationForm">
 
@@ -1033,6 +1053,394 @@ document.getElementById('site-footer').innerHTML=data;
 });
 
 </script>
+  <script>
+
+/*====================================================
+  ENROLL 121.5 HRS - WIZARD
+====================================================*/
+
+const wizard = document.getElementById("eligibilityWizard");
+
+const licenseSection = document.getElementById("licenseSection");
+const airBrakeSection = document.getElementById("airBrakeSection");
+const knowledgeSection = document.getElementById("knowledgeSection");
+const medicalSection = document.getElementById("medicalSection");
+const englishSection = document.getElementById("englishSection");
+
+const successSection = document.getElementById("successSection");
+const failSection = document.getElementById("failSection");
+
+const registrationSection = document.getElementById("registrationSection");
+
+const hiddenLicense =
+document.getElementById("selectedLicence");
+
+const hiddenEligibility =
+document.getElementById("eligibilityResult");
+
+let selectedLicence = "";
+let passedAirBrake = false;
+let passedKnowledge = false;
+let passedMedical = false;
+let passedEnglish = false;
+
+/*====================================================
+  SMALL HELPER FUNCTIONS
+====================================================*/
+
+function hideAllQuestions(){
+
+    airBrakeSection.style.display="none";
+    knowledgeSection.style.display="none";
+    medicalSection.style.display="none";
+    englishSection.style.display="none";
+
+}
+
+function hideResults(){
+
+    successSection.style.display="none";
+    failSection.style.display="none";
+    registrationSection.style.display="none";
+
+}
+
+function scrollToElement(el){
+
+    window.scrollTo({
+
+        top:el.offsetTop-110,
+        behavior:"smooth"
+
+    });
+
+}
+
+hideAllQuestions();
+hideResults();
+/*====================================================
+  LICENSE BUTTONS
+====================================================*/
+
+document.querySelectorAll(".license-btn").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        /* Remove previous selection */
+
+        document.querySelectorAll(".license-btn").forEach(function(b){
+
+            b.classList.remove("active");
+
+        });
+
+        this.classList.add("active");
+
+        selectedLicence = this.dataset.license;
+
+        hiddenLicense.value = selectedLicence;
+
+        hideResults();
+
+        /* Hide remaining questions */
+
+        hideAllQuestions();
+
+        /*----------------------------------
+          Class 5L
+        ----------------------------------*/
+
+        if(selectedLicence==="5L"){
+
+            airBrakeSection.style.display="block";
+
+            scrollToElement(airBrakeSection);
+
+        }
+
+        /*----------------------------------
+          Class 5I
+        ----------------------------------*/
+
+        else if(selectedLicence==="5I"){
+
+            airBrakeSection.style.display="block";
+
+            scrollToElement(airBrakeSection);
+
+        }
+
+        /*----------------------------------
+          Class 5F
+        ----------------------------------*/
+
+        else if(selectedLicence==="5F"){
+
+            airBrakeSection.style.display="block";
+
+            scrollToElement(airBrakeSection);
+
+        }
+
+        /*----------------------------------
+          Class 3
+        ----------------------------------*/
+
+        else if(selectedLicence==="3"){
+
+            airBrakeSection.style.display="block";
+
+            scrollToElement(airBrakeSection);
+
+        }
+
+        /*----------------------------------
+          Class 2
+        ----------------------------------*/
+
+        else if(selectedLicence==="2"){
+
+            airBrakeSection.style.display="block";
+
+            scrollToElement(airBrakeSection);
+
+        }
+
+    });
+
+});
+/*====================================================
+  AIR BRAKE QUESTION
+====================================================*/
+
+document.querySelectorAll(".air-btn").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        document.querySelectorAll(".air-btn").forEach(function(b){
+            b.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        passedAirBrake = this.dataset.answer==="yes";
+
+        hideResults();
+
+        if(passedAirBrake){
+
+            knowledgeSection.style.display="block";
+            scrollToElement(knowledgeSection);
+
+        }else{
+
+            failSection.style.display="block";
+
+            hiddenEligibility.value="Need Air Brake";
+
+            scrollToElement(failSection);
+
+        }
+
+    });
+
+});
+
+
+/*====================================================
+  CLASS 1 KNOWLEDGE TEST
+====================================================*/
+
+document.querySelectorAll(".knowledge-btn").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        document.querySelectorAll(".knowledge-btn").forEach(function(b){
+            b.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        passedKnowledge = this.dataset.answer==="yes";
+
+        hideResults();
+
+        if(passedKnowledge){
+
+            medicalSection.style.display="block";
+            scrollToElement(medicalSection);
+
+        }else{
+
+            failSection.style.display="block";
+
+            hiddenEligibility.value="Need Knowledge Test";
+
+            scrollToElement(failSection);
+
+        }
+
+    });
+
+});
+
+
+/*====================================================
+  MEDICAL QUESTION
+====================================================*/
+
+document.querySelectorAll(".medical-btn").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        document.querySelectorAll(".medical-btn").forEach(function(b){
+            b.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        passedMedical = this.dataset.answer==="yes";
+
+        hideResults();
+
+        if(passedMedical){
+
+            englishSection.style.display="block";
+            scrollToElement(englishSection);
+
+        }else{
+
+            failSection.style.display="block";
+
+            hiddenEligibility.value="Medical Pending";
+
+            scrollToElement(failSection);
+
+        }
+
+    });
+
+});
+
+
+/*====================================================
+  ENGLISH QUESTION
+====================================================*/
+
+document.querySelectorAll(".english-btn").forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        document.querySelectorAll(".english-btn").forEach(function(b){
+            b.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        passedEnglish = this.dataset.answer==="yes";
+
+        hideResults();
+
+        if(passedEnglish){
+
+            successSection.style.display="block";
+
+            hiddenEligibility.value="Eligible";
+
+            scrollToElement(successSection);
+
+        }else{
+
+            failSection.style.display="block";
+
+            hiddenEligibility.value="English Assistance";
+
+            scrollToElement(failSection);
+
+        }
+
+    });
+
+});
+    /*====================================================
+  OPEN REGISTRATION FORM
+====================================================*/
+
+const proceedBtn = document.getElementById("proceedEnrollment");
+const connectBtn = document.getElementById("letsConnect");
+
+/* Show Registration Form */
+
+function openRegistrationForm(){
+
+    registrationSection.style.display = "block";
+
+    scrollToElement(registrationSection);
+
+}
+
+/*====================================================
+  CONGRATULATIONS BUTTON
+====================================================*/
+
+if(proceedBtn){
+
+    proceedBtn.addEventListener("click",function(){
+
+        openRegistrationForm();
+
+    });
+
+}
+
+/*====================================================
+  NO WORRIES BUTTON
+====================================================*/
+
+if(connectBtn){
+
+    connectBtn.addEventListener("click",function(){
+
+        openRegistrationForm();
+
+    });
+
+}
+
+/*====================================================
+  AUTO FILL COURSE NAME
+====================================================*/
+
+const courseField = document.getElementById("selectedCourse");
+
+if(courseField){
+
+    courseField.value = "Class 1 (121.5 Hrs)";
+
+}
+
+/*====================================================
+  SAVE HIDDEN VALUES
+====================================================*/
+
+const licenceHidden =
+document.getElementById("selectedLicence");
+
+if(licenceHidden){
+
+    licenceHidden.value = selectedLicence;
+
+}
+
+const eligibilityHidden =
+document.getElementById("eligibilityResult");
+
+if(eligibilityHidden){
+
+    eligibilityHidden.value = hiddenEligibility.value;
+
+}
+  
 
 </body>
 

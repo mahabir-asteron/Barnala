@@ -1764,15 +1764,40 @@ QUESTION 2
 
 document.querySelectorAll("#q2 .licence-btn").forEach(function(btn){
 
-    btn.onclick=function(){
+    btn.onclick = function(){
 
-document.getElementById("selectedLicence").value=this.innerText;
+        const licence = this.innerText.trim();
 
-completeQuestion(q2,this.innerText);
+        // Save selected licence
+        document.getElementById("selectedLicence").value = licence;
 
-showNext(q3);
+        // Show selected answer
+        completeQuestion(q2, licence);
 
-};
+        // Class 5L and Class 5I
+        if (licence === "Class 5L" || licence === "Class 5I") {
+
+            infoMessage.innerHTML = "Let's connect and make it possible.";
+
+            showNext(infoBox);
+
+            return;
+        }
+
+        // Class 5F, Class 3, Class 2
+        if (
+            licence === "Class 5F" ||
+            licence === "Class 3" ||
+            licence === "Class 2"
+        ) {
+
+            showNext(q3);
+
+            return;
+        }
+
+    };
+
 });
 
 /*=====================================================

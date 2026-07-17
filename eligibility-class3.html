@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class 3 Eligibility | Barnala Driver Training Academy</title>
+
+    <meta name="description" content="Check the eligibility requirements for the Class 3 Driver Training Program at Barnala Driver Training Academy.">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/eligibility-class3.css">
+
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main>
+
+        <section class="eligibility-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <span class="section-label">
+            CLASS 3 ELIGIBILITY
+        </span>
+
+        <h1>
+            Check Your Class 3 Eligibility
+        </h1>
+
+        <p>
+            Make sure you meet the requirements before starting your Class 3 Driver Training in Manitoba.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+       <section class="eligibility-section">
+
+    <div class="container">
+
+        <span class="section-label">
+            ELIGIBILITY REQUIREMENTS
+        </span>
+
+        <h2>
+            Are You Eligible for Class 3 Training?
+        </h2>
+
+        <p class="section-text">
+            Before enrolling in the Class 3 Driver Training Program, make sure you meet the following eligibility requirements.
+        </p>
+
+        <div class="eligibility-grid">
+
+            <!-- Knowledge Test -->
+
+            <div class="eligibility-card">
+
+                <img src="images/courses/knowledge-test.webp"
+                     alt="Knowledge Test">
+
+                <h3>Knowledge Test</h3>
+
+                <p>
+                    You must pass a written knowledge test on traffic laws, safe driving practices, and specific regulations related to Class 3 vehicles.
+                </p>
+
+            </div>
+
+            <!-- Air Brake -->
+
+            <div class="eligibility-card">
+
+                <img src="images/courses/air-brake.webp"
+                     alt="Air Brake Endorsement">
+
+                <h3>Air Brake Endorsement</h3>
+
+                <p>
+                    Complete the Air Brake Endorsement course required for operating commercial vehicles equipped with air brake systems.
+                </p>
+
+            </div>
+
+            <!-- Driver License -->
+
+            <div class="eligibility-card">
+
+                <img src="images/courses/drivers-license.webp"
+                     alt="Driver's License">
+
+                <h3>Driver's License</h3>
+
+                <p>
+                    You need a valid Class 5 (Full) driver's license or an equivalent licence before applying.
+                </p>
+
+            </div>
+
+            <!-- Medical -->
+
+            <div class="eligibility-card">
+
+                <img src="images/courses/medical-fitness.webp"
+                     alt="Medical Fitness">
+
+                <h3>Medical Fitness</h3>
+
+                <p>
+                    You must pass a medical examination to ensure you meet the physical requirements for driving a commercial vehicle.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script>
+
+    fetch("header.html")
+    .then(r=>r.text())
+    .then(html=>{
+
+        const header=document.getElementById("site-header");
+
+        header.innerHTML=html;
+
+        header.querySelectorAll("script").forEach(old=>{
+
+            const s=document.createElement("script");
+
+            if(old.src){
+                s.src=old.src;
+            }else{
+                s.textContent=old.textContent;
+            }
+
+            document.body.appendChild(s);
+
+        });
+
+    });
+
+    </script>
+
+    <script>
+
+    fetch("footer.html")
+    .then(r=>r.text())
+    .then(html=>{
+
+        document.getElementById("site-footer").innerHTML=html;
+
+    });
+
+    </script>
+
+</body>
+
+</html>

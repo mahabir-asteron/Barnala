@@ -1,6 +1,6 @@
-/* =====================================================
+/* ===================================================
    RESET
-===================================================== */
+=================================================== */
 
 *{
     margin:0;
@@ -13,185 +13,155 @@ html{
 }
 
 body{
-    font-family:Inter, sans-serif;
-    background:#f7f9fc;
+    font-family:'Inter',sans-serif;
+    background:#f4f7fb;
     color:#1f2937;
     line-height:1.6;
 }
 
-/* =====================================================
+/* ===================================================
    HERO
-===================================================== */
+=================================================== */
 
 .hero{
     position:relative;
-    min-height:520px;
+    min-height:500px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     overflow:hidden;
 
-    background:url("images/class3-hero.webp") center center/cover no-repeat;
+    background:url("../images/class-3-training.webp") center center/cover no-repeat;
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,33,71,.70);
+    background:linear-gradient(rgba(0,33,71,.75),rgba(0,33,71,.75));
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-    max-width:900px;
-    padding:40px 20px;
+    max-width:850px;
+    padding:20px;
 }
 
 .hero-tag{
-
     display:inline-block;
-
-    padding:10px 22px;
-
-    border-radius:100px;
-
+    padding:10px 24px;
+    border-radius:50px;
     background:rgba(255,255,255,.15);
-
-    backdrop-filter:blur(12px);
-
     color:#fff;
-
     font-size:.9rem;
-
     font-weight:700;
-
     letter-spacing:2px;
-
-    margin-bottom:22px;
+    margin-bottom:25px;
+    backdrop-filter:blur(8px);
 }
 
 .hero h1{
-
     color:#fff;
-
-    font-size:clamp(42px,6vw,72px);
-
-    line-height:1.08;
-
-    margin-bottom:24px;
-
+    font-size:clamp(42px,6vw,70px);
+    line-height:1.1;
+    margin-bottom:20px;
     font-weight:800;
 }
 
 .hero p{
-
-    color:#f3f6fb;
-
-    max-width:760px;
-
-    margin:auto;
-
+    color:#f2f6fb;
     font-size:1.15rem;
+    max-width:720px;
+    margin:auto;
 }
 
-/* =====================================================
+/* ===================================================
    WIZARD
-===================================================== */
+=================================================== */
 
 .wizard-section{
-
     margin-top:-90px;
-
-    position:relative;
-
-    z-index:10;
-
     padding:0 20px 100px;
-}
-
-.wizard-container{
-
-    max-width:820px;
-
-    margin:auto;
+    position:relative;
+    z-index:10;
 }
 
 .wizard-card{
-
+    max-width:900px;
+    margin:auto;
     background:#fff;
-
     border-radius:24px;
-
-    padding:55px;
-
-    box-shadow:0 25px 70px rgba(0,0,0,.10);
+    padding:50px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
 }
 
-/* =====================================================
-   PROGRESS BAR
-===================================================== */
+/* ===================================================
+   PROGRESS
+=================================================== */
 
-.progress-wrapper{
+.progress{
     margin-bottom:40px;
-    text-align:center;
 }
 
 .progress-bar{
     width:100%;
     height:10px;
     background:#e5e7eb;
-    border-radius:30px;
+    border-radius:50px;
     overflow:hidden;
-    margin-bottom:12px;
 }
 
-.progress-fill{
-    width:20%;
+.progress-bar span{
+    display:block;
+    width:25%;
     height:100%;
-    background:linear-gradient(90deg,#0057B8,#0096ff);
-    border-radius:30px;
-    transition:.4s;
+    background:#0057b8;
+    border-radius:50px;
+    transition:.35s;
 }
 
 #progressText{
+    margin-top:12px;
+    text-align:center;
     color:#64748b;
     font-weight:600;
 }
 
-/* =====================================================
-   STEP
-===================================================== */
+/* ===================================================
+   WIZARD CONTENT
+=================================================== */
 
-.step{
-    display:none;
-    animation:fadeUp .45s ease;
-}
-
-.step.active{
-    display:block;
-}
-
-.step h2{
-    font-size:2rem;
-    font-weight:700;
+#wizardContent{
     text-align:center;
-    margin-bottom:40px;
-    color:#002147;
+    min-height:340px;
 }
 
-/* =====================================================
+#wizardContent h2{
+    font-size:2rem;
+    color:#002147;
+    margin-bottom:35px;
+    font-weight:700;
+}
+
+#wizardContent p{
+    color:#64748b;
+    font-size:1.1rem;
+    margin-bottom:35px;
+}
+
+/* ===================================================
    BUTTONS
-===================================================== */
+=================================================== */
 
 .button-group{
     display:flex;
-    gap:20px;
     justify-content:center;
+    gap:20px;
     flex-wrap:wrap;
 }
 
-.btn-option{
+.button-group button{
 
     width:180px;
 
@@ -201,7 +171,9 @@ body{
 
     border-radius:14px;
 
-    background:#f3f6fb;
+    background:#0057b8;
+
+    color:#fff;
 
     font-size:18px;
 
@@ -212,69 +184,84 @@ body{
     transition:.3s;
 }
 
-.btn-option:hover{
+.button-group button:hover{
 
-    background:#0057B8;
-
-    color:#fff;
+    background:#003d82;
 
     transform:translateY(-4px);
 
-    box-shadow:0 12px 30px rgba(0,87,184,.25);
+    box-shadow:0 14px 35px rgba(0,87,184,.25);
+
 }
 
-/* =====================================================
-   LICENSE GRID
-===================================================== */
+/* ===================================================
+   LICENCE CARDS
+=================================================== */
 
-.license-grid{
+.licence-grid{
 
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+    gap:22px;
+
+    margin-top:20px;
 }
 
-.license-btn{
+.licence-card{
 
-    padding:22px;
+    background:#fff;
 
-    border:none;
+    border:2px solid #e5e7eb;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    background:#f5f8fc;
-
-    font-size:20px;
-
-    font-weight:700;
+    padding:35px 25px;
 
     cursor:pointer;
 
     transition:.3s;
+
+    text-align:center;
 }
 
-.license-btn:hover{
+.licence-card:hover{
 
-    background:#0057B8;
+    border-color:#0057b8;
 
-    color:#fff;
+    transform:translateY(-6px);
 
-    transform:translateY(-5px);
-
-    box-shadow:0 15px 35px rgba(0,87,184,.25);
+    box-shadow:0 18px 40px rgba(0,87,184,.15);
 }
 
-/* =====================================================
-   RESULTS
-===================================================== */
+.licence-card h3{
+
+    color:#002147;
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+.licence-card p{
+
+    margin:0;
+
+    color:#64748b;
+}
+
+/* ===================================================
+   RESULT
+=================================================== */
 
 .result-icon{
 
     width:90px;
 
     height:90px;
+
+    margin:0 auto 25px;
 
     border-radius:50%;
 
@@ -284,122 +271,54 @@ body{
 
     justify-content:center;
 
-    margin:0 auto 30px;
-
-    font-size:40px;
-
     color:#fff;
 
-    font-weight:700;
+    font-size:42px;
+
+    font-weight:bold;
 }
 
-.success-icon{
+.success{
 
     background:#22c55e;
 }
 
-.error-icon{
+.error{
 
     background:#ef4444;
 }
 
-.step p{
-
-    text-align:center;
-
-    font-size:18px;
-
-    color:#475569;
-
-    margin-bottom:35px;
-}
-
-.primary-btn{
+.result-btn{
 
     display:inline-block;
 
-    background:#0057B8;
-
-    color:#fff;
-
-    text-decoration:none;
+    margin-top:20px;
 
     padding:18px 36px;
 
     border-radius:12px;
+
+    background:#0057b8;
+
+    color:#fff;
+
+    text-decoration:none;
 
     font-weight:700;
 
     transition:.3s;
 }
 
-.primary-btn:hover{
+.result-btn:hover{
 
-    background:#003f86;
+    background:#003d82;
 
     transform:translateY(-3px);
 }
 
-.secondary-btn{
-
-    display:inline-block;
-
-    background:#fff;
-
-    color:#0057B8;
-
-    border:2px solid #0057B8;
-
-    text-decoration:none;
-
-    padding:18px 36px;
-
-    border-radius:12px;
-
-    font-weight:700;
-
-    transition:.3s;
-}
-
-.secondary-btn:hover{
-
-    background:#0057B8;
-
-    color:#fff;
-}
-
-.step.result{
-
-    text-align:center;
-}
-
-/* =====================================================
-   ANIMATION
-===================================================== */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(25px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* =====================================================
+/* ===================================================
    MOBILE
-===================================================== */
+=================================================== */
 
 @media(max-width:768px){
 
@@ -427,33 +346,27 @@ body{
 
 }
 
-.step h2{
+#wizardContent h2{
 
-    font-size:28px;
+    font-size:30px;
 
 }
 
-.license-grid{
+.licence-grid{
 
     grid-template-columns:1fr;
-
-}
-
-.btn-option,
-.license-btn{
-
-    width:100%;
 
 }
 
 .button-group{
 
     flex-direction:column;
+
 }
 
-.primary-btn,
-.secondary-btn{
+.button-group button{
 
     width:100%;
+
 }
 }

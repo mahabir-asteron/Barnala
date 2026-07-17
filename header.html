@@ -282,6 +282,17 @@
     .modern-links.active{
         right:0;
     }
+   .menu-item{
+    width:100%;
+}
+
+.has-dropdown{
+    width:100%;
+}
+
+.dropdown-toggle{
+    justify-content:space-between;
+}
 
     .modern-links>a,
     .dropdown-toggle{
@@ -312,15 +323,22 @@
 
     position:static;
 
+    left:auto;
+    top:auto;
+
     width:100%;
+    max-width:100%;
 
     display:none;
 
     opacity:1;
     visibility:visible;
+
     transform:none;
 
     grid-template-columns:1fr;
+
+    gap:18px;
 
     background:#1b1b1b;
 
@@ -332,8 +350,15 @@
 
     border-top:2px solid #0057B8;
 
-     overflow:visible;
+    overflow:visible;
 
+}
+   .dropdown-column{
+    width:100%;
+}
+
+.dropdown-column a{
+    width:100%;
 }
    
     .has-dropdown.open .dropdown-menu{

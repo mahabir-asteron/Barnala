@@ -24,13 +24,16 @@ body{
 
 .hero{
     position:relative;
-    height:520px;
-    background:url("compare-hero.webp") center/cover no-repeat;
+    min-height:620px;
+    background-image: url("images/compare-hero.webp");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     display:flex;
     align-items:center;
     color:#fff;
 }
-
+    
 .hero::before{
     content:"";
     position:absolute;

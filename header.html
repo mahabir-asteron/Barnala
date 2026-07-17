@@ -95,6 +95,7 @@
 
 .menu-item{
     position:relative;
+    width:100%;
 }
 
 .dropdown-toggle{
@@ -331,8 +332,29 @@
 
     border-top:2px solid #0057B8;
 
-    overflow:hidden;
+     overflow:visible;
 
+}
+   .menu-item{
+    width:100%;
+}
+
+.dropdown-toggle{
+    width:100%;
+}
+
+.dropdown-column{
+    width:100%;
+}
+
+.dropdown-column h4{
+    margin-bottom:12px;
+}
+
+.dropdown-column a{
+    display:block;
+    width:100%;
+    padding:10px 0;
 }
    
     .has-dropdown.open .dropdown-menu{
@@ -340,6 +362,7 @@
     }
 
 }
+   
 
 @media(min-width:1201px){
 
@@ -553,7 +576,15 @@ document.querySelectorAll(".dropdown-toggle").forEach(function(btn){
 
             e.preventDefault();
 
-            this.parentElement.classList.toggle("open");
+            document.querySelectorAll(".has-dropdown").forEach(function(item){
+
+    if(item !== btn.parentElement){
+        item.classList.remove("open");
+    }
+
+});
+
+btn.parentElement.classList.toggle("open");
 
         }
 

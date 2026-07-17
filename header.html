@@ -459,6 +459,11 @@ const overlay = document.getElementById("menuOverlay");
 
 menuToggle.addEventListener("click", function(){
 
+    // Reset all dropdowns before opening
+    document.querySelectorAll(".has-dropdown").forEach(function(item){
+        item.classList.remove("open");
+    });
+
     menu.classList.add("active");
     overlay.classList.add("active");
     menuToggle.classList.add("active");
@@ -466,7 +471,7 @@ menuToggle.addEventListener("click", function(){
     document.body.style.overflow = "hidden";
 
 });
-
+   
 /* =========================
    CLOSE FUNCTION
 ========================= */
@@ -479,8 +484,12 @@ function closeMenu(){
 
     document.body.style.overflow = "";
 
-}
+    // Close every dropdown
+    document.querySelectorAll(".has-dropdown").forEach(function(item){
+        item.classList.remove("open");
+    });
 
+}
 /* Close Button */
 
 closeBtn.addEventListener("click", closeMenu);

@@ -1701,16 +1701,41 @@ FOOTER
 
 <script>
 
+// Load Header
 fetch("header.html")
-.then(response=>response.text())
-.then(data=>{
-document.getElementById("site-header").innerHTML=data;
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-header").innerHTML = html;
+
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
+
+    scripts.forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+        } else {
+            newScript.textContent = oldScript.textContent;
+        }
+
+        document.body.appendChild(newScript);
+        oldScript.remove();
+
+    });
+
 });
 
+// Load Footer
 fetch("footer.html")
-.then(response=>response.text())
-.then(data=>{
-document.getElementById("site-footer").innerHTML=data;
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-footer").innerHTML = html;
+
 });
 
 /*=====================================================

@@ -551,11 +551,15 @@ document.querySelectorAll(".dropdown-toggle").forEach(function(btn){
 
     btn.addEventListener("click", function(e){
 
-        if(window.innerWidth<=1200){
+        if(window.innerWidth <= 1200){
 
             e.preventDefault();
 
-    }
+            this.parentElement.classList.toggle("open");
+
+        }
+
+    });
 
 });
 

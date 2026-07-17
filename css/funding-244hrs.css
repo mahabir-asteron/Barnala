@@ -1,1 +1,394 @@
+/*==================================================
+GOVERNMENT FUNDING (244 HRS)
+==================================================*/
 
+:root{
+    --primary:#0d6efd;
+    --dark:#081320;
+    --light:#ffffff;
+    --text:#d8e2f1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#081320;
+    color:#fff;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/*=========================================
+HERO
+=========================================*/
+
+.funding244-hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:140px 0 90px;
+
+    background:
+    linear-gradient(90deg,
+    rgba(8,19,32,.92) 0%,
+    rgba(8,19,32,.75) 45%,
+    rgba(8,19,32,.45) 100%),
+    url("../images/funding-hero.webp") center/cover no-repeat;
+
+}
+
+.subtitle{
+
+    display:inline-block;
+
+    color:#4aa3ff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.funding244-hero h1{
+
+    max-width:760px;
+
+    font-size:clamp(44px,5vw,72px);
+
+    line-height:1.08;
+
+    margin-bottom:25px;
+
+    font-weight:800;
+
+}
+
+.hero-text{
+
+    max-width:650px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#d8e2f1;
+
+}
+
+/*=========================================
+SECTION TITLE
+=========================================*/
+
+.government-steps{
+
+    padding:110px 0;
+
+    background:#081320;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+}
+
+.section-heading span{
+
+    color:#4aa3ff;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.section-heading h2{
+
+    font-size:clamp(36px,4vw,54px);
+
+    margin:18px 0;
+
+    font-weight:800;
+
+}
+
+.section-heading p{
+
+    color:#d8e2f1;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+STEP CARDS
+=========================================*/
+
+.steps-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.step-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.step-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#0d6efd;
+
+    box-shadow:0 20px 45px rgba(13,110,253,.25);
+
+}
+
+.step-number{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.step-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.step-card p{
+
+    color:#d8e2f1;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+CTA
+=========================================*/
+
+.funding-cta{
+
+    padding:110px 0;
+
+    background:#0b1827;
+
+}
+
+.cta-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:60px;
+
+}
+
+.cta-box h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.cta-box p{
+
+    color:#d8e2f1;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    background:#fff;
+
+    color:#0d6efd;
+
+    transform:translateY(-4px);
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.steps-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.funding244-hero{
+
+min-height:auto;
+
+padding:140px 0 80px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.funding244-hero{
+
+padding:120px 0 70px;
+
+}
+
+.funding244-hero h1{
+
+font-size:42px;
+
+}
+
+.hero-text{
+
+font-size:16px;
+
+}
+
+.section-heading h2{
+
+font-size:34px;
+
+}
+
+.step-card{
+
+padding:28px;
+
+}
+
+.cta-box{
+
+padding:40px 25px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.funding244-hero h1{
+
+font-size:32px;
+
+}
+
+.step-card h3{
+
+font-size:20px;
+
+}
+
+.cta-box h2{
+
+font-size:30px;
+
+}
+
+}

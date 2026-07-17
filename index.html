@@ -1533,16 +1533,21 @@ fetch("header.html")
 .then(res => res.text())
 .then(html => {
 
-    document.getElementById("site-header").innerHTML = html;
+    const header = document.getElementById("site-header");
 
-    const scripts = document
-        .getElementById("site-header")
-        .querySelectorAll("script");
+header.innerHTML = html;
 
-    header.querySelectorAll("script").forEach(script => {
+header.querySelectorAll("script").forEach(script => {
+
     const s = document.createElement("script");
-    s.textContent = script.textContent;
-    document.head.appendChild(s);
+
+    if (script.src) {
+        s.src = script.src;
+    } else {
+        s.textContent = script.textContent;
+    }
+
+    document.body.appendChild(s);
 });
 
 });

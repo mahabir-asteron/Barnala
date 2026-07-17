@@ -1,1 +1,375 @@
+/*==================================================
+FUNDING PAGE
+==================================================*/
 
+:root{
+    --primary:#0d6efd;
+    --secondary:#173b7a;
+    --dark:#081320;
+    --light:#ffffff;
+    --text:#d8e2f1;
+    --border:rgba(255,255,255,.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#081320;
+    color:#fff;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/*==================================================
+HERO
+==================================================*/
+
+.funding-hero{
+
+    position:relative;
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(8,19,32,.82),
+    rgba(8,19,32,.88)),
+    url("images/heroes/funding-hero.webp")
+    center/cover no-repeat;
+
+}
+
+.subtitle{
+
+    display:inline-block;
+
+    color:#4aa3ff;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    text-transform:uppercase;
+
+}
+
+.funding-hero h1{
+
+    font-size:clamp(42px,5vw,72px);
+
+    line-height:1.08;
+
+    font-weight:800;
+
+    margin-bottom:70px;
+
+}
+
+/*==================================================
+CARDS
+==================================================*/
+
+.funding-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+    margin-bottom:70px;
+
+}
+
+.funding-card{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:40px;
+
+    border-radius:26px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(14px);
+
+    transition:.35s;
+
+}
+
+.funding-card:hover{
+
+    transform:translateY(-10px);
+
+    background:#0d6efd;
+
+    border-color:#0d6efd;
+
+}
+
+.card-number{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+}
+
+.card-number sup{
+
+    font-size:16px;
+
+}
+
+.card-arrow{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#0d6efd;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    margin:auto;
+
+    transition:.35s;
+
+}
+
+.funding-card:hover .card-arrow{
+
+    background:#081320;
+
+    color:#fff;
+
+}
+
+/*==================================================
+NOTES
+==================================================*/
+
+.funding-notes{
+
+    width:min(850px,100%);
+
+    margin:auto;
+
+    text-align:left;
+
+}
+
+.funding-notes ol{
+
+    padding-left:22px;
+
+}
+
+.funding-notes li{
+
+    color:#d6dceb;
+
+    margin:12px 0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+.funding-card{
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media (max-width:992px){
+
+.funding-hero{
+
+padding:140px 0 100px;
+
+min-height:auto;
+
+}
+
+.funding-cards{
+
+grid-template-columns:1fr;
+
+gap:30px;
+
+}
+
+.funding-hero h1{
+
+font-size:52px;
+
+}
+
+.card-number{
+
+font-size:30px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.funding-hero{
+
+padding:120px 0 80px;
+
+}
+
+.subtitle{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.funding-hero h1{
+
+font-size:40px;
+
+margin-bottom:50px;
+
+}
+
+.funding-card{
+
+padding:30px;
+
+}
+
+.card-number{
+
+font-size:26px;
+
+}
+
+.card-arrow{
+
+width:50px;
+
+height:50px;
+
+font-size:22px;
+
+}
+
+.funding-notes li{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.funding-hero h1{
+
+font-size:32px;
+
+}
+
+.funding-card{
+
+padding:24px;
+
+}
+
+.card-number{
+
+font-size:22px;
+
+}
+
+.card-arrow{
+
+width:46px;
+
+height:46px;
+
+font-size:20px;
+
+}
+
+.funding-notes{
+
+font-size:15px;
+
+}
+
+}

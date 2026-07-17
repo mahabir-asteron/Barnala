@@ -49,10 +49,9 @@ HERO
     overflow:hidden;
 
     background:
-    linear-gradient(rgba(8,19,32,.82),
-    rgba(8,19,32,.88)),
-    url("images/heroes/funding-hero.webp")
-    center/cover no-repeat;
+linear-gradient(rgba(8,19,32,.82),rgba(8,19,32,.88)),
+url("../images/funding-hero.webp")
+center center/cover no-repeat;
 
 }
 

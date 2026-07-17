@@ -142,30 +142,119 @@ p{
 
 .hero{
 
-    background:#f7f9fc;
+    position:relative;
 
-}
+    min-height:90vh;
 
-.hero-grid{
+    display:flex;
 
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
     align-items:center;
-    gap:70px;
+
+    background:url("../class-3-training.webp") center center/cover no-repeat;
+
+    overflow:hidden;
 
 }
 
-.hero-content p{
+.hero-overlay{
 
-    max-width:650px;
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
 
 }
 
-.hero-image img{
+.hero-content{
 
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 20px 60px rgba(0,0,0,.12);
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    color:#fff;
+
+}
+
+.hero .section-label{
+
+    color:#4da3ff;
+
+}
+
+.hero h1{
+
+    color:#fff;
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:1.05;
+
+    margin:20px 0;
+
+}
+
+.hero p{
+
+    color:#f3f3f3;
+
+    font-size:22px;
+
+    max-width:700px;
+
+}
+
+.hero-buttons{
+
+    margin-top:45px;
+
+}
+
+@media(max-width:992px){
+
+.hero{
+
+    min-height:75vh;
+
+}
+
+.hero h1{
+
+    font-size:54px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:70vh;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
 
 }
 

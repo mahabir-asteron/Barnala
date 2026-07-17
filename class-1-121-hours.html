@@ -397,7 +397,41 @@ Email Us
 </section>
 <div id="site-footer"></div>
 <script>
-fetch('header.html').then(r=>r.text()).then(d=>document.getElementById('site-header').innerHTML=d);
-fetch('footer.html').then(r=>r.text()).then(d=>document.getElementById('site-footer').innerHTML=d);
+
+fetch("header.html")
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-header").innerHTML = html;
+
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
+
+    scripts.forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if(oldScript.src){
+            newScript.src = oldScript.src;
+        }else{
+            newScript.textContent = oldScript.textContent;
+        }
+
+        document.body.appendChild(newScript);
+        oldScript.remove();
+
+    });
+
+});
+
+fetch("footer.html")
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-footer").innerHTML = html;
+
+});
+
 </script>
 </body></html>

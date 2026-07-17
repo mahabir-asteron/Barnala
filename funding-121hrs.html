@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Private Sponsored Enrolment | Barnala Driver Training Academy</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/funding-121hrs.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div id="header"></div>
+
+<section class="funding121-hero">
+
+    <div class="container">
+
+        <span class="subtitle">
+            PRIVATE SPONSORED ENROLMENT
+        </span>
+
+        <h1>
+            Enroll in Your Desired Class 1 121.5 Course with Extended Payment Plans
+        </h1>
+
+        <p class="hero-text">
+            Apply Online or In-Person and get decision in no time.
+        </p>
+
+        <a href="apply-121hrs.html" class="btn-primary">
+            Apply Now
+        </a>
+
+    </div>
+
+</section>
+
+<section class="funding-note">
+
+    <div class="container">
+
+        <div class="note-box">
+
+            <h2>Important Note</h2>
+
+            <p>
+                1. M.E.L.T (Mandatory Entry-Level Training) is considered as Class 1 (121.5 Hrs) course.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(response=>response.text())
+.then(data=>{
+document.getElementById("header").innerHTML=data;
+});
+
+fetch("footer.html")
+.then(response=>response.text())
+.then(data=>{
+document.getElementById("footer").innerHTML=data;
+});
+
+</script>
+
+</body>
+</html>

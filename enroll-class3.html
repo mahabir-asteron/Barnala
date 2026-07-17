@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,9 +11,10 @@
     <meta name="description"
         content="Enroll in Barnala Driver Training Academy's Class 3 Driver Training Program.">
 
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="enroll-class3.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/enroll-class3.css">
+
 </head>
 
 <body>
@@ -22,7 +24,7 @@
 
     <main>
 
-        <!-- ================= HERO ================= -->
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -37,205 +39,33 @@
                 <h1>Enroll in Class 3 Driver Training</h1>
 
                 <p>
-                    Answer a few quick questions to determine your eligibility
-                    before enrolling in Barnala's Class 3 Driver Training Program.
+                    Answer a few quick questions to confirm your eligibility before
+                    enrolling in Barnala's Class 3 Driver Training Program.
                 </p>
 
             </div>
 
         </section>
 
-        <!-- ================= ENROLLMENT WIZARD ================= -->
+        <!-- WIZARD -->
 
         <section class="wizard-section">
 
-            <div class="wizard-container">
+            <div class="wizard-card">
 
-                <!-- Progress -->
-
-                <div class="progress-wrapper">
+                <div class="progress">
 
                     <div class="progress-bar">
-
-                        <div class="progress-fill" id="progressFill"></div>
-
+                        <span id="progressFill"></span>
                     </div>
 
                     <p id="progressText">Step 1 of 2</p>
 
                 </div>
 
-                <!-- Wizard Card -->
+                <div id="wizardContent">
 
-                <div class="wizard-card">
-
-                    <!-- STEP 1 -->
-
-                    <div class="step active" id="step1">
-
-                        <h2>Are you 18 years of age or older?</h2>
-
-                        <div class="button-group">
-
-                            <button class="btn-option" data-answer="yes">
-                                Yes
-                            </button>
-
-                            <button class="btn-option" data-answer="no">
-                                No
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- STEP 2 -->
-
-                    <div class="step" id="step2">
-
-                        <h2>Which class of licence do you currently hold?</h2>
-
-                        <div class="license-grid">
-
-                            <button class="license-btn" data-license="5L">
-                                Class 5L
-                            </button>
-
-                            <button class="license-btn" data-license="5I">
-                                Class 5I
-                            </button>
-
-                            <button class="license-btn" data-license="5F">
-                                Class 5F
-                            </button>
-
-                            <button class="license-btn" data-license="4">
-                                Class 4
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CLASS 5F -->
-
-                    <div class="step" id="step5F">
-
-                        <h2>Have you passed the Air Brake Knowledge Test?</h2>
-
-                        <div class="button-group">
-
-                            <button class="btn-option" data-answer="yes">
-                                Yes
-                            </button>
-
-                            <button class="btn-option" data-answer="no">
-                                No
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- CLASS 4 -->
-
-                    <div class="step" id="step4Medical">
-
-                        <h2>Have you completed your Medical Examination?</h2>
-
-                        <div class="button-group">
-
-                            <button class="btn-option">Yes</button>
-
-                            <button class="btn-option">No</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="step" id="step4Abstract">
-
-                        <h2>Do you have a Driver Abstract?</h2>
-
-                        <div class="button-group">
-
-                            <button class="btn-option">Yes</button>
-
-                            <button class="btn-option">No</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="step" id="step4Knowledge">
-
-                        <h2>Have you passed the Class 3 Knowledge Test?</h2>
-
-                        <div class="button-group">
-
-                            <button class="btn-option">Yes</button>
-
-                            <button class="btn-option">No</button>
-
-                        </div>
-
-                    </div>
-
-                    <div class="step" id="step4AirBrake">
-
-                        <h2>Have you passed the Air Brake Knowledge Test?</h2>
-
-                        <div class="button-group">
-
-                            <button class="btn-option">Yes</button>
-
-                            <button class="btn-option">No</button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUCCESS -->
-
-                    <div class="step" id="success">
-
-                        <div class="result-icon success-icon">
-                            ✓
-                        </div>
-
-                        <h2>Congratulations!</h2>
-
-                        <p>
-                            You are eligible to enrol in Barnala's Class 3 Driver
-                            Training Program.
-                        </p>
-
-                        <a href="contact.html" class="primary-btn">
-                            Proceed with Enrollment
-                        </a>
-
-                    </div>
-
-                    <!-- NOT ELIGIBLE -->
-
-                    <div class="step" id="notEligible">
-
-                        <div class="result-icon error-icon">
-                            !
-                        </div>
-
-                        <h2>Not Eligible Yet</h2>
-
-                        <p id="notEligibleMessage">
-                            Please complete the required requirements before
-                            enrolling.
-                        </p>
-
-                        <a href="contact.html" class="secondary-btn">
-                            Contact Barnala
-                        </a>
-
-                    </div>
+                    <!-- JavaScript will load the questions here -->
 
                 </div>
 
@@ -250,7 +80,12 @@
     <div id="footer"></div>
 
     <script src="include.js"></script>
-    <script src="enroll-class3.js"></script>
+
+    <script>
+
+        // JavaScript will be added here in the next step.
+
+    </script>
 
 </body>
 

@@ -41,25 +41,24 @@ Hero
 .hero-content{
     position:relative;
     z-index:2;
+    max-width:650px;
     color:#fff;
-    text-align:center;
-    max-width:850px;
-    padding:80px 20px 40px;
+    text-align:left;
+    padding-top:100px;
 }
 
 .hero-content h1{
-    font-size:clamp(46px,6vw,72px);
+    font-size:clamp(52px,6vw,82px);
     font-weight:800;
     line-height:1.05;
-    margin-bottom:30px;
+    margin:25px 0;
 }
 
 .hero-content p{
-    font-size:1.2rem;
+    max-width:600px;
+    font-size:1.25rem;
     line-height:1.8;
-    color:#eef4ff;
-    max-width:700px;
-    margin:0 auto;
+    color:#f4f6fb;
 }
 
 /*======================================
@@ -94,14 +93,6 @@ Eligibility
     line-height:1.8;
 }
 
-.eligibility-section .section-label,
-.eligibility-section h2,
-.section-text{
-    text-align:center;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-}
 
 .eligibility-grid{
     display:grid;

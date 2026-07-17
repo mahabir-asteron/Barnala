@@ -1,1 +1,459 @@
+/* =====================================================
+   RESET
+===================================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter, sans-serif;
+    background:#f7f9fc;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    position:relative;
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+
+    background:url("images/class3-hero.webp") center center/cover no-repeat;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,33,71,.70);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:40px 20px;
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+
+    color:#fff;
+
+    font-size:clamp(42px,6vw,72px);
+
+    line-height:1.08;
+
+    margin-bottom:24px;
+
+    font-weight:800;
+}
+
+.hero p{
+
+    color:#f3f6fb;
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+}
+
+/* =====================================================
+   WIZARD
+===================================================== */
+
+.wizard-section{
+
+    margin-top:-90px;
+
+    position:relative;
+
+    z-index:10;
+
+    padding:0 20px 100px;
+}
+
+.wizard-container{
+
+    max-width:820px;
+
+    margin:auto;
+}
+
+.wizard-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:55px;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.10);
+}
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+.progress-wrapper{
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.progress-bar{
+    width:100%;
+    height:10px;
+    background:#e5e7eb;
+    border-radius:30px;
+    overflow:hidden;
+    margin-bottom:12px;
+}
+
+.progress-fill{
+    width:20%;
+    height:100%;
+    background:linear-gradient(90deg,#0057B8,#0096ff);
+    border-radius:30px;
+    transition:.4s;
+}
+
+#progressText{
+    color:#64748b;
+    font-weight:600;
+}
+
+/* =====================================================
+   STEP
+===================================================== */
+
+.step{
+    display:none;
+    animation:fadeUp .45s ease;
+}
+
+.step.active{
+    display:block;
+}
+
+.step h2{
+    font-size:2rem;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:40px;
+    color:#002147;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-group{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn-option{
+
+    width:180px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#f3f6fb;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-option:hover{
+
+    background:#0057B8;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,87,184,.25);
+}
+
+/* =====================================================
+   LICENSE GRID
+===================================================== */
+
+.license-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.license-btn{
+
+    padding:22px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#f5f8fc;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.license-btn:hover{
+
+    background:#0057B8;
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,87,184,.25);
+}
+
+/* =====================================================
+   RESULTS
+===================================================== */
+
+.result-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 30px;
+
+    font-size:40px;
+
+    color:#fff;
+
+    font-weight:700;
+}
+
+.success-icon{
+
+    background:#22c55e;
+}
+
+.error-icon{
+
+    background:#ef4444;
+}
+
+.step p{
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#475569;
+
+    margin-bottom:35px;
+}
+
+.primary-btn{
+
+    display:inline-block;
+
+    background:#0057B8;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:18px 36px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+
+    background:#003f86;
+
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+
+    display:inline-block;
+
+    background:#fff;
+
+    color:#0057B8;
+
+    border:2px solid #0057B8;
+
+    text-decoration:none;
+
+    padding:18px 36px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+
+    background:#0057B8;
+
+    color:#fff;
+}
+
+.step.result{
+
+    text-align:center;
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:420px;
+
+}
+
+.hero h1{
+
+    font-size:40px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.wizard-card{
+
+    padding:30px 20px;
+
+}
+
+.step h2{
+
+    font-size:28px;
+
+}
+
+.license-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.btn-option,
+.license-btn{
+
+    width:100%;
+
+}
+
+.button-group{
+
+    flex-direction:column;
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+}
+}

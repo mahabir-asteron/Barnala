@@ -1,1 +1,240 @@
+/*==================================================
+CLASS 1 (121.5 HRS) FUNDING
+==================================================*/
 
+:root{
+    --primary:#0d6efd;
+    --dark:#081320;
+    --light:#ffffff;
+    --text:#d8e2f1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#081320;
+    color:#fff;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/*=========================================
+HERO
+=========================================*/
+
+.funding121-hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(90deg,
+    rgba(8,19,32,.90) 0%,
+    rgba(8,19,32,.70) 45%,
+    rgba(8,19,32,.45) 100%),
+    url("../images/funding-hero.webp") center/cover no-repeat;
+
+    padding:140px 0 90px;
+
+}
+
+.subtitle{
+
+    display:inline-block;
+
+    color:#4aa3ff;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.funding121-hero h1{
+
+    max-width:780px;
+
+    font-size:clamp(44px,5vw,72px);
+
+    line-height:1.08;
+
+    margin-bottom:30px;
+
+    font-weight:800;
+
+}
+
+.hero-text{
+
+    max-width:620px;
+
+    color:#d8e2f1;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:50px;
+
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 42px;
+
+    border-radius:50px;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    background:#fff;
+
+    color:#0d6efd;
+
+    transform:translateY(-4px);
+
+}
+
+/*=========================================
+NOTE
+=========================================*/
+
+.funding-note{
+
+    padding:80px 0;
+
+    background:#0b1827;
+
+}
+
+.note-box{
+
+    max-width:900px;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.note-box h2{
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.note-box p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#d8e2f1;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+.funding121-hero{
+
+padding:120px 0 70px;
+
+min-height:auto;
+
+}
+
+.funding121-hero h1{
+
+font-size:42px;
+
+}
+
+.hero-text{
+
+font-size:16px;
+
+}
+
+.note-box{
+
+padding:30px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.funding121-hero h1{
+
+font-size:34px;
+
+}
+
+.hero-text{
+
+font-size:15px;
+
+}
+
+.note-box h2{
+
+font-size:24px;
+
+}
+
+.note-box p{
+
+font-size:16px;
+
+}
+
+}

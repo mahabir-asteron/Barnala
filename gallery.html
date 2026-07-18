@@ -44,32 +44,7 @@ GALLERY
 
     <div class="container">
 
-        <div class="gallery-grid">
-
-            <!-- Image 1 -->
-            <div class="gallery-item">
-                <img src="images/gallery/1.jpg" alt="Barnala Gallery">
-            </div>
-
-            <!-- Image 2 -->
-            <div class="gallery-item">
-                <img src="images/gallery/2.jpg" alt="Barnala Gallery">
-            </div>
-
-            <!-- Image 3 -->
-            <div class="gallery-item">
-                <img src="images/gallery/3.jpg" alt="Barnala Gallery">
-            </div>
-
-            <!-- Image 4 -->
-            <div class="gallery-item">
-                <img src="images/gallery/4.jpg" alt="Barnala Gallery">
-            </div>
-
-            <!-- Continue the same structure for all gallery images -->
-
-        </div>
-
+        <div class="gallery-grid"></div>
     </div>
 
 </section>
@@ -114,5 +89,32 @@ document.getElementById("site-footer").innerHTML = html;
 });
 </script>
 
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const galleryGrid = document.querySelector(".gallery-grid");
+
+    for(let i = 1; i <= 40; i++){
+
+        const item = document.createElement("div");
+
+        item.className = "gallery-item";
+
+        item.innerHTML = `
+            <img src="images/gallery/${i}.jpg"
+                 alt="Barnala Gallery ${i}"
+                 loading="lazy">
+        `;
+
+        galleryGrid.appendChild(item);
+
+    }
+
+});
+
+</script>
+
+    
 </body>
 </html>

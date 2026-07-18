@@ -43,7 +43,7 @@ HERO
 
     position:relative;
 
-    min-height:52vh;
+    min-height:48vh;
 
     display:flex;
 
@@ -57,8 +57,8 @@ HERO
 
     background:
     linear-gradient(
-        rgba(4,27,69,.72),
-        rgba(4,27,69,.78)
+        rgba(4,27,69,.62),
+        rgba(4,27,69,.68)
     ),
     url("../images/gallery-hero.jpg")
     80% center / cover no-repeat;
@@ -83,7 +83,7 @@ HERO
 
     margin-left:80px;
 
-    transform:translateY(-20px);
+    transform:translateY(15px);
 
 }
 

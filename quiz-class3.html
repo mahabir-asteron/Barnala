@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz Practice | Barnala Driver Training Academy</title>
+
+<meta name="description"
+content="Practice your road rules knowledge with official Manitoba driving quizzes.">
+
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/quiz-class3.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <span class="hero-tag">
+
+            CLASS 3 RESOURCES
+
+        </span>
+
+        <h1>
+
+            Quiz Practice
+
+        </h1>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+QUIZ PRACTICE
+========================================= -->
+
+<section class="quiz-section">
+
+    <div class="container">
+
+        <div class="quiz-card">
+
+            <p>
+
+                Curious about your road rules knowledge?
+                Whether you're new to driving or experienced with
+                specific vehicle classes, multiple-choice quizzes are available to
+                assess and enhance your understanding. These quizzes focus on
+                fundamental concepts relevant to each licence class, providing
+                valuable practice without mirroring actual test questions.
+
+            </p>
+
+            <a
+                href="https://apps.mpi.mb.ca/DriverQuiz/?lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hero-btn">
+
+                Go to Driving Quizzes
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+fetch("header.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-header").innerHTML=html;
+
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old=>{
+
+const s=document.createElement("script");
+
+if(old.src){
+s.src=old.src;
+}else{
+s.textContent=old.textContent;
+}
+
+document.body.appendChild(s);
+
+});
+
+});
+</script>
+
+<script>
+fetch("footer.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-footer").innerHTML=html;
+
+});
+</script>
+
+</body>
+</html>

@@ -1,12 +1,6 @@
-/* ===================================================
-   GOOGLE FONT
-=================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-/* ===================================================
+/* ==========================================
    RESET
-=================================================== */
+========================================== */
 
 *{
     margin:0;
@@ -19,631 +13,422 @@ html{
 }
 
 body{
-    font-family:'Inter',sans-serif;
+    font-family:Inter,Arial,sans-serif;
     background:#f4f7fb;
     color:#1f2937;
-    line-height:1.7;
-    overflow-x:hidden;
+    line-height:1.6;
 }
 
-/* ===================================================
+/* ==========================================
    HERO
-=================================================== */
+========================================== */
 
 .hero{
-
     position:relative;
-
-    min-height:420px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    background:url("../images/class-3-training.webp") center center/cover no-repeat;
-
     overflow:hidden;
-
+    min-height:460px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:140px 20px 90px;
+    background:
+        linear-gradient(135deg,#002d72 0%,#0057b8 100%);
 }
 
 .hero-overlay{
-
     position:absolute;
-
     inset:0;
-
-    background:linear-gradient(
-        rgba(0,33,71,.82),
-        rgba(0,33,71,.82)
-    );
-
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.12),
+        transparent 45%);
 }
 
 .hero-content{
-
     position:relative;
-
     z-index:2;
-
-    max-width:850px;
-
-    padding:20px;
-
+    max-width:760px;
 }
 
 .hero-tag{
-
     display:inline-block;
-
-    padding:10px 22px;
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(10px);
-
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,.15);
     color:#fff;
-
-    font-size:.85rem;
-
+    font-size:13px;
     font-weight:700;
-
-    letter-spacing:2px;
-
-    margin-bottom:24px;
-
-    text-transform:uppercase;
-
+    letter-spacing:1px;
+    margin-bottom:22px;
 }
 
 .hero h1{
-
     color:#fff;
-
-    font-size:clamp(42px,5vw,68px);
-
-    line-height:1.1;
-
+    font-size:clamp(42px,6vw,70px);
+    line-height:1.05;
     font-weight:800;
-
-    margin-bottom:20px;
-
+    margin-bottom:22px;
 }
 
 .hero p{
-
-    color:#edf4ff;
-
-    font-size:18px;
-
-    max-width:700px;
-
+    color:rgba(255,255,255,.92);
+    font-size:19px;
+    max-width:650px;
     margin:auto;
-
 }
 
-/* ===================================================
-   ENROLLMENT WIZARD
-=================================================== */
+/* ==========================================
+   SECTION
+========================================== */
 
 .wizard-section{
-
-    position:relative;
-
-    z-index:10;
-
-    margin-top:-80px;
-
+    margin-top:-90px;
     padding:0 20px 100px;
-
+    position:relative;
+    z-index:20;
 }
 
 .wizard-card{
-
     max-width:900px;
-
     margin:auto;
-
     background:#fff;
-
-    border-radius:24px;
-
-    border:1px solid #e5e7eb;
-
-    padding:55px;
-
-    box-shadow:0 25px 60px rgba(15,23,42,.08);
-
+    border-radius:28px;
+    padding:45px;
+    box-shadow:
+        0 30px 80px rgba(15,23,42,.10);
 }
 
-/* ===================================================
-   PROGRESS BAR
-=================================================== */
+/* ==========================================
+   PROGRESS
+========================================== */
 
 .progress-wrapper{
-
     margin-bottom:45px;
-
 }
 
 .progress-bar{
-
     width:100%;
-
     height:12px;
-
-    background:#e8edf4;
-
+    background:#e5e7eb;
     border-radius:999px;
-
     overflow:hidden;
-
 }
 
-.progress-bar span{
-
+#progressFill{
     display:block;
-
-    width:0;
-
+    width:16%;
     height:100%;
-
-    background:linear-gradient(90deg,#0057b8,#2d8cff);
-
+    background:linear-gradient(90deg,#0057b8,#0094ff);
     border-radius:999px;
-
-    transition:width .4s ease;
-
+    transition:.4s;
 }
 
 .progress-info{
-
+    margin-top:18px;
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-    margin-top:16px;
-
 }
 
 #progressText{
-
-    color:#64748b;
-
     font-size:15px;
-
-    font-weight:600;
-
+    font-weight:700;
+    color:#6b7280;
 }
 
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
 .back-btn{
-
     border:none;
-
-    background:transparent;
-
+    background:#eef4ff;
     color:#0057b8;
-
+    padding:12px 20px;
+    border-radius:12px;
     font-size:15px;
-
     font-weight:700;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
 
 .back-btn:hover{
-
-    color:#003d82;
-
+    background:#dbeafe;
 }
 
-/* ===================================================
-   QUESTION AREA
-=================================================== */
+/* ==========================================
+   WIZARD
+========================================== */
 
 #wizardContent{
-
-    min-height:340px;
-
+    transition:.35s;
     text-align:center;
-
-    transition:opacity .3s ease, transform .3s ease;
-
 }
 
 #wizardContent h2{
-
-    color:#002147;
-
-    font-size:clamp(30px,3vw,38px);
-
-    line-height:1.25;
-
-    font-weight:800;
-
-    margin-bottom:20px;
-
+    font-size:38px;
+    line-height:1.15;
+    margin-bottom:18px;
+    color:#0f172a;
 }
 
 .question-subtitle{
-
-    max-width:600px;
-
-    margin:0 auto 35px;
-
-    color:#64748b;
-
-    font-size:17px;
-
-    line-height:1.8;
-
+    max-width:620px;
+    margin:0 auto 40px;
+    color:#6b7280;
+    font-size:18px;
 }
 
-#wizardContent p{
-
-    color:#64748b;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-}
-/* ===================================================
+/* ==========================================
    BUTTONS
-=================================================== */
+========================================== */
 
 .button-group{
-
     display:flex;
-
     justify-content:center;
-
-    gap:18px;
-
     flex-wrap:wrap;
-
-    margin-top:40px;
-
+    gap:18px;
 }
 
-.button-group button{
-
+.button-group button,
+.result-btn,
+.secondary-btn{
     min-width:180px;
-
-    padding:16px 34px;
-
+    padding:18px 28px;
     border:none;
-
-    border-radius:12px;
-
-    background:#0057b8;
-
-    color:#fff;
-
-    font-size:16px;
-
+    border-radius:14px;
+    font-size:17px;
     font-weight:700;
-
     cursor:pointer;
-
-    transition:all .3s ease;
-
-}
-
-.button-group button:hover{
-
-    background:#003f86;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 16px 35px rgba(0,87,184,.25);
-
-}
-
-/* ===================================================
-   LICENCE CARDS
-=================================================== */
-
-.licence-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-    gap:22px;
-
-    margin-top:40px;
-
-}
-
-.licence-card{
-
-    background:#fff;
-
-    border:2px solid #e5e7eb;
-
-    border-radius:18px;
-
-    padding:38px 24px;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:all .3s ease;
-
-}
-
-.licence-card:hover{
-
-    border-color:#0057b8;
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,87,184,.12);
-
-}
-
-.licence-card h3{
-
-    font-size:32px;
-
-    color:#0057b8;
-
-    font-weight:800;
-
-    margin-bottom:10px;
-
-}
-
-.licence-card p{
-
-    margin:0;
-
-    color:#64748b;
-
-    font-size:15px;
-
-    line-height:1.6;
-
-}
-
-/* ===================================================
-   RESULT SCREEN
-=================================================== */
-
-.result-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:0 auto 30px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:42px;
-
-    font-weight:800;
-
-}
-
-.result-icon.success{
-
-    background:#eaf8ef;
-
-    border:4px solid #22c55e;
-
-    color:#22c55e;
-
-}
-
-.result-icon.error{
-
-    background:#fff2f2;
-
-    border:4px solid #ef4444;
-
-    color:#ef4444;
-
-}
-
-.result-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:16px 38px;
-
-    margin-top:20px;
-
-    border-radius:12px;
-
-    background:#0057b8;
-
-    color:#fff;
-
-    font-weight:700;
-
+    transition:.3s;
     text-decoration:none;
-
-    transition:all .3s ease;
-
 }
 
+.button-group button,
+.result-btn{
+    background:#0057b8;
+    color:#fff;
+}
+
+.button-group button:hover,
 .result-btn:hover{
-
     background:#003f86;
-
-    transform:translateY(-3px);
-
+    transform:translateY(-2px);
 }
 
 .secondary-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:16px 38px;
-
-    margin-top:20px;
-
-    margin-left:15px;
-
-    border:2px solid #0057b8;
-
-    border-radius:12px;
-
-    background:#fff;
-
-    color:#0057b8;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:all .3s ease;
-
+    background:#eef2f7;
+    color:#1f2937;
 }
 
 .secondary-btn:hover{
+    background:#dde5ef;
+}
 
+/* ==========================================
+   LICENCE CARDS
+========================================== */
+
+.licence-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:35px;
+}
+
+.licence-card{
+    padding:34px 24px;
+    border:2px solid #e5e7eb;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.3s;
+    background:#fff;
+}
+
+.licence-card:hover{
+    border-color:#0057b8;
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,87,184,.10);
+}
+
+.licence-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#002d72;
+}
+
+.licence-card p{
+    color:#6b7280;
+    font-size:16px;
+}
+
+/* ==========================================
+   RESULT ICONS
+========================================== */
+
+.result-icon{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 30px;
+    font-size:48px;
+    font-weight:800;
+}
+
+.success{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.error{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ==========================================
+   ENROLLMENT FORM
+========================================== */
+
+.enrollment-form{
+    text-align:left;
+}
+
+.enrollment-form h2{
+    text-align:center;
+    margin-bottom:12px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-bottom:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    font-size:16px;
+    transition:.3s;
+    background:#fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#0057b8;
+    box-shadow:0 0 0 4px rgba(0,87,184,.12);
+}
+
+textarea{
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:20px;
+    padding:18px;
+    border:none;
+    border-radius:14px;
     background:#0057b8;
-
     color:#fff;
-
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
 }
 
-/* ===================================================
-   ANIMATION
-=================================================== */
-
-#wizardContent{
-
-    animation:fadeIn .35s ease;
-
+.submit-btn:hover{
+    background:#003f86;
 }
 
-@keyframes fadeIn{
+/* ==========================================
+   THANK YOU
+========================================== */
 
-    from{
-
-        opacity:0;
-
-        transform:translateY(18px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
+.thank-you{
+    text-align:center;
+    padding:30px 10px;
 }
 
-/* ===================================================
-   MOBILE
-=================================================== */
+.thank-you h2{
+    margin-bottom:18px;
+}
 
-@media (max-width:768px){
+.thank-you p{
+    max-width:620px;
+    margin:auto;
+    color:#6b7280;
+}
 
-    .hero{
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
-        min-height:360px;
+@media(max-width:768px){
 
-    }
+.hero{
+    min-height:380px;
+    padding:120px 20px 70px;
+}
 
-    .hero h1{
+.hero h1{
+    font-size:42px;
+}
 
-        font-size:40px;
+.hero p{
+    font-size:17px;
+}
 
-    }
+.wizard-card{
+    padding:30px 24px;
+}
 
-    .hero p{
+#wizardContent h2{
+    font-size:30px;
+}
 
-        font-size:16px;
+.licence-grid{
+    grid-template-columns:1fr;
+}
 
-    }
+.form-row{
+    grid-template-columns:1fr;
+}
 
-    .wizard-section{
+.progress-info{
+    flex-direction:column;
+    gap:14px;
+}
 
-        margin-top:-60px;
+.button-group{
+    flex-direction:column;
+}
 
-        padding:0 15px 70px;
-
-    }
-
-    .wizard-card{
-
-        padding:30px 22px;
-
-        border-radius:18px;
-
-    }
-
-    #wizardContent{
-
-        min-height:auto;
-
-    }
-
-    #wizardContent h2{
-
-        font-size:28px;
-
-    }
-
-    .licence-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .button-group{
-
-        flex-direction:column;
-
-    }
-
-    .button-group button{
-
-        width:100%;
-
-    }
-
-    .result-btn,
-
-    .secondary-btn{
-
-        width:100%;
-
-        margin:12px 0 0;
-
-    }
+.button-group button,
+.result-btn,
+.secondary-btn{
+    width:100%;
+}
 
 }

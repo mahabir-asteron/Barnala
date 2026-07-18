@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Barnala Driver Training Academy</title>
+
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/gallery.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <h1>Gallery</h1>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+GALLERY
+========================================= -->
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        <div class="gallery-grid">
+
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="images/gallery/1.jpg" alt="Barnala Gallery">
+            </div>
+
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="images/gallery/2.jpg" alt="Barnala Gallery">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="images/gallery/3.jpg" alt="Barnala Gallery">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="gallery-item">
+                <img src="images/gallery/4.jpg" alt="Barnala Gallery">
+            </div>
+
+            <!-- Continue the same structure for all gallery images -->
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(html => {
+
+document.getElementById("site-header").innerHTML = html;
+
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old => {
+
+const s = document.createElement("script");
+
+if(old.src){
+s.src = old.src;
+}else{
+s.textContent = old.textContent;
+}
+
+document.body.appendChild(s);
+
+});
+
+});
+</script>
+
+<script>
+fetch("footer.html")
+.then(r => r.text())
+.then(html => {
+
+document.getElementById("site-footer").innerHTML = html;
+
+});
+</script>
+
+</body>
+</html>

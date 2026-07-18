@@ -43,7 +43,7 @@ HERO
 
     position:relative;
 
-    min-height:70vh;
+    min-height:80vh;
 
     display:flex;
 
@@ -57,8 +57,8 @@ HERO
 
     background:
     linear-gradient(
-        rgba(4,27,60,.62),
-        rgba(4,27,60,.68)
+        rgba(4,27,64,.62),
+        rgba(4,27,64,.68)
     ),
     url("../images/gallery-hero.jpg")
     80% center / cover no-repeat;

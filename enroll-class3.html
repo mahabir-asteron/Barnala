@@ -295,39 +295,32 @@ function notEligible(message){
 
     render(`
 
-        <div class="result-icon error">
+        <div class="not-eligible-screen">
 
-            !
+            <h2>No Worries</h2>
 
-        </div>
+            <p class="question-subtitle">
 
-        <h2>
+                Let's connect and make it possible.
 
-            Not Eligible Yet
+            </p>
 
-        </h2>
+            <div class="button-group">
 
-        <p class="question-subtitle">
+                <a href="contact-us.html" class="result-btn">
 
-            ${message}
+                    Let's Connect
 
-        </p>
+                </a>
 
-        <div class="button-group">
-
-            <button
-                class="secondary-btn"
-                onclick="startWizard()">
-
-                Try Again
-
-            </button>
+            </div>
 
         </div>
 
     `);
 
 }
+        
         /* =========================================
    STEP 1
 ========================================= */

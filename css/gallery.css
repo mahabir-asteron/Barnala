@@ -66,12 +66,17 @@ HERO
 }
 
 .hero-overlay{
-
     position:absolute;
-
     inset:0;
-
+    background:
+        linear-gradient(
+            90deg,
+            rgba(6,28,63,.90) 0%,
+            rgba(6,28,63,.75) 45%,
+            rgba(6,28,63,.45) 100%
+        );
 }
+
 
 .hero-content{
 

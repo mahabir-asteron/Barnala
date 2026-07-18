@@ -56,10 +56,12 @@ HERO
     overflow:hidden;
 
     background:
-    linear-gradient(rgba(5,25,70,.72),
-    rgba(5,25,70,.72)),
+    linear-gradient(
+        rgba(4,27,69,.82),
+        rgba(4,27,69,.72)
+    ),
     url("../images/gallery-hero.jpg")
-    center center/cover no-repeat;
+    center center / cover no-repeat;
 
 }
 

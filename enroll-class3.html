@@ -4,12 +4,15 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Enroll in Class 3 | Barnala Driver Training Academy</title>
+    <title>
+        Enroll in Class 3 | Barnala Driver Training Academy
+    </title>
 
     <meta name="description"
-        content="Enroll in Barnala Driver Training Academy's Class 3 Driver Training Program.">
+          content="Check your eligibility and enroll in Barnala Driver Training Academy's Class 3 Driver Training Program.">
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -19,12 +22,17 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- ===========================
+         HEADER
+    ============================ -->
+
     <div id="header"></div>
 
     <main>
 
-        <!-- HERO -->
+        <!-- ===========================
+             HERO
+        ============================ -->
 
         <section class="hero">
 
@@ -33,466 +41,99 @@
             <div class="hero-content">
 
                 <span class="hero-tag">
-                    CLASS 3 ENROLLMENT
+
+                    CLASS 3 DRIVER TRAINING
+
                 </span>
 
-                <h1>Enroll in Class 3 Driver Training</h1>
+                <h1>
+
+                    Class 3 Enrollment
+
+                </h1>
 
                 <p>
-                    Answer a few quick questions to confirm your eligibility before
-                    enrolling in Barnala's Class 3 Driver Training Program.
+
+                    Complete a quick eligibility check.
+                    If you qualify, you'll immediately continue
+                    to the registration form without leaving
+                    this page.
+
                 </p>
 
             </div>
 
         </section>
 
-      <!-- ================= ENROLLMENT WIZARD ================= -->
+        <!-- ===========================
+             ENROLLMENT WIZARD
+        ============================ -->
 
-<section class="wizard-section">
+        <section class="wizard-section">
 
-    <div class="wizard-card">
+            <div class="wizard-card">
 
-        <!-- Progress -->
+                <!-- Progress -->
 
-        <div class="progress-wrapper">
+                <div class="progress-wrapper">
 
-            <div class="progress-bar">
-                <span id="progressFill"></span>
+                    <div class="progress-bar">
+
+                        <span id="progressFill"></span>
+
+                    </div>
+
+                    <div class="progress-info">
+
+                        <span id="progressText">
+
+                            Step 1 of 6
+
+                        </span>
+
+                        <button
+                            id="backBtn"
+                            class="back-btn"
+                            style="display:none;">
+
+                            ← Back
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Dynamic Content -->
+
+                <div id="wizardContent">
+
+                </div>
+
             </div>
 
-            <div class="progress-info">
-
-                <span id="progressText">
-                    Step 1 of 6
-                </span>
-
-                <button id="backBtn" class="back-btn" style="display:none;">
-                    ← Back
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- Question Area -->
-
-        <div id="wizardContent">
-
-        </div>
-
-    </div>
-
-</section>
-
+        </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- ===========================
+         FOOTER
+    ============================ -->
 
     <div id="footer"></div>
 
     <script src="include.js"></script>
 
+    <script>
 
-        <script>
+        /*
 
-const wizard = document.getElementById("wizardContent");
-const progressFill = document.getElementById("progressFill");
-const progressText = document.getElementById("progressText");
-const backBtn = document.getElementById("backBtn");
+        JavaScript will be added in
+        Part 3, Part 4, Part 5 and Part 6.
 
-let history = [];
+        */
 
-function updateProgress(step,total){
-
-    progressFill.style.width=((step/total)*100)+"%";
-    progressText.innerHTML=`Step ${step} of ${total}`;
-
-}
-
-function render(html){
-
-    wizard.innerHTML=html;
-
-}
-
-function goBack(){
-
-    if(history.length===0) return;
-
-    const previous=history.pop();
-
-    previous();
-
-}
-
-backBtn.onclick=goBack;
-
-function saveStep(fn){
-
-    history.push(fn);
-
-    backBtn.style.display="inline-block";
-
-}
-
-function resetWizard(){
-
-    history=[];
-
-    backBtn.style.display="none";
-
-}
-
-startWizard();
-
-function startWizard(){
-
-    resetWizard();
-
-    updateProgress(1,6);
-
-    render(`
-
-        <h2>Are you 18 years of age or older?</h2>
-
-        <div class="button-group">
-
-            <button onclick="ageYes()">Yes</button>
-
-            <button onclick="ageNo()">No</button>
-
-        </div>
-
-    `);
-
-}
-
-function ageYes(){
-
-    saveStep(startWizard);
-
-    licenceStep();
-
-}
-
-function ageNo(){
-
-    notEligible(
-        "You must be at least 18 years old to enrol in the Class 3 Driver Training Program."
-    );
-
-}
-
-function licenceStep(){
-
-    updateProgress(2,6);
-
-    render(`
-
-        <h2>Which class of licence do you currently hold?</h2>
-
-        <div class="licence-grid">
-
-            <div class="licence-card" onclick="licence5L()">
-
-                <h3>Class 5L</h3>
-
-                <p>Learner Licence</p>
-
-            </div>
-
-            <div class="licence-card" onclick="licence5I()">
-
-                <h3>Class 5I</h3>
-
-                <p>Intermediate Licence</p>
-
-            </div>
-
-            <div class="licence-card" onclick="licence5F()">
-
-                <h3>Class 5F</h3>
-
-                <p>Full Licence</p>
-
-            </div>
-
-            <div class="licence-card" onclick="licence4()">
-
-                <h3>Class 4</h3>
-
-                <p>Commercial Licence</p>
-
-            </div>
-
-        </div>
-
-    `);
-
-}
-
-function licence5L(){
-
-    notEligible(
-        "Please obtain your Class 5 Full Licence before enrolling."
-    );
-
-}
-
-function licence5I(){
-
-    notEligible(
-        "Please complete the Intermediate stage and obtain your Class 5 Full Licence."
-    );
-
-}
-        // =====================================
-// CLASS 5F FLOW
-// =====================================
-
-function licence5F(){
-
-    saveStep(licenceStep);
-
-    updateProgress(3,3);
-
-    render(`
-
-        <h2>Have you passed the Air Brake Knowledge Test?</h2>
-
-        <div class="button-group">
-
-            <button onclick="airBrakePassed()">Yes</button>
-
-            <button onclick="airBrakeFailed()">No</button>
-
-        </div>
-
-    `);
-
-}
-
-function airBrakePassed(){
-
-    eligible();
-
-}
-
-function airBrakeFailed(){
-
-    notEligible(
-        "Please complete the Air Brake Knowledge Test before enrolling."
-    );
-
-}
-
-
-// =====================================
-// CLASS 4 FLOW
-// =====================================
-
-function licence4(){
-
-    saveStep(licenceStep);
-
-    medicalStep();
-
-}
-
-function medicalStep(){
-
-    updateProgress(3,6);
-
-    render(`
-
-        <h2>Have you completed your Medical Examination?</h2>
-
-        <div class="button-group">
-
-            <button onclick="medicalYes()">Yes</button>
-
-            <button onclick="medicalNo()">No</button>
-
-        </div>
-
-    `);
-
-}
-
-function medicalYes(){
-
-    saveStep(medicalStep);
-
-    driverAbstractStep();
-
-}
-
-function medicalNo(){
-
-    notEligible(
-        "Please complete your Medical Examination before enrolling."
-    );
-
-}
-
-function driverAbstractStep(){
-
-    updateProgress(4,6);
-
-    render(`
-
-        <h2>Do you have a Driver Abstract?</h2>
-
-        <div class="button-group">
-
-            <button onclick="abstractYes()">Yes</button>
-
-            <button onclick="abstractNo()">No</button>
-
-        </div>
-
-    `);
-
-}
-
-function abstractYes(){
-
-    saveStep(driverAbstractStep);
-
-    knowledgeStep();
-
-}
-
-function abstractNo(){
-
-    notEligible(
-        "Please obtain your Driver Abstract before enrolling."
-    );
-
-}
-
-function knowledgeStep(){
-
-    updateProgress(5,6);
-
-    render(`
-
-        <h2>Have you passed the Class 3 Knowledge Test?</h2>
-
-        <div class="button-group">
-
-            <button onclick="knowledgeYes()">Yes</button>
-
-            <button onclick="knowledgeNo()">No</button>
-
-        </div>
-
-    `);
-
-}
-
-function knowledgeYes(){
-
-    saveStep(knowledgeStep);
-
-    class4AirBrakeStep();
-
-}
-
-function knowledgeNo(){
-
-    notEligible(
-        "Please complete the Class 3 Knowledge Test before enrolling."
-    );
-
-}
-
-function class4AirBrakeStep(){
-
-    updateProgress(6,6);
-
-    render(`
-
-        <h2>Have you passed the Air Brake Knowledge Test?</h2>
-
-        <div class="button-group">
-
-            <button onclick="eligible()">Yes</button>
-
-            <button onclick="airBrakeFailed()">No</button>
-
-        </div>
-
-    `);
-
-}
-
-
-// =====================================
-// RESULT SCREENS
-// =====================================
-
-function eligible(){
-
-    backBtn.style.display="none";
-
-    progressFill.style.width="100%";
-
-    progressText.innerHTML="Completed";
-
-    render(`
-
-        <div class="result-icon success">✓</div>
-
-        <h2>Congratulations!</h2>
-
-        <p>
-
-            You are eligible to enrol in Barnala's
-            Class 3 Driver Training Program.
-
-        </p>
-
-        <a href="https://barnala.ca/enroll/class3" class="result-btn">
-
-            Proceed with Enrollment
-
-        </a>
-
-    `);
-
-}
-
-function notEligible(message){
-
-    backBtn.style.display="none";
-
-    progressFill.style.width="100%";
-
-    progressText.innerHTML="Completed";
-
-    render(`
-
-        <div class="result-icon error">!</div>
-
-        <h2>Not Eligible Yet</h2>
-
-        <p>${message}</p>
-
-        <a href="contact-us.html" class="result-btn">
-
-            Contact Barnala
-
-        </a>
-
-    `);
-
-}
-
-</script>
-
+    </script>
 
 </body>
 

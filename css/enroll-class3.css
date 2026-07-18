@@ -500,16 +500,24 @@ textarea{
 
 .hero-btn-outline{
 
-    border:2px solid rgba(255,255,255,.8);
+    border:2px solid rgba(255,255,255,.35);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
 
     color:#ffffff;
 
 }
 
-.hero-btn-outline:hover{
+.hero-btn{
 
     background:#ffffff;
 
     color:#0057b8;
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.18);
 
 }

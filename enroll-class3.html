@@ -126,12 +126,867 @@
 
     <script>
 
-        /*
+        /* =========================================
+   ELEMENTS
+========================================= */
 
-        JavaScript will be added in
-        Part 3, Part 4, Part 5 and Part 6.
+const wizard = document.getElementById("wizardContent");
+const progressFill = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
+const backBtn = document.getElementById("backBtn");
 
-        */
+const TOTAL_STEPS = 6;
+
+let history = [];
+
+/* =========================================
+   HELPERS
+========================================= */
+
+function render(html){
+
+    wizard.style.opacity = "0";
+    wizard.style.transform = "translateY(20px)";
+
+    setTimeout(()=>{
+
+        wizard.innerHTML = html;
+
+        wizard.style.opacity = "1";
+        wizard.style.transform = "translateY(0)";
+
+    },180);
+
+}
+
+function updateProgress(step){
+
+    progressFill.style.width =
+        ((step / TOTAL_STEPS) * 100) + "%";
+
+    progressText.textContent =
+        `Step ${step} of ${TOTAL_STEPS}`;
+
+}
+
+function finishWizard(){
+
+    progressFill.style.width = "100%";
+
+    progressText.textContent = "Completed";
+
+    backBtn.style.display = "none";
+
+}
+
+function resetWizard(){
+
+    history = [];
+
+    backBtn.style.display = "none";
+
+    progressFill.style.width = "16%";
+
+    progressText.textContent = "Step 1 of 6";
+
+}
+
+function saveStep(step){
+
+    history.push(step);
+
+    backBtn.style.display = "inline-flex";
+
+}
+
+function goBack(){
+
+    if(history.length===0){
+
+        return;
+
+    }
+
+    const previous = history.pop();
+
+    previous();
+
+}
+
+backBtn.addEventListener("click",goBack);
+
+/* =========================================
+   START
+========================================= */
+
+function startWizard(){
+
+    resetWizard();
+
+    ageQuestion();
+
+}
+
+window.addEventListener("load",startWizard);
+
+/* =========================================
+   RESULT SCREENS
+========================================= */
+
+function eligible(){
+
+    finishWizard();
+
+    render(`
+
+        <div class="result-icon success">
+
+            ✓
+
+        </div>
+
+        <h2>
+
+            You're Eligible!
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            Congratulations! You meet the eligibility
+            requirements for Barnala's Class 3 Driver
+            Training Program.
+
+        </p>
+
+        <div class="button-group">
+
+            <button
+                class="result-btn"
+                onclick="showEnrollmentForm()">
+
+                Proceed with Enrollment
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function notEligible(message){
+
+    finishWizard();
+
+    render(`
+
+        <div class="result-icon error">
+
+            !
+
+        </div>
+
+        <h2>
+
+            Not Eligible Yet
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            ${message}
+
+        </p>
+
+        <div class="button-group">
+
+            <button
+                class="secondary-btn"
+                onclick="startWizard()">
+
+                Try Again
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+        /* =========================================
+   STEP 1
+========================================= */
+
+function ageQuestion(){
+
+    updateProgress(1);
+
+    render(`
+
+        <h2>Are you 18 years of age or older?</h2>
+
+        <p class="question-subtitle">
+
+            Applicants must be at least 18 years old to enroll in
+            Barnala's Class 3 Driver Training Program.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="ageYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="ageNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function ageYes(){
+
+    saveStep(ageQuestion);
+
+    licenceQuestion();
+
+}
+
+function ageNo(){
+
+    notEligible(
+
+        "You must be at least 18 years old before you can enroll."
+
+    );
+
+}
+
+/* =========================================
+   STEP 2
+========================================= */
+
+function licenceQuestion(){
+
+    updateProgress(2);
+
+    render(`
+
+        <h2>Which licence do you currently hold?</h2>
+
+        <p class="question-subtitle">
+
+            Select the licence you currently have.
+
+        </p>
+
+        <div class="licence-grid">
+
+            <div class="licence-card"
+                onclick="licence5L()">
+
+                <h3>Class 5L</h3>
+
+                <p>Learner Licence</p>
+
+            </div>
+
+            <div class="licence-card"
+                onclick="licence5I()">
+
+                <h3>Class 5I</h3>
+
+                <p>Intermediate Licence</p>
+
+            </div>
+
+            <div class="licence-card"
+                onclick="licence5F()">
+
+                <h3>Class 5F</h3>
+
+                <p>Full Licence</p>
+
+            </div>
+
+            <div class="licence-card"
+                onclick="licence4()">
+
+                <h3>Class 4</h3>
+
+                <p>Commercial Licence</p>
+
+            </div>
+
+        </div>
+
+    `);
+
+}
+
+/* =========================================
+   CLASS 5L
+========================================= */
+
+function licence5L(){
+
+    notEligible(
+
+        "Please obtain your Class 5 Full Licence before enrolling."
+
+    );
+
+}
+
+/* =========================================
+   CLASS 5I
+========================================= */
+
+function licence5I(){
+
+    notEligible(
+
+        "Please complete the Intermediate stage and obtain your Class 5 Full Licence before enrolling."
+
+    );
+
+}
+
+/* =========================================
+   CLASS 5F
+========================================= */
+
+function licence5F(){
+
+    saveStep(licenceQuestion);
+
+    updateProgress(3);
+
+    render(`
+
+        <h2>
+
+            Have you passed the Air Brake Knowledge Test?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            A valid Air Brake Knowledge Test is required
+            before you can continue.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="airBrakeYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="airBrakeNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function airBrakeYes(){
+
+    eligible();
+
+}
+
+function airBrakeNo(){
+
+    notEligible(
+
+        "Please complete the Air Brake Knowledge Test before enrolling."
+
+    );
+
+}
+
+/* =========================================
+   CLASS 4
+========================================= */
+
+function licence4(){
+
+    saveStep(licenceQuestion);
+
+    medicalQuestion();
+
+}
+
+function medicalQuestion(){
+
+    updateProgress(3);
+
+    render(`
+
+        <h2>
+
+            Have you completed your Medical Examination?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            A valid medical examination is required for
+            Class 3 licensing.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="medicalYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="medicalNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function medicalYes(){
+
+    saveStep(medicalQuestion);
+
+    abstractQuestion();
+
+}
+
+function medicalNo(){
+
+    notEligible(
+
+        "Please complete your Medical Examination before enrolling."
+
+    );
+
+}
+
+function abstractQuestion(){
+
+    updateProgress(4);
+
+    render(`
+
+        <h2>
+
+            Do you have a current Driver Abstract?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            Your Driver Abstract is required during enrollment.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="abstractYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="abstractNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function abstractYes(){
+
+    saveStep(abstractQuestion);
+
+    knowledgeQuestion();
+
+}
+
+function abstractNo(){
+
+    notEligible(
+
+        "Please obtain your Driver Abstract before enrolling."
+
+    );
+
+}
+
+function knowledgeQuestion(){
+
+    updateProgress(5);
+
+    render(`
+
+        <h2>
+
+            Have you passed the Class 3 Knowledge Test?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            Passing the Class 3 Knowledge Test is required
+            before training begins.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="knowledgeYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="knowledgeNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function knowledgeYes(){
+
+    saveStep(knowledgeQuestion);
+
+    finalAirBrakeQuestion();
+
+}
+
+function knowledgeNo(){
+
+    notEligible(
+
+        "Please pass the Class 3 Knowledge Test before enrolling."
+
+    );
+
+}
+
+function finalAirBrakeQuestion(){
+
+    updateProgress(6);
+
+    render(`
+
+        <h2>
+
+            Have you passed the Air Brake Knowledge Test?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            This is the final requirement before enrollment.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="eligible()">
+
+                Yes
+
+            </button>
+
+            <button onclick="airBrakeNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+        /* =========================================
+   ENROLLMENT FORM
+========================================= */
+
+function showEnrollmentForm(){
+
+    finishWizard();
+
+    window.scrollTo({
+        top: document.querySelector(".wizard-section").offsetTop - 80,
+        behavior: "smooth"
+    });
+
+    render(`
+
+<div class="enrollment-form">
+
+    <h2>Registration Request</h2>
+
+    <p class="question-subtitle">
+
+        Complete the form below and our admissions team will contact you to complete your Class 3 enrollment.
+
+    </p>
+
+    <form id="class3Form">
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="firstName">First Name *</label>
+
+                <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="lastName">Last Name *</label>
+
+                <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    required>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="phone">Phone Number *</label>
+
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">Email Address *</label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="course">Course</label>
+
+                <input
+                    id="course"
+                    type="text"
+                    value="Class 3 Driver Training"
+                    readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="branch">Preferred Branch *</label>
+
+                <select
+                    id="branch"
+                    name="branch"
+                    required>
+
+                    <option value="">Select Branch</option>
+
+                    <option>Winnipeg</option>
+
+                    <option>Steinbach</option>
+
+                    <option>Portage la Prairie</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="startDate">
+
+                    Preferred Start Date
+
+                </label>
+
+                <input
+                    id="startDate"
+                    name="startDate"
+                    type="date">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="licence">
+
+                    Current Licence
+
+                </label>
+
+                <select
+                    id="licence"
+                    name="licence">
+
+                    <option>Class 5F</option>
+
+                    <option>Class 4</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="message">
+
+                Additional Information
+
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us anything you'd like us to know..."></textarea>
+
+        </div>
+
+        <button
+            class="submit-btn"
+            type="submit">
+
+            Submit Registration Request
+
+        </button>
+
+    </form>
+
+</div>
+
+`);
+
+    const form = document.getElementById("class3Form");
+
+    form.addEventListener("submit",function(e){
+
+        e.preventDefault();
+
+        showThankYou();
+
+    });
+
+}
+
+/* =========================================
+   THANK YOU
+========================================= */
+
+function showThankYou(){
+
+    render(`
+
+<div class="thank-you">
+
+    <div class="result-icon success">
+
+        ✓
+
+    </div>
+
+    <h2>
+
+        Thank You!
+
+    </h2>
+
+    <p>
+
+        Your registration request has been received successfully.
+
+        A member of the Barnala Driver Training Academy team will contact you shortly to complete your enrollment.
+
+    </p>
+
+    <br>
+
+    <button
+        class="result-btn"
+        onclick="startWizard()">
+
+        Return to Eligibility Checker
+
+    </button>
+
+</div>
+
+`);
+
+}
 
     </script>
 

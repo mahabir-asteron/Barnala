@@ -26,14 +26,26 @@ body{
 .hero{
     position:relative;
     overflow:hidden;
-    min-height:460px;
+
+    min-height:520px;
+
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:140px 20px 90px;
+
+    padding:140px 20px 120px;
+
     background:
-        linear-gradient(135deg,#002d72 0%,#0057b8 100%);
+        linear-gradient(
+            rgba(0,38,89,.60),
+            rgba(0,38,89,.60)
+        ),
+        url("../images/class3-hero.jpg");
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
 }
 
 .hero-overlay{

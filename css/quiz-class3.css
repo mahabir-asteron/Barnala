@@ -1,1 +1,251 @@
+/* =========================================
+GOOGLE FONT
+========================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:#1c1c1c;
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+
+    position:relative;
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(rgba(4,27,69,.72),
+    rgba(4,27,69,.78)),
+    url("../images/quiz-practice-hero.png")
+    center center/cover no-repeat;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,255,255,.12),
+    transparent 60%);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:820px;
+
+    color:#fff;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:28px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(42px,6vw,72px);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+}
+
+/* =========================================
+QUIZ SECTION
+========================================= */
+
+.quiz-section{
+
+    padding:100px 0;
+
+}
+
+.quiz-card{
+
+    max-width:760px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.08);
+
+}
+
+.quiz-card p{
+
+    font-size:1.12rem;
+
+    color:#5a6473;
+
+    margin-bottom:40px;
+
+}
+
+/* =========================================
+BUTTON
+========================================= */
+
+.hero-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border-radius:999px;
+
+    background:#0057b8;
+
+    color:#fff;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 40px rgba(0,87,184,.25);
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#00479a;
+
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:60vh;
+
+}
+
+.hero h1{
+
+    font-size:44px;
+
+}
+
+.quiz-section{
+
+    padding:70px 0;
+
+}
+
+.quiz-card{
+
+    padding:40px 28px;
+
+}
+
+.quiz-card p{
+
+    font-size:1rem;
+
+}
+
+.hero-btn{
+
+    width:100%;
+
+}
+
+}

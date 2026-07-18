@@ -61,7 +61,7 @@ HERO
         rgba(4,27,69,.78)
     ),
     url("../images/gallery-hero.jpg")
-    center right / cover no-repeat;
+    80% center / cover no-repeat;
 
 }
 

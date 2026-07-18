@@ -57,8 +57,8 @@ HERO
 
     background:
     linear-gradient(
-        rgba(4,27,69,.62),
-        rgba(4,27,69,.68)
+        rgba(4,27,60,.62),
+        rgba(4,27,60,.68)
     ),
     url("../images/gallery-hero.jpg")
     80% center / cover no-repeat;
@@ -66,17 +66,12 @@ HERO
 }
 
 .hero-overlay{
-    position:absolute;
-    inset:0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(6,28,63,.90) 0%,
-            rgba(6,28,63,.75) 45%,
-            rgba(6,28,63,.45) 100%
-        );
-}
 
+    position:absolute;
+
+    inset:0;
+
+}
 
 .hero-content{
 

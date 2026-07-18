@@ -31,7 +31,7 @@ img{
 }
 
 .container{
-    width:min(1240px,92%);
+    width:min(1400px,96%);
     margin:auto;
 }
 
@@ -84,13 +84,9 @@ HERO
 .hero h1{
 
     color:#fff;
-
-    font-size:clamp(40px,5vw,62px);
-
+    font-size:clamp(48px,6vw,72px);
     font-weight:700;
-
-    line-height:1.1;
-
+    line-height:1.05;
 }
 
 /*=========================================

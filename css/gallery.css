@@ -61,7 +61,7 @@ HERO
         rgba(4,27,69,.78)
     ),
     url("../images/gallery-hero.jpg")
-    center center / cover no-repeat;
+    center right / cover no-repeat;
 
 }
 
@@ -75,7 +75,7 @@ HERO
 
 .hero-content{
 
-    position:relative;
+    position:relative;transform: translateY(-20px);
 
     z-index:2;
 
@@ -87,7 +87,7 @@ HERO
 
     font-size:clamp(40px,5vw,62px);
 
-    font-weight:800;
+    font-weight:700;
 
     line-height:1.1;
 

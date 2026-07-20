@@ -1,689 +1,865 @@
-/*=========================================
+/*==================================================
+  CLASS 5 DRIVING LESSONS
+  Barnala Driver Training Academy
+==================================================*/
+
+/*========================
 RESET
-=========================================*/
+========================*/
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-
-font-family:'Manrope',sans-serif;
-background:#fff;
-color:#1b1b1b;
-
+    font-family:'Manrope',sans-serif;
+    background:#ffffff;
+    color:#171717;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
 img{
+    max-width:100%;
+    display:block;
+}
 
-max-width:100%;
-display:block;
-
+a{
+    text-decoration:none;
 }
 
 .container{
+    width:min(92%,1380px);
+    margin:auto;
+}
 
-width:min(1200px,92%);
-margin:auto;
+section{
+    padding:100px 0;
+}
+
+/*========================
+TYPOGRAPHY
+========================*/
+
+.section-label{
+
+    display:inline-block;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    color:#0057B8;
+
+    margin-bottom:18px;
 
 }
 
-/*=========================================
+h1{
+
+    font-size:clamp(52px,6vw,82px);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    margin-bottom:28px;
+
+}
+
+h2{
+
+    font-size:clamp(34px,4vw,54px);
+
+    line-height:1.08;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.section-text{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+/*========================
+BUTTONS
+========================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.btn,
+.btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:200px;
+
+    padding:16px 34px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+}
+
+.btn{
+
+    background:#0057B8;
+
+    color:#fff;
+
+}
+
+.btn:hover{
+
+    background:#171717;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    border:2px solid #0057B8;
+
+    color:#0057B8;
+
+    background:#fff;
+
+}
+
+.btn-outline:hover{
+
+    background:#0057B8;
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+/*========================
 HERO
-=========================================*/
+========================*/
 
 .hero{
 
-position:relative;
+    position:relative;
 
-height:620px;
+    min-height:90vh;
 
-display:flex;
-align-items:center;
+    display:flex;
 
-background:url("images/class5-hero.jpg") center center/cover no-repeat;
+    align-items:center;
 
-overflow:hidden;
+    overflow:hidden;
+
+    background:url("../images/class5-hero.jpg") center center/cover no-repeat;
 
 }
 
 .hero-overlay{
 
-position:absolute;
-inset:0;
+    position:absolute;
 
-background:linear-gradient(
-90deg,
-rgba(8,43,97,.88) 0%,
-rgba(8,43,97,.55) 55%,
-rgba(8,43,97,.15) 100%
-);
+    inset:0;
+
+    background:rgba(0,0,0,.58);
+
+}
+
+.hero .container{
+
+    position:relative;
+
+    z-index:2;
 
 }
 
 .hero-content{
 
-position:relative;
-z-index:2;
-max-width:700px;
+    max-width:720px;
+
+    color:#fff;
 
 }
 
-.hero-tag{
+.hero .section-label{
 
-display:inline-block;
-
-padding:10px 22px;
-
-border-radius:50px;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(10px);
-
-color:#fff;
-
-font-size:15px;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-margin-bottom:28px;
+    color:#73b7ff;
 
 }
 
-.hero-content h1{
+.hero h1{
 
-font-size:clamp(60px,7vw,92px);
-
-font-weight:800;
-
-line-height:.92;
-
-letter-spacing:-2px;
-
-text-transform:uppercase;
-
-color:#fff;
+    color:#fff;
 
 }
 
-/*=========================================
-INTRO
-=========================================*/
+.hero p{
+
+    color:#f3f3f3;
+
+    font-size:21px;
+
+    max-width:650px;
+
+}
+
+@media(max-width:992px){
+
+.hero{
+
+    min-height:75vh;
+
+    padding:80px 0;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.hero{
+
+    min-height:70vh;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-direction:column;
+
+}
+
+.btn,
+.btn-outline{
+
+    width:100%;
+
+}
+
+h1{
+
+    font-size:42px;
+
+}
+
+h2{
+
+    font-size:34px;
+
+}
+
+p{
+
+    font-size:16px;
+
+}
+
+}
+
+/*==================================================
+INTRODUCTION
+==================================================*/
 
 .intro-section{
 
-padding:90px 0;
-
-background:#fff;
+    background:#ffffff;
 
 }
 
-.intro-content{
+.intro-section h2{
 
-max-width:950px;
+    max-width:900px;
 
-margin:0 auto;
-
-text-align:center;
+    margin:0 auto 30px;
 
 }
 
-.intro-content p{
+.intro-section .section-text{
 
-font-size:20px;
-
-line-height:1.9;
-
-color:#555;
-
-margin-bottom:24px;
+    margin-bottom:25px;
 
 }
 
-.intro-content p:last-child{
+.intro-section .section-text:last-child{
 
-margin-bottom:0;
-
-}
-
-/*=========================================
-SECTION HEADING
-=========================================*/
-
-.section-heading{
-
-max-width:760px;
-margin:0 auto 60px;
-text-align:center;
+    margin-bottom:0;
 
 }
 
-.section-heading span{
 
-display:inline-block;
-
-padding:8px 18px;
-
-background:#eaf2ff;
-
-color:#0d4ea6;
-
-border-radius:50px;
-
-font-size:14px;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-margin-bottom:18px;
-
-}
-
-.section-heading h2{
-
-font-size:clamp(36px,5vw,56px);
-
-font-weight:800;
-
-line-height:1.05;
-
-color:#082b61;
-
-margin-bottom:18px;
-
-}
-
-.section-heading p{
-
-font-size:18px;
-
-line-height:1.8;
-
-color:#666;
-
-}
-
-/*=========================================
+/*==================================================
 HALL OF SUCCESS
-=========================================*/
+==================================================*/
 
-.hall-success{
+.student-section{
 
-padding:100px 0;
-
-background:#f7f9fc;
+    background:#f7f9fc;
 
 }
 
 .student-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
-gap:35px;
+    gap:35px;
+
+    margin-top:60px;
 
 }
 
 .student-card{
 
-background:#fff;
+    background:#fff;
 
-border-radius:24px;
+    border-radius:20px;
 
-overflow:hidden;
+    overflow:hidden;
 
-box-shadow:0 12px 35px rgba(0,0,0,.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
-transition:.35s;
+    transition:.35s ease;
 
 }
 
 .student-card:hover{
 
-transform:translateY(-8px);
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
 
 }
 
 .student-card img{
 
-width:100%;
+    width:100%;
 
-height:380px;
+    height:340px;
 
-object-fit:cover;
+    object-fit:cover;
+
+    transition:transform .4s ease;
+
+}
+
+.student-card:hover img{
+
+    transform:scale(1.04);
 
 }
 
 .student-info{
 
-padding:28px;
+    padding:28px;
 
-text-align:center;
+    text-align:center;
 
 }
 
 .student-info h3{
 
-font-size:24px;
+    color:#0057B8;
 
-font-weight:700;
-
-color:#082b61;
-
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
 
-.student-info span{
+.student-info p{
 
-color:#0d4ea6;
+    color:#888;
 
-font-weight:700;
+    margin:0;
 
 }
 
-@media(max-width:768px){
+
+/*==================================================
+CONTENT SECTION
+==================================================*/
+
+.content-section{
+
+    background:#ffffff;
+
+}
+
+.content-block{
+
+    background:#fff;
+
+    padding:40px;
+
+    margin-top:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.content-block h3{
+
+    color:#0057B8;
+
+    margin-bottom:18px;
+
+}
+
+.content-block ul{
+
+    padding-left:22px;
+
+}
+
+.content-block li{
+
+    margin-bottom:15px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+CARD SECTIONS
+==================================================*/
+
+.included-section,
+.modules-section,
+.career-section,
+.practice-section,
+.why-section{
+
+    background:#f7f9fc;
+
+}
+
+.included-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.included-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.included-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+.included-card h3{
+
+    color:#0057B8;
+
+    margin-bottom:15px;
+
+}
+
+.included-card p{
+
+    margin:0;
+
+}
+
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:992px){
 
 .student-grid{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
+
+}
+
+.included-grid{
+
+    grid-template-columns:repeat(2,1fr);
 
 }
 
 .student-card img{
 
-height:300px;
+    height:300px;
 
 }
 
 }
 
-/*=========================================
-CONTENT SECTION
-=========================================*/
 
-.content-section{
+/*==================================================
+MOBILE
+==================================================*/
 
-padding:100px 0;
+@media(max-width:768px){
 
-background:#fff;
+.student-grid,
+.included-grid{
 
-}
-
-.content-box{
-
-max-width:900px;
-
-margin:0 auto;
+    grid-template-columns:1fr;
 
 }
 
-.content-box p{
+.student-card img{
 
-font-size:19px;
-
-line-height:1.9;
-
-color:#555;
-
-margin-bottom:24px;
+    height:240px;
 
 }
 
-.content-box p:last-child{
+.content-block{
 
-margin-bottom:0;
-
-}
-
-/*=========================================
-ALTERNATE SECTION
-=========================================*/
-
-.content-section.alt{
-
-background:#f7f9fc;
+    padding:28px;
 
 }
 
-.check-list{
+.student-info{
 
-list-style:none;
-
-padding:0;
-
-margin:35px 0;
+    padding:22px;
 
 }
 
-.check-list li{
+}
 
-position:relative;
+/*==================================================
+FAQ SECTION
+==================================================*/
 
-padding-left:34px;
+.faq-section{
 
-margin-bottom:22px;
-
-font-size:18px;
-
-line-height:1.9;
-
-color:#555;
+    background:#ffffff;
 
 }
 
-.check-list li::before{
+.accordion{
 
-content:"✓";
+    max-width:1000px;
 
-position:absolute;
-
-left:0;
-
-top:2px;
-
-width:22px;
-
-height:22px;
-
-border-radius:50%;
-
-background:#0d4ea6;
-
-color:#fff;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:13px;
-
-font-weight:700;
+    margin:60px auto 0;
 
 }
 
-/*=========================================
-FAQ
-=========================================*/
+.accordion-item{
 
-.faq-wrapper{
+    background:#fff;
 
-max-width:900px;
-margin:0 auto;
+    border-radius:18px;
 
-}
+    overflow:hidden;
 
-.faq-item{
+    margin-bottom:25px;
 
-background:#fff;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 
-padding:35px;
-
-border-radius:18px;
-
-margin-bottom:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
 
 }
 
-.faq-item:last-child{
+.accordion-item:hover{
 
-margin-bottom:0;
-
-}
-
-.faq-item h3{
-
-font-size:24px;
-
-color:#082b61;
-
-margin-bottom:15px;
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
 
 }
 
-.faq-item p{
+.accordion-btn{
 
-font-size:18px;
+    width:100%;
 
-line-height:1.8;
+    border:none;
 
-color:#555;
+    background:#fff;
 
-}
+    cursor:pointer;
 
-/*=========================================
-READY SECTION
-=========================================*/
+    padding:28px 35px;
 
-.ready-section{
+    display:flex;
 
-padding:100px 0;
+    justify-content:space-between;
 
-background:#082b61;
+    align-items:center;
 
-}
+    text-align:left;
 
-.ready-content{
+    font-size:22px;
 
-max-width:850px;
+    font-weight:700;
 
-margin:0 auto;
-
-text-align:center;
-
-color:#fff;
+    color:#171717;
 
 }
 
-.ready-content span{
+.accordion-btn::after{
 
-display:inline-block;
+    content:"+";
 
-padding:8px 20px;
+    color:#0057B8;
 
-border-radius:40px;
+    font-size:30px;
 
-background:rgba(255,255,255,.15);
-
-font-size:14px;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-margin-bottom:20px;
+    transition:.3s;
 
 }
 
-.ready-content h2{
+.accordion-item.active .accordion-btn::after{
 
-font-size:clamp(40px,5vw,60px);
-
-font-weight:800;
-
-margin-bottom:20px;
+    content:"−";
 
 }
 
-.ready-content p{
+.accordion-content{
 
-font-size:19px;
+    max-height:0;
 
-line-height:1.9;
+    overflow:hidden;
 
-margin-bottom:35px;
-
-opacity:.95;
+    transition:max-height .35s ease;
 
 }
 
-/*=========================================
+.accordion-content p{
+
+    padding:0 35px 30px;
+
+    margin:0;
+
+}
+
+
+/*==================================================
+FINAL CTA
+==================================================*/
+
+.final-cta{
+
+    background:#0057B8;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.final-cta .section-label{
+
+    color:#9dd1ff;
+
+}
+
+.final-cta h2,
+.final-cta p{
+
+    color:#fff;
+
+}
+
+.final-cta .hero-buttons{
+
+    justify-content:center;
+
+}
+
+
+/*==================================================
 ADVISOR
-=========================================*/
+==================================================*/
 
 .advisor-section{
 
-padding:100px 0;
+    background:#171717;
 
-background:#f7f9fc;
+    text-align:center;
 
-}
-
-.advisor-content{
-
-max-width:900px;
-
-margin:0 auto;
-
-text-align:center;
+    color:#fff;
 
 }
 
-.advisor-content span{
+.advisor-section .section-label{
 
-display:inline-block;
-
-padding:8px 20px;
-
-border-radius:40px;
-
-background:#eaf2ff;
-
-color:#0d4ea6;
-
-font-size:14px;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-margin-bottom:20px;
+    color:#73b7ff;
 
 }
 
-.advisor-content h2{
+.advisor-section h2,
+.advisor-section p{
 
-font-size:clamp(40px,5vw,60px);
-
-font-weight:800;
-
-color:#082b61;
-
-margin-bottom:20px;
+    color:#fff;
 
 }
 
-.advisor-content p{
+.advisor-section .hero-buttons{
 
-font-size:19px;
-
-line-height:1.9;
-
-color:#555;
-
-margin-bottom:40px;
+    justify-content:center;
 
 }
 
-.advisor-buttons{
 
-display:flex;
+/*==================================================
+SMOOTH ANIMATION
+==================================================*/
 
-justify-content:center;
+.student-card,
+.included-card,
+.content-block,
+.accordion-item{
 
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-/*=========================================
-BUTTONS
-=========================================*/
-
-.primary-btn,
-.secondary-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-padding:16px 34px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:700;
-
-transition:.3s;
+    transition:all .35s ease;
 
 }
 
-.primary-btn{
 
-background:#0d4ea6;
+/*==================================================
+RESPONSIVE
+==================================================*/
 
-color:#fff;
+@media(max-width:992px){
 
-}
+.accordion-btn{
 
-.primary-btn:hover{
-
-background:#083a7f;
-
-}
-
-.secondary-btn{
-
-border:2px solid #0d4ea6;
-
-color:#0d4ea6;
-
-background:#fff;
+    font-size:20px;
 
 }
-
-.secondary-btn:hover{
-
-background:#0d4ea6;
-
-color:#fff;
 
 }
 
 @media(max-width:768px){
 
-.ready-section,
-.advisor-section{
+.accordion-btn{
 
-padding:70px 0;
+    padding:22px;
 
-}
-
-.advisor-buttons{
-
-flex-direction:column;
+    font-size:18px;
 
 }
 
-.primary-btn,
-.secondary-btn{
+.accordion-content p{
 
-width:100%;
+    padding:0 22px 22px;
+
+}
+
+.final-cta .hero-buttons,
+.advisor-section .hero-buttons{
+
+    flex-direction:column;
 
 }
 

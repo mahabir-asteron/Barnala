@@ -1,205 +1,193 @@
 /*=========================================
-WHY CLASS 5
+HALL OF SUCCESS
 =========================================*/
 
-.why-class5{
+.hall-success{
 
 padding:100px 0;
 background:#f7f9fc;
 
 }
 
-.section-title{
-
-max-width:760px;
-margin:0 auto 60px;
-text-align:center;
-
-}
-
-.section-title span{
-
-display:inline-block;
-background:#e8eefb;
-color:#0d4ea6;
-padding:8px 18px;
-border-radius:50px;
-font-size:.85rem;
-font-weight:700;
-letter-spacing:1px;
-margin-bottom:20px;
-
-}
-
-.section-title h2{
-
-font-size:clamp(34px,4vw,52px);
-font-weight:800;
-margin-bottom:20px;
-color:#082b61;
-
-}
-
-.section-title p{
-
-font-size:18px;
-line-height:1.8;
-color:#666;
-
-}
-
-.feature-grid{
+.student-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:60px;
 
 }
 
-.feature-card{
+.student-card{
 
 background:#fff;
-padding:40px 30px;
 border-radius:24px;
+overflow:hidden;
 box-shadow:0 15px 40px rgba(0,0,0,.08);
 transition:.35s;
 
 }
 
-.feature-card:hover{
+.student-card:hover{
 
 transform:translateY(-10px);
 
 }
 
-.feature-card .icon{
+.student-image{
 
-font-size:48px;
-margin-bottom:20px;
+overflow:hidden;
 
 }
 
-.feature-card h3{
+.student-image img{
+
+width:100%;
+display:block;
+aspect-ratio:4/3;
+object-fit:cover;
+transition:.45s;
+
+}
+
+.student-card:hover img{
+
+transform:scale(1.06);
+
+}
+
+.student-info{
+
+padding:28px;
+text-align:center;
+
+}
+
+.student-info h3{
 
 font-size:24px;
-margin-bottom:15px;
 color:#082b61;
+margin-bottom:10px;
 
 }
 
-.feature-card p{
+.student-info span{
 
+font-size:18px;
+font-weight:700;
+color:#0d4ea6;
+
+}
+
+/*=========================================
+CONTENT SECTIONS
+=========================================*/
+
+.content-section{
+
+padding:100px 0;
+background:#fff;
+
+}
+
+.content-section.alt{
+
+background:#f7f9fc;
+
+}
+
+.content-wrapper{
+
+max-width:1100px;
+margin:auto;
+
+}
+
+.content-wrapper h2{
+
+font-size:clamp(34px,4vw,52px);
+font-weight:800;
+color:#082b61;
+margin-bottom:25px;
+
+}
+
+.content-wrapper p{
+
+font-size:18px;
+line-height:1.9;
+color:#555;
+margin-bottom:25px;
+
+}
+
+.content-wrapper ul{
+
+list-style:none;
+padding:0;
+margin:0;
+
+}
+
+.content-wrapper li{
+
+display:flex;
+align-items:flex-start;
+gap:14px;
+margin-bottom:18px;
+font-size:18px;
 line-height:1.8;
-color:#666;
+color:#555;
 
 }
+
+.content-wrapper li::before{
+
+content:"✓";
+width:28px;
+height:28px;
+border-radius:50%;
+background:#0d4ea6;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+font-weight:700;
+flex-shrink:0;
+margin-top:2px;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
 
 @media(max-width:768px){
 
-.why-class5{
+.hall-success,
+.content-section{
 
 padding:70px 0;
 
 }
 
-.section-title{
-
-margin-bottom:40px;
-
-}
-
-}
-
-/*=========================================
-GDL SECTION
-=========================================*/
-
-.gdl-section{
-
-padding:110px 0;
-background:#ffffff;
-
-}
-
-.gdl-timeline{
-
-margin-top:70px;
-display:grid;
-grid-template-columns:1fr auto 1fr auto 1fr;
-align-items:center;
-gap:30px;
-
-}
-
-.gdl-card{
-
-background:#fff;
-padding:40px;
-border-radius:24px;
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-transition:.35s;
-
-}
-
-.gdl-card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.gdl-number{
-
-width:70px;
-height:70px;
-background:#0d4ea6;
-color:#fff;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-font-weight:700;
-margin-bottom:25px;
-
-}
-
-.gdl-card h3{
-
-font-size:28px;
-margin-bottom:18px;
-color:#082b61;
-
-}
-
-.gdl-card p{
-
-line-height:1.9;
-color:#666;
-
-}
-
-.timeline-line{
-
-height:4px;
-background:#0d4ea6;
-border-radius:20px;
-
-}
-
-@media(max-width:992px){
-
-.gdl-timeline{
+.student-grid{
 
 grid-template-columns:1fr;
-gap:30px;
 
 }
 
-.timeline-line{
+.content-wrapper h2{
 
-width:4px;
-height:60px;
-margin:auto;
+font-size:32px;
+
+}
+
+.content-wrapper p,
+.content-wrapper li{
+
+font-size:17px;
 
 }
 

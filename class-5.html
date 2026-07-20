@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Class 5 Driving Lessons in Manitoba | Barnala Driver Training Academy</title>
+
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/class-5.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<main>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <span class="hero-tag">
+            CLASS 5
+        </span>
+
+        <h1>
+            Driving Lessons in Manitoba
+        </h1>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+INTRO
+========================================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-content">
+
+            <p>
+                Looking to earn your Class 5 license in Manitoba? Our Class 5 driving lessons offer the foundation for every driver's journey, whether you're a beginner, a new Canadian resident, or someone looking to refresh their skills. Designed in line with Manitoba's Graduated Driver Licensing (GDL) program, our course helps students move confidently from Learner's to Intermediate, and finally to Full Class 5 licensing.
+            </p>
+
+            <p>
+                With our experienced instructors, flexible scheduling, and proven curriculum, you'll master safe driving habits that last a lifetime.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEXT SECTION STARTS HERE -->
+
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(html => {
+
+document.getElementById("site-header").innerHTML = html;
+
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old => {
+
+const s = document.createElement("script");
+
+if(old.src){
+s.src = old.src;
+}else{
+s.textContent = old.textContent;
+}
+
+document.body.appendChild(s);
+
+});
+
+});
+</script>
+
+<script>
+fetch("footer.html")
+.then(r => r.text())
+.then(html => {
+
+document.getElementById("site-footer").innerHTML = html;
+
+});
+</script>
+
+</body>
+</html>

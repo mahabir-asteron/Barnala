@@ -708,5 +708,41 @@ document.getElementById("site-footer").innerHTML = data;
 
 </script>
 
+    <script>
+document.querySelectorAll(".accordion-btn").forEach(button => {
+
+button.addEventListener("click", () => {
+
+const item = button.parentElement;
+
+const content = item.querySelector(".accordion-content");
+
+const openItem = document.querySelector(".accordion-item.active");
+
+if(openItem && openItem !== item){
+
+openItem.classList.remove("active");
+
+openItem.querySelector(".accordion-content").style.maxHeight = null;
+
+}
+
+item.classList.toggle("active");
+
+if(item.classList.contains("active")){
+
+content.style.maxHeight = content.scrollHeight + "px";
+
+}else{
+
+content.style.maxHeight = null;
+
+}
+
+});
+
+});
+</script>
+
 </body>
 </html>

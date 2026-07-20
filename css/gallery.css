@@ -43,7 +43,7 @@ HERO
 
     position:relative;
 
-    min-height:80vh;
+    min-height:60vh;
 
     display:flex;
 
@@ -81,9 +81,9 @@ HERO
 
     max-width:600px;
 
-    margin-left:80px;
+    margin-left:50px;
 
-    transform:translateY(15px);
+    transform:translateY(0);
 
 }
 
@@ -167,13 +167,33 @@ MOBILE
 
 .hero{
 
-    min-height:45vh;
+    min-height:38vh;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background-position:center center;
+
+}
+
+.hero-content{
+
+    max-width:100%;
+
+    margin-left:0;
+
+    padding:0 24px;
+
+    transform:none;
 
 }
 
 .hero h1{
 
     font-size:42px;
+
+    line-height:1.1;
 
 }
 
@@ -204,6 +224,18 @@ SMALL MOBILE
 =========================================*/
 
 @media(max-width:480px){
+
+.hero{
+
+    min-height:34vh;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
 
 .gallery-grid{
 

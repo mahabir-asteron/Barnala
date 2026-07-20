@@ -112,120 +112,6 @@ color:#fff;
 }
 
 /*=========================================
-CLASS 5 PAGE
-=========================================*/
-
-:root{
-
---primary:#0d4ea6;
---secondary:#082b61;
---white:#ffffff;
---light:#f7f9fc;
---text:#555;
-
-}
-
-/*=========================================
-GLOBAL
-=========================================*/
-
-.container{
-
-width:min(1200px,92%);
-margin:0 auto;
-
-}
-
-img{
-
-max-width:100%;
-display:block;
-
-}
-
-/*=========================================
-HERO
-=========================================*/
-
-.course-hero{
-
-position:relative;
-
-min-height:600px;
-
-display:flex;
-align-items:center;
-
-background:url("images/class-5-hero.webp") center center/cover no-repeat;
-
-overflow:hidden;
-
-}
-
-.hero-overlay{
-
-position:absolute;
-inset:0;
-
-background:linear-gradient(
-90deg,
-rgba(8,43,97,.92) 0%,
-rgba(8,43,97,.75) 45%,
-rgba(8,43,97,.35) 100%
-);
-
-}
-
-.hero-content{
-
-position:relative;
-z-index:2;
-
-max-width:700px;
-
-color:#fff;
-
-}
-
-.hero-badge{
-
-display:inline-block;
-
-padding:10px 22px;
-
-border-radius:50px;
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(10px);
-
-font-size:.9rem;
-font-weight:700;
-letter-spacing:1px;
-
-margin-bottom:28px;
-
-}
-
-.hero-content h1{
-
-font-size:clamp(58px,7vw,92px);
-
-font-weight:800;
-
-line-height:.95;
-
-letter-spacing:-2px;
-
-text-transform:uppercase;
-
-color:#fff;
-
-margin:0;
-
-}
-
-/*=========================================
 INTRO
 =========================================*/
 
@@ -240,19 +126,27 @@ background:#fff;
 .intro-content{
 
 max-width:950px;
-margin:auto;
+
+margin:0 auto;
+
 text-align:center;
 
 }
 
 .intro-content p{
 
-font-size:19px;
+font-size:20px;
 
 line-height:1.9;
 
-color:var(--text);
+color:#555;
 
-margin-bottom:25px;
+margin-bottom:24px;
+
+}
+
+.intro-content p:last-child{
+
+margin-bottom:0;
 
 }

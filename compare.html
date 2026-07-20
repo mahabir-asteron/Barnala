@@ -159,6 +159,52 @@ tr:nth-child(even){
 .btn:hover{
     background:#0957cc;
 }
+    /*=========================================
+RESPONSIVE TABLE
+=========================================*/
+
+.table-responsive{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+}
+
+.table-responsive table{
+    min-width:900px;
+}
+
+.table-responsive::-webkit-scrollbar{
+    height:8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+    background:#0d6efd;
+    border-radius:20px;
+}
+
+@media(max-width:768px){
+
+    .compare-section{
+        margin:60px auto;
+        padding:0 15px;
+    }
+
+    .compare-title h2{
+        font-size:30px;
+    }
+
+    th{
+        font-size:18px;
+        padding:16px;
+    }
+
+    td{
+        padding:16px;
+        font-size:15px;
+    }
+
+}
 
 </style>
 </head>

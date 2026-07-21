@@ -1,1 +1,339 @@
+/*==================================================
+CLASS 1 (121.5 HOURS)
+PART 1
+==================================================*/
 
+:root{
+
+    --primary:#0d6efd;
+    --secondary:#071936;
+    --white:#ffffff;
+    --text:#d8e1ef;
+    --radius:22px;
+    --shadow:0 25px 70px rgba(0,0,0,.18);
+
+}
+
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+    min-height:92vh;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(6,18,43,.92) 0%,
+        rgba(6,18,43,.82) 34%,
+        rgba(6,18,43,.55) 64%,
+        rgba(6,18,43,.18) 100%
+    ),
+    url("../class-1-training.webp") center center/cover no-repeat;
+
+}
+
+.hero .container{
+
+    width:min(92%,1380px);
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-content{
+
+    max-width:700px;
+
+}
+
+.hero-label{
+
+    color:#3b82f6;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.hero h1{
+
+    color:#fff;
+
+    font-size:clamp(58px,6vw,86px);
+
+    line-height:1.05;
+
+    margin-bottom:28px;
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:21px;
+
+    line-height:1.9;
+
+    max-width:640px;
+
+    margin-bottom:42px;
+
+}
+
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn,
+.btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 34px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.btn{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#0959d8;
+
+}
+
+.btn-outline{
+
+    border:2px solid #fff;
+
+    color:#fff;
+
+}
+
+.btn-outline:hover{
+
+    background:#fff;
+
+    color:#071936;
+
+}
+
+
+/*==================================================
+WHY CHOOSE IMAGE LAYOUT
+==================================================*/
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:70px;
+
+    align-items:start;
+
+    margin-top:60px;
+
+}
+
+.why-image{
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+.why-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:.45s;
+
+}
+
+.why-image img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.content-block{
+
+    margin-bottom:50px;
+
+}
+
+.content-block h3{
+
+    font-size:30px;
+
+    color:#071936;
+
+    margin-bottom:18px;
+
+}
+
+.content-block p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+.content-block ul{
+
+    margin-top:20px;
+
+    padding-left:22px;
+
+}
+
+.content-block li{
+
+    margin-bottom:12px;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:991px){
+
+.hero{
+
+    min-height:760px;
+
+}
+
+.hero h1{
+
+    font-size:52px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-image{
+
+    position:relative;
+
+    top:auto;
+
+    order:-1;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:680px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn,
+.btn-outline{
+
+    width:100%;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+}

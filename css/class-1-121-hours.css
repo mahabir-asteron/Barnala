@@ -23,7 +23,7 @@ HERO
 
     position:relative;
 
-    min-height:92vh;
+    min-height:82vh;
 
     display:flex;
     align-items:center;
@@ -36,7 +36,7 @@ HERO
         rgba(7,25,54,.45) 68%,
         rgba(7,25,54,.10) 100%
     ),
-    url("../images/class-1-training.webp") center center/cover no-repeat;
+    url("../class-1-training.webp") center center/cover no-repeat;
 
 }
 

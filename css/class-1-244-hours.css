@@ -4,7 +4,7 @@ CLASS 1 (244 HOURS) HERO
 
 .hero{
     position:relative;
-    min-height:620px;
+    min-height:70vh;
     display:flex;
     align-items:center;
     overflow:hidden;

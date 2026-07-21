@@ -23,7 +23,7 @@ HERO
 
     position:relative;
 
-    min-height:82vh;
+    min-height:820px;
 
     display:flex;
     align-items:center;
@@ -32,11 +32,13 @@ HERO
     linear-gradient(
         90deg,
         rgba(7,25,54,.92) 0%,
-        rgba(7,25,54,.82) 38%,
-        rgba(7,25,54,.45) 68%,
-        rgba(7,25,54,.10) 100%
-    ),
-    url("../class-1-training.webp") center center/cover no-repeat;
+rgba(7,25,54,.78) 35%,
+rgba(7,25,54,.35) 65%,
+rgba(7,25,54,.08) 100%
+),
+url("../images/class-1-training.webp") right center / contain no-repeat;
+
+background-color:#0b1d3b;
 
 }
 

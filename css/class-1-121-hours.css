@@ -16,59 +16,107 @@ PART 1
 
 
 /*==================================================
-HERO
+CLASS 1 HERO
 ==================================================*/
 
-.eligibility-hero{
+.hero{
+
     position:relative;
-    min-height:600px;
+
+    min-height:620px;
+
     display:flex;
+
     align-items:center;
-    justify-content:center;
-    background:url("../class-1-training.webp") center center/cover no-repeat;
+
+    background:
+        url("../class-1-training.webp")
+        center center / cover no-repeat;
+
     overflow:hidden;
+
 }
 
 .hero-overlay{
+
     position:absolute;
+
     inset:0;
+
     background:
-        linear-gradient(
-            90deg,
-            rgba(6,28,63,.90) 0%,
-            rgba(6,28,63,.75) 45%,
-            rgba(6,28,63,.45) 100%
-        );
+    linear-gradient(
+        90deg,
+        rgba(5,23,50,.88) 0%,
+        rgba(5,23,50,.72) 42%,
+        rgba(5,23,50,.35) 72%,
+        rgba(5,23,50,.10) 100%
+    );
+
+}
+
+.hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(92%,1320px);
+
+    margin:auto;
+
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:650px;
+
+    max-width:640px;
+
+}
+
+.hero-label{
+
+    display:inline-block;
+
+    color:#0d6efd;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:22px;
+
+}
+
+.hero h1{
+
     color:#fff;
-    text-align:left;
-    padding-top:100px;
-}
 
-.hero-content h1{
-    font-size:clamp(52px,6vw,82px);
+    font-size:clamp(48px,6vw,78px);
+
     font-weight:800;
+
     line-height:1.05;
-    margin:25px 0;
+
+    margin-bottom:26px;
+
 }
 
-.hero-content p{
-    max-width:600px;
-    font-size:1.25rem;
+.hero p{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:20px;
+
     line-height:1.8;
-    color:#f4f6fb;
+
+    max-width:620px;
+
+    margin-bottom:42px;
+
 }
-
-
-
-/*==================================================
-BUTTONS
-==================================================*/
 
 .hero-buttons{
 
@@ -80,7 +128,38 @@ BUTTONS
 
 }
 
-.btn,
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 34px;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#0957cc;
+
+    transform:translateY(-3px);
+
+}
+
 .btn-outline{
 
     display:inline-flex;
@@ -89,39 +168,19 @@ BUTTONS
 
     justify-content:center;
 
-    padding:18px 34px;
-
-    border-radius:14px;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    transition:.35s;
-
-}
-
-.btn{
-
-    background:#0d6efd;
-
-    color:#fff;
-
-}
-
-.btn:hover{
-
-    transform:translateY(-4px);
-
-    background:#0959d8;
-
-}
-
-.btn-outline{
+    padding:16px 34px;
 
     border:2px solid #fff;
 
     color:#fff;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+    transition:.3s;
 
 }
 
@@ -132,6 +191,46 @@ BUTTONS
     color:#071936;
 
 }
+
+@media(max-width:768px){
+
+.hero{
+
+    min-height:560px;
+
+}
+
+.hero-content{
+
+    text-align:center;
+
+    margin:auto;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-direction:column;
+
+}
+
+.btn,
+.btn-outline{
+
+    width:100%;
+
+}
+
+}
+
 
 
 /*==================================================

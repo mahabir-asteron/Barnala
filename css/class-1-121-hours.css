@@ -22,40 +22,39 @@ HERO
 .hero{
 
     position:relative;
+
     min-height:92vh;
 
     display:flex;
     align-items:center;
 
-    overflow:hidden;
-
     background:
     linear-gradient(
         90deg,
-        rgba(6,18,43,.92) 0%,
-        rgba(6,18,43,.82) 34%,
-        rgba(6,18,43,.55) 64%,
-        rgba(6,18,43,.18) 100%
+        rgba(7,25,54,.92) 0%,
+        rgba(7,25,54,.82) 38%,
+        rgba(7,25,54,.45) 68%,
+        rgba(7,25,54,.10) 100%
     ),
-    url("../class-1-training.webp") center center/cover no-repeat;
+    url("../images/class-1-training.webp") center center/cover no-repeat;
 
 }
 
 .hero .container{
 
-    width:min(92%,1380px);
+    width:min(92%,1320px);
 
-    margin:auto;
-
-    position:relative;
-
-    z-index:2;
+    margin:0 auto;
 
 }
 
 .hero-content{
 
-    max-width:700px;
+    max-width:650px;
+
+    text-align:left;
+
+    padding:90px 0;
 
 }
 
@@ -63,15 +62,15 @@ HERO
 
     color:#3b82f6;
 
-    font-size:15px;
-
-    letter-spacing:2px;
+    font-size:16px;
 
     font-weight:700;
 
+    letter-spacing:2px;
+
     text-transform:uppercase;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 
 }
 
@@ -79,13 +78,13 @@ HERO
 
     color:#fff;
 
-    font-size:clamp(58px,6vw,86px);
+    font-size:clamp(60px,6vw,84px);
 
     line-height:1.05;
 
-    margin-bottom:28px;
-
     font-weight:800;
+
+    margin-bottom:28px;
 
 }
 
@@ -95,11 +94,21 @@ HERO
 
     font-size:21px;
 
-    line-height:1.9;
+    line-height:1.8;
 
-    max-width:640px;
+    margin-bottom:40px;
 
-    margin-bottom:42px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    justify-content:flex-start;
+
+    flex-wrap:wrap;
 
 }
 

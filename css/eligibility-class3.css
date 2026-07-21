@@ -16,7 +16,7 @@
 Hero
 ======================================*/
 
-.eligibility-hero{
+.hero{
     position:relative;
     min-height:600px;
     display:flex;
@@ -24,6 +24,22 @@ Hero
     justify-content:center;
     background:url("../images/hero/eligibility-class3-hero.webp") center center/cover no-repeat;
     overflow:hidden;
+}
+
+.hero-label{
+
+    color:#3b82f6;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
 }
 
 .hero-overlay{

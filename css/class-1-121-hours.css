@@ -23,22 +23,23 @@ HERO
 
     position:relative;
 
-    min-height:820px;
+    min-height:760px;
 
     display:flex;
+
     align-items:center;
 
     background:
     linear-gradient(
         90deg,
         rgba(7,25,54,.92) 0%,
-rgba(7,25,54,.78) 35%,
-rgba(7,25,54,.35) 65%,
-rgba(7,25,54,.08) 100%
-),
-url("../class-1-training.webp") right center / contain no-repeat;
+        rgba(7,25,54,.78) 42%,
+        rgba(7,25,54,.32) 72%,
+        rgba(7,25,54,.08) 100%
+    ),
+    url("../class-1-training.webp") 85% center/58% auto no-repeat;
 
-background-color:#0b1d3b;
+    background-color:#081c39;
 
 }
 

@@ -337,3 +337,595 @@ RESPONSIVE
 }
 
 }
+
+/*==================================================
+PART 2
+GENERAL SECTIONS
+==================================================*/
+
+.course-overview,
+.pricing-section,
+.included-section,
+.student-section,
+.content-section,
+.faq-section,
+.final-cta,
+.advisor-section{
+
+    padding:110px 0;
+
+}
+
+.container{
+
+    width:min(92%,1320px);
+
+    margin:auto;
+
+}
+
+.section-label{
+
+    color:#0d6efd;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.course-overview h2,
+.pricing-section h2,
+.included-section h2,
+.student-section h2,
+.content-section h2,
+.faq-section h2,
+.final-cta h2,
+.advisor-section h2{
+
+    font-size:clamp(40px,5vw,60px);
+
+    line-height:1.1;
+
+    color:#071936;
+
+    margin-bottom:25px;
+
+}
+
+.section-text{
+
+    max-width:760px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#666;
+
+    margin-bottom:70px;
+
+}
+
+
+/*==================================================
+OVERVIEW CARDS
+==================================================*/
+
+.overview-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.overview-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:40px 34px;
+
+    box-shadow:0 18px 55px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid rgba(0,0,0,.05);
+
+}
+
+.overview-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 28px 65px rgba(0,0,0,.12);
+
+}
+
+.overview-card h3{
+
+    font-size:26px;
+
+    color:#071936;
+
+    margin-bottom:18px;
+
+}
+
+.overview-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+PRICING
+==================================================*/
+
+.pricing-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.price-card{
+
+    width:520px;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 25px 80px rgba(0,0,0,.12);
+
+}
+
+.price-card h3{
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.price{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    color:#0d6efd;
+
+    margin-bottom:25px;
+
+}
+
+.price-card p{
+
+    font-size:19px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+
+/*==================================================
+STUDENT SUCCESS
+==================================================*/
+
+.student-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.student-card{
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:#fff;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.student-card img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.4s;
+
+}
+
+.student-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.student-card h3{
+
+    padding:28px;
+
+    text-align:center;
+
+    font-size:24px;
+
+}
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.overview-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.student-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.course-overview,
+.pricing-section,
+.included-section,
+.student-section,
+.content-section,
+.faq-section,
+.final-cta,
+.advisor-section{
+
+    padding:80px 0;
+
+}
+
+.overview-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.price-card{
+
+    width:100%;
+
+    padding:40px 30px;
+
+}
+
+.price{
+
+    font-size:58px;
+
+}
+
+}
+
+/*==================================================
+PART 3
+FAQ + CTA + ADVISOR
+==================================================*/
+
+
+/* FAQ */
+
+.faq-item{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:32px;
+
+    margin-bottom:24px;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+    border:1px solid rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+}
+
+.faq-item h3{
+
+    color:#071936;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.faq-item p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+
+
+/* FINAL CTA */
+
+.final-cta{
+
+    background:linear-gradient(135deg,#071936,#0d6efd);
+
+    color:#fff;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    margin:120px auto;
+
+    width:min(92%,1320px);
+
+    padding:90px 70px;
+
+}
+
+.final-cta h2{
+
+    color:#fff;
+
+    margin-bottom:30px;
+
+}
+
+.final-cta p{
+
+    color:rgba(255,255,255,.9);
+
+    max-width:850px;
+
+    margin:0 auto 25px;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+}
+
+.final-cta .hero-buttons{
+
+    justify-content:center;
+
+    margin-top:45px;
+
+}
+
+
+
+/* ADVISOR */
+
+.advisor-section{
+
+    text-align:center;
+
+}
+
+.advisor-section p{
+
+    max-width:760px;
+
+    margin:25px auto 40px;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:19px;
+
+}
+
+.advisor-section .hero-buttons{
+
+    justify-content:center;
+
+}
+
+
+
+/* CONTENT */
+
+.content-block{
+
+    margin-bottom:55px;
+
+}
+
+.content-block:last-child{
+
+    margin-bottom:0;
+
+}
+
+.content-block h3{
+
+    font-size:32px;
+
+    color:#071936;
+
+    margin-bottom:18px;
+
+}
+
+.content-block p{
+
+    color:#555;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+.content-block ul{
+
+    margin:22px 0 22px 22px;
+
+}
+
+.content-block li{
+
+    margin-bottom:12px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+
+
+/* BUTTON SPACING */
+
+.btn,
+
+.btn-outline{
+
+    min-width:190px;
+
+}
+
+
+
+/* SECTION DIVIDER */
+
+.course-overview,
+
+.pricing-section,
+
+.included-section,
+
+.student-section,
+
+.content-section,
+
+.faq-section{
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+
+
+/* IMAGE */
+
+img{
+
+    max-width:100%;
+
+}
+
+
+
+/* SMOOTH SCROLL */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.final-cta{
+
+    padding:60px 28px;
+
+    margin:80px auto;
+
+    border-radius:22px;
+
+}
+
+.final-cta h2{
+
+    font-size:38px;
+
+}
+
+.final-cta p{
+
+    font-size:17px;
+
+}
+
+.faq-item{
+
+    padding:24px;
+
+}
+
+.faq-item h3{
+
+    font-size:21px;
+
+}
+
+.content-block h3{
+
+    font-size:28px;
+
+}
+
+}

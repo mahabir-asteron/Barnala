@@ -182,12 +182,23 @@ p{
 
 }
 
-.hero .section-label{
+.hero .section-label!{
 
-    color:#4da3ff;
+    display:inline-block;
+
+    color:#0d6efd;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:22px;
 
 }
-
 .hero h1{
 
     color:#fff;

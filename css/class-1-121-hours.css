@@ -1,122 +1,128 @@
 /*==================================================
 CLASS 1 (121.5 HOURS)
-PART 1
+Barnala Driver Training Academy
 ==================================================*/
 
-:root{
+/*========================
+RESET
+========================*/
 
-    --primary:#0d6efd;
-    --secondary:#071936;
-    --white:#ffffff;
-    --text:#d8e1ef;
-    --radius:22px;
-    --shadow:0 25px 70px rgba(0,0,0,.18);
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
-/*==================================================
-CLASS 1 HERO
-==================================================*/
-
-.hero{
-
-    position:relative;
-
-    min-height:620px;
-
-    display:flex;
-
-    align-items:center;
-
-    background:
-        url("..//images/hero/class-1-training.webp")
-        center center / cover no-repeat;
-
-    overflow:hidden;
-
+html{
+    scroll-behavior:smooth;
 }
 
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    linear-gradient(
-        90deg,
-        rgba(5,23,50,.88) 0%,
-        rgba(5,23,50,.72) 42%,
-        rgba(5,23,50,.35) 72%,
-        rgba(5,23,50,.10) 100%
-    );
-
+body{
+    font-family:'Manrope',sans-serif;
+    background:#fff;
+    color:#171717;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
-.hero .container{
+img{
+    max-width:100%;
+    display:block;
+}
 
-    position:relative;
+a{
+    text-decoration:none;
+}
 
-    z-index:2;
-
-    width:min(92%,1320px);
-
+.container{
+    width:min(92%,1380px);
     margin:auto;
-
 }
 
-.hero-content{
-
-    max-width:640px;
-
+section{
+    padding:100px 0;
 }
 
-.hero-label{
+/*========================
+TYPOGRAPHY
+========================*/
+
+.section-label{
 
     display:inline-block;
+    margin-bottom:18px;
 
-    color:#0d6efd;
+    color:#0057B8;
 
-    font-size:15px;
+    font-size:14px;
+    font-weight:800;
 
-    font-weight:700;
-
+    letter-spacing:1.5px;
     text-transform:uppercase;
-
-    letter-spacing:2px;
-
-    margin-bottom:22px;
 
 }
 
-.hero h1{
+h1{
 
-    color:#fff;
+    font-size:clamp(52px,6vw,82px);
+    line-height:1.05;
 
-    font-size:clamp(48px,6vw,78px);
+    font-weight:800;
+    letter-spacing:-2px;
+
+    margin-bottom:28px;
+
+}
+
+h2{
+
+    font-size:clamp(34px,4vw,54px);
+
+    line-height:1.08;
 
     font-weight:800;
 
-    line-height:1.05;
+    letter-spacing:-1px;
 
-    margin-bottom:26px;
+    text-align:center;
+
+    margin-bottom:28px;
 
 }
 
-.hero p{
+h3{
 
-    color:rgba(255,255,255,.92);
+    font-size:24px;
 
-    font-size:20px;
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    font-size:18px;
 
     line-height:1.8;
 
-    max-width:620px;
-
-    margin-bottom:42px;
+    color:#666;
 
 }
+
+.section-text{
+
+    max-width:900px;
+
+    margin:0 auto 25px;
+
+    text-align:center;
+
+}
+
+/*========================
+BUTTONS
+========================*/
 
 .hero-buttons{
 
@@ -126,35 +132,42 @@ CLASS 1 HERO
 
     flex-wrap:wrap;
 
+    margin-top:40px;
+
+}
+
+.btn,
+.btn-outline{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:200px;
+
+    padding:16px 34px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.35s;
+
 }
 
 .btn{
 
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:16px 34px;
-
-    background:#0d6efd;
+    background:#0057B8;
 
     color:#fff;
-
-    text-decoration:none;
-
-    border-radius:10px;
-
-    font-weight:700;
-
-    transition:.3s;
 
 }
 
 .btn:hover{
 
-    background:#0957cc;
+    background:#171717;
 
     transform:translateY(-3px);
 
@@ -162,440 +175,218 @@ CLASS 1 HERO
 
 .btn-outline{
 
-    display:inline-flex;
+    border:2px solid #0057B8;
 
-    align-items:center;
+    background:#fff;
 
-    justify-content:center;
-
-    padding:16px 34px;
-
-    border:2px solid #fff;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:10px;
-
-    font-weight:700;
-
-    transition:.3s;
+    color:#0057B8;
 
 }
 
 .btn-outline:hover{
 
-    background:#fff;
+    background:#0057B8;
 
-    color:#071936;
+    color:#fff;
+
+    transform:translateY(-3px);
 
 }
 
-@media(max-width:768px){
+/*========================
+HERO
+========================*/
 
 .hero{
 
-    min-height:560px;
+    position:relative;
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:url("../images/hero/class-1-training.webp") center center/cover no-repeat;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.58);
+
+}
+
+.hero .container{
+
+    position:relative;
+
+    z-index:2;
 
 }
 
 .hero-content{
 
-    text-align:center;
+    position:relative;
 
-    margin:auto;
+    z-index:2;
+
+    max-width:720px;
+
+    color:#fff;
+
+    padding-top:40px;
+
+}
+
+.hero .section-label{
+
+    color:#73b7ff;
+
+}
+
+.hero h1{
+
+    color:#fff;
 
 }
 
 .hero p{
 
-    font-size:18px;
+    display:none;
 
 }
 
-.hero-buttons{
+/*========================
+INTRO
+========================*/
 
-    justify-content:center;
+.intro-section{
 
-    flex-direction:column;
-
-}
-
-.btn,
-.btn-outline{
-
-    width:100%;
+    background:#fff;
 
 }
 
+.intro-section h2{
+
+    max-width:950px;
+
+    margin:0 auto 30px;
+
 }
 
+.intro-section .section-text:last-child{
 
+    margin-bottom:0;
+
+}
 
 /*==================================================
-WHY CHOOSE IMAGE LAYOUT
+PRICE / INCLUDED / SCHEDULE
 ==================================================*/
 
-.why-grid{
+.included-section{
+
+    background:#f7f9fc;
+
+}
+
+.included-grid{
 
     display:grid;
 
-    grid-template-columns:1.2fr .8fr;
+    grid-template-columns:repeat(3,1fr);
 
-    gap:70px;
-
-    align-items:start;
+    gap:30px;
 
     margin-top:60px;
 
 }
 
-.why-image{
-
-    position:sticky;
-
-    top:120px;
-
-}
-
-.why-image img{
-
-    width:100%;
-
-    display:block;
-
-    border-radius:24px;
-
-    box-shadow:var(--shadow);
-
-    transition:.45s;
-
-}
-
-.why-image img:hover{
-
-    transform:scale(1.02);
-
-}
-
-.content-block{
-
-    margin-bottom:50px;
-
-}
-
-.content-block h3{
-
-    font-size:30px;
-
-    color:#071936;
-
-    margin-bottom:18px;
-
-}
-
-.content-block p{
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    color:#555;
-
-}
-
-.content-block ul{
-
-    margin-top:20px;
-
-    padding-left:22px;
-
-}
-
-.content-block li{
-
-    margin-bottom:12px;
-
-    line-height:1.8;
-
-}
-
-
-/*==================================================
-RESPONSIVE
-==================================================*/
-
-@media(max-width:991px){
-
-.hero{
-
-    min-height:760px;
-
-}
-
-.hero h1{
-
-    font-size:52px;
-
-}
-
-.hero p{
-
-    font-size:18px;
-
-}
-
-.why-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.why-image{
-
-    position:relative;
-
-    top:auto;
-
-    order:-1;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.hero{
-
-    min-height:680px;
-
-}
-
-.hero h1{
-
-    font-size:42px;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-}
-
-.btn,
-.btn-outline{
-
-    width:100%;
-
-}
-
-.hero p{
-
-    font-size:17px;
-
-}
-
-}
-
-/*==================================================
-PART 2
-GENERAL SECTIONS
-==================================================*/
-
-.course-overview,
-.pricing-section,
-.included-section,
-.student-section,
-.content-section,
-.faq-section,
-.final-cta,
-.advisor-section{
-
-    padding:110px 0;
-
-}
-
-.container{
-
-    width:min(92%,1320px);
-
-    margin:auto;
-
-}
-
-.section-label{
-
-    color:#0d6efd;
-
-    font-size:14px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:18px;
-
-}
-
-.course-overview h2,
-.pricing-section h2,
-.included-section h2,
-.student-section h2,
-.content-section h2,
-.faq-section h2,
-.final-cta h2,
-.advisor-section h2{
-
-    font-size:clamp(40px,5vw,60px);
-
-    line-height:1.1;
-
-    color:#071936;
-
-    margin-bottom:25px;
-
-}
-
-.section-text{
-
-    max-width:760px;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    color:#666;
-
-    margin-bottom:70px;
-
-}
-
-
-/*==================================================
-OVERVIEW CARDS
-==================================================*/
-
-.overview-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:28px;
-
-}
-
-.overview-card{
+.included-card{
 
     background:#fff;
 
-    border-radius:22px;
+    padding:35px;
 
-    padding:40px 34px;
+    border-radius:20px;
 
-    box-shadow:0 18px 55px rgba(0,0,0,.08);
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 
-    transition:.35s;
-
-    border:1px solid rgba(0,0,0,.05);
-
-}
-
-.overview-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 28px 65px rgba(0,0,0,.12);
-
-}
-
-.overview-card h3{
-
-    font-size:26px;
-
-    color:#071936;
-
-    margin-bottom:18px;
-
-}
-
-.overview-card p{
-
-    color:#666;
-
-    line-height:1.8;
-
-}
-
-
-/*==================================================
-PRICING
-==================================================*/
-
-.pricing-grid{
+    transition:.35s ease;
 
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
+
+    height:100%;
 
 }
 
-.price-card{
+.included-card:hover{
 
-    width:520px;
+    transform:translateY(-8px);
 
-    background:#fff;
-
-    border-radius:28px;
-
-    padding:60px;
-
-    text-align:center;
-
-    box-shadow:0 25px 80px rgba(0,0,0,.12);
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
 
 }
 
-.price-card h3{
+.included-card h3{
 
-    font-size:32px;
+    color:#0057B8;
 
-    margin-bottom:25px;
-
-}
-
-.price{
-
-    font-size:72px;
-
-    font-weight:800;
-
-    color:#0d6efd;
-
-    margin-bottom:25px;
+    margin-bottom:18px;
 
 }
 
-.price-card p{
+.included-card p{
 
-    font-size:19px;
+    margin-bottom:18px;
 
-    color:#666;
+}
+
+.included-card ul{
+
+    padding-left:22px;
+
+    margin-top:10px;
+
+}
+
+.included-card li{
+
+    margin-bottom:14px;
+
+    color:#555;
 
     line-height:1.8;
 
-    margin-bottom:35px;
+}
+
+.included-card .btn{
+
+    margin-top:auto;
+
+    align-self:flex-start;
 
 }
 
 
 /*==================================================
-STUDENT SUCCESS
+HALL OF SUCCESS
 ==================================================*/
+
+.student-section{
+
+    background:#ffffff;
+
+}
 
 .student-grid{
 
@@ -603,19 +394,31 @@ STUDENT SUCCESS
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:40px;
+    gap:35px;
+
+    margin-top:60px;
 
 }
 
 .student-card{
 
-    overflow:hidden;
-
-    border-radius:24px;
-
     background:#fff;
 
-    box-shadow:0 20px 60px rgba(0,0,0,.08);
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.student-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
 
 }
 
@@ -623,9 +426,11 @@ STUDENT SUCCESS
 
     width:100%;
 
-    display:block;
+    height:340px;
 
-    transition:.4s;
+    object-fit:cover;
+
+    transition:transform .4s ease;
 
 }
 
@@ -635,24 +440,38 @@ STUDENT SUCCESS
 
 }
 
-.student-card h3{
+.student-info{
 
     padding:28px;
 
     text-align:center;
 
-    font-size:24px;
+}
+
+.student-info h3{
+
+    color:#0057B8;
+
+    margin-bottom:8px;
+
+}
+
+.student-info p{
+
+    margin:0;
+
+    color:#888;
 
 }
 
 
 /*==================================================
-RESPONSIVE
+TABLET
 ==================================================*/
 
-@media(max-width:1100px){
+@media(max-width:992px){
 
-.overview-grid{
+.included-grid{
 
     grid-template-columns:repeat(2,1fr);
 
@@ -664,140 +483,366 @@ RESPONSIVE
 
 }
 
+.student-card img{
+
+    height:300px;
+
 }
+
+}
+
+
+/*==================================================
+MOBILE
+==================================================*/
 
 @media(max-width:768px){
 
-.course-overview,
-.pricing-section,
-.included-section,
-.student-section,
-.content-section,
-.faq-section,
-.final-cta,
-.advisor-section{
-
-    padding:80px 0;
-
-}
-
-.overview-grid{
+.included-grid{
 
     grid-template-columns:1fr;
 
 }
 
-.price-card{
+.student-grid{
 
-    width:100%;
-
-    padding:40px 30px;
+    grid-template-columns:1fr;
 
 }
 
-.price{
+.student-card img{
 
-    font-size:58px;
+    height:240px;
 
 }
 
 }
 
 /*==================================================
-PART 3
-FAQ + CTA + ADVISOR
+CONTENT SECTION
 ==================================================*/
 
+.content-section{
 
-/* FAQ */
+    background:#ffffff;
 
-.faq-item{
+}
+
+.content-block{
+
+    background:#ffffff;
+
+    padding:40px;
+
+    margin-top:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.content-block:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+.content-block h3{
+
+    color:#0057B8;
+
+    margin-bottom:20px;
+
+}
+
+.content-block ul{
+
+    padding-left:22px;
+
+}
+
+.content-block li{
+
+    margin-bottom:14px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+WHY CHOOSE PROGRAM
+==================================================*/
+
+.why-section{
+
+    background:#f7f9fc;
+
+}
+
+
+/*==================================================
+WHO SHOULD ENROLL
+==================================================*/
+
+.career-section{
+
+    background:#ffffff;
+
+}
+
+
+/*==================================================
+PROGRAM HIGHLIGHTS
+==================================================*/
+
+.practice-section{
+
+    background:#f7f9fc;
+
+}
+
+
+/*==================================================
+COMMON CARD STYLES
+==================================================*/
+
+.why-section .included-card,
+.career-section .included-card,
+.practice-section .included-card{
 
     background:#fff;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    padding:32px;
+    padding:35px;
 
-    margin-bottom:24px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
 
-    box-shadow:0 15px 45px rgba(0,0,0,.08);
+    transition:.35s ease;
 
-    border:1px solid rgba(0,0,0,.05);
-
-    transition:.35s;
+    height:100%;
 
 }
 
-.faq-item:hover{
+.why-section .included-card:hover,
+.career-section .included-card:hover,
+.practice-section .included-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-8px);
 
-    box-shadow:0 20px 60px rgba(0,0,0,.12);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
 
 }
 
-.faq-item h3{
+.why-section .included-card h3,
+.career-section .included-card h3,
+.practice-section .included-card h3{
 
-    color:#071936;
-
-    font-size:24px;
+    color:#0057B8;
 
     margin-bottom:18px;
 
 }
 
-.faq-item p{
+.why-section .included-card p,
+.career-section .included-card p,
+.practice-section .included-card p{
 
-    color:#666;
+    margin-bottom:18px;
 
-    line-height:1.9;
+}
 
-    font-size:17px;
+.why-section .included-card ul,
+.career-section .included-card ul,
+.practice-section .included-card ul{
+
+    padding-left:22px;
+
+}
+
+.why-section .included-card li,
+.career-section .included-card li,
+.practice-section .included-card li{
+
+    margin-bottom:14px;
+
+    color:#555;
+
+    line-height:1.8;
 
 }
 
 
+/*==================================================
+RESPONSIVE
+==================================================*/
 
-/* FINAL CTA */
+@media(max-width:992px){
+
+.content-block{
+
+    padding:32px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.content-block{
+
+    padding:26px;
+
+}
+
+.why-section .included-card,
+.career-section .included-card,
+.practice-section .included-card{
+
+    padding:28px;
+
+}
+
+}
+
+/*==================================================
+FAQ SECTION
+==================================================*/
+
+.faq-section{
+
+    background:#ffffff;
+
+}
+
+.accordion{
+
+    max-width:1000px;
+
+    margin:60px auto 0;
+
+}
+
+.accordion-item{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.accordion-item:hover{
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+
+.accordion-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    padding:28px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    text-align:left;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#171717;
+
+}
+
+.accordion-btn::after{
+
+    content:"+";
+
+    color:#0057B8;
+
+    font-size:30px;
+
+    transition:.3s;
+
+}
+
+.accordion-item.active .accordion-btn::after{
+
+    content:"−";
+
+}
+
+.accordion-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+}
+
+.accordion-content p{
+
+    padding:0 35px 30px;
+
+    margin:0;
+
+}
+
+
+/*==================================================
+FINAL CTA
+==================================================*/
 
 .final-cta{
 
-    background:linear-gradient(135deg,#071936,#0d6efd);
+    background:#0057B8;
 
     color:#fff;
 
     text-align:center;
 
-    border-radius:32px;
+}
 
-    margin:120px auto;
+.final-cta .section-label{
 
-    width:min(92%,1320px);
-
-    padding:90px 70px;
+    color:#9dd1ff;
 
 }
 
-.final-cta h2{
-
-    color:#fff;
-
-    margin-bottom:30px;
-
-}
+.final-cta h2,
 
 .final-cta p{
 
-    color:rgba(255,255,255,.9);
-
-    max-width:850px;
-
-    margin:0 auto 25px;
-
-    font-size:20px;
-
-    line-height:1.9;
+    color:#fff;
 
 }
 
@@ -805,31 +850,34 @@ FAQ + CTA + ADVISOR
 
     justify-content:center;
 
-    margin-top:45px;
-
 }
 
 
-
-/* ADVISOR */
+/*==================================================
+ADVISOR
+==================================================*/
 
 .advisor-section{
+
+    background:#171717;
+
+    color:#fff;
 
     text-align:center;
 
 }
 
+.advisor-section .section-label{
+
+    color:#73b7ff;
+
+}
+
+.advisor-section h2,
+
 .advisor-section p{
 
-    max-width:760px;
-
-    margin:25px auto 40px;
-
-    color:#666;
-
-    line-height:1.9;
-
-    font-size:19px;
+    color:#fff;
 
 }
 
@@ -840,152 +888,126 @@ FAQ + CTA + ADVISOR
 }
 
 
+/*==================================================
+GLOBAL ANIMATIONS
+==================================================*/
 
-/* CONTENT */
+.student-card,
 
-.content-block{
+.included-card,
 
-    margin-bottom:55px;
+.content-block,
 
-}
+.accordion-item{
 
-.content-block:last-child{
-
-    margin-bottom:0;
-
-}
-
-.content-block h3{
-
-    font-size:32px;
-
-    color:#071936;
-
-    margin-bottom:18px;
-
-}
-
-.content-block p{
-
-    color:#555;
-
-    line-height:1.9;
-
-    font-size:18px;
-
-}
-
-.content-block ul{
-
-    margin:22px 0 22px 22px;
-
-}
-
-.content-block li{
-
-    margin-bottom:12px;
-
-    color:#555;
-
-    line-height:1.8;
+    transition:all .35s ease;
 
 }
 
 
+/*==================================================
+RESPONSIVE
+==================================================*/
 
-/* BUTTON SPACING */
+@media(max-width:992px){
+
+.hero{
+
+    min-height:75vh;
+
+    padding:80px 0;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+}
+
+.accordion-btn{
+
+    font-size:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.hero{
+
+    min-height:70vh;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
 
 .btn,
 
 .btn-outline{
 
-    min-width:190px;
+    width:100%;
 
 }
 
+h1{
 
-
-/* SECTION DIVIDER */
-
-.course-overview,
-
-.pricing-section,
-
-.included-section,
-
-.student-section,
-
-.content-section,
-
-.faq-section{
-
-    border-bottom:1px solid rgba(0,0,0,.05);
+    font-size:42px;
 
 }
 
+h2{
 
-
-/* IMAGE */
-
-img{
-
-    max-width:100%;
+    font-size:34px;
 
 }
 
+p{
 
-
-/* SMOOTH SCROLL */
-
-html{
-
-    scroll-behavior:smooth;
+    font-size:16px;
 
 }
 
+.accordion-btn{
 
+    padding:22px;
 
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.final-cta{
-
-    padding:60px 28px;
-
-    margin:80px auto;
-
-    border-radius:22px;
+    font-size:18px;
 
 }
 
-.final-cta h2{
+.accordion-content p{
 
-    font-size:38px;
-
-}
-
-.final-cta p{
-
-    font-size:17px;
+    padding:0 22px 22px;
 
 }
 
-.faq-item{
+.final-cta .hero-buttons,
 
-    padding:24px;
+.advisor-section .hero-buttons{
 
-}
-
-.faq-item h3{
-
-    font-size:21px;
-
-}
-
-.content-block h3{
-
-    font-size:28px;
+    flex-direction:column;
 
 }
 

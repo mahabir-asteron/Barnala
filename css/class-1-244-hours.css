@@ -32,18 +32,22 @@ CLASS 1 (244 HOURS) HERO
 }
 
 .hero-content{
-    max-width:650px;
+    position:relative;
+    z-index:2;
+    max-width:700px;
+    color:#fff;
     padding-top:40px;
+    text-align:left;
 }
 
-.hero-label{
+.hero .section-label{
     display:inline-block;
-    margin-bottom:20px;
-    color:#0d6efd;
+    color:#4da3ff;
     font-size:15px;
     font-weight:700;
     letter-spacing:2px;
     text-transform:uppercase;
+    margin-bottom:22px;
 }
 
 .hero h1{
@@ -51,7 +55,8 @@ CLASS 1 (244 HOURS) HERO
     font-size:clamp(52px,6vw,82px);
     font-weight:800;
     line-height:1.05;
-    margin-bottom:22px 0 28px;
+    margin:22px 0 28px;
+    text-align:left;
 }
 
 .hero p{
@@ -66,6 +71,8 @@ CLASS 1 (244 HOURS) HERO
     display:flex;
     gap:18px;
     flex-wrap:wrap;
+    margin-top:40px;
+    justify-content:flex-start;
 }
 
 .btn{

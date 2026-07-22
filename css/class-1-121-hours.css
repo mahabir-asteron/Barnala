@@ -30,7 +30,7 @@ CLASS 1 HERO
     align-items:center;
 
     background:
-        url("../class-1-training.webp")
+        url("..//images/hero/class-1-training.webp")
         center center / cover no-repeat;
 
     overflow:hidden;

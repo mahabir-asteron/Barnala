@@ -668,3 +668,42 @@ h2{
 }
 
 }
+
+/*==================================================
+FULL WIDTH IMAGE
+==================================================*/
+
+.divider-image{
+    background:#ffffff;
+    padding:20px 0 90px;
+}
+
+.divider-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:24px;
+    display:block;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+@media(max-width:992px){
+
+.divider-image img{
+    height:420px;
+}
+
+}
+
+@media(max-width:768px){
+
+.divider-image{
+    padding:10px 0 70px;
+}
+
+.divider-image img{
+    height:260px;
+    border-radius:18px;
+}
+
+}

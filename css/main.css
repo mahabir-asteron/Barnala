@@ -645,69 +645,112 @@ font-size:15px;
    ELIGIBILITY PAGE
 =========================== */
 
+/*==========================
+CHECK ELIGIBILITY
+==========================*/
+
 .eligibility-hero{
-    padding:70px 0 60px;
-    background:#fff;
+
+    padding:120px 0 100px;
+
 }
 
-.eligibility-grid{
-    max-width:700px;
-    margin:0 auto;
+.eligibility-hero h1{
+
+    font-size:clamp(42px,5vw,66px);
+    font-weight:800;
     text-align:center;
+    margin-bottom:25px;
+
 }
 
-.eligibility-content{
-    width:100%;
+.eligibility-hero .section-text{
+
+    max-width:700px;
+    margin:0 auto 70px;
+    text-align:center;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+
 }
 
+.eligibility-options{
 
-.eligibility-content h1{
-    font-size:clamp(40px,5vw,58px);
-    line-height:1.08;
-    margin:15px 0 25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-bottom:70px;
+
+}
+
+.eligibility-card{
+
+    background:#fff;
+    border-radius:24px;
+    padding:60px 45px;
+    text-align:center;
+    text-decoration:none;
+    color:#171817;
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    border:2px solid transparent;
+    transition:.35s;
+
+}
+
+.eligibility-card:hover{
+
+    transform:translateY(-8px);
+    border-color:#0057B8;
+
+}
+
+.eligibility-card h2{
+
+    font-size:38px;
+    margin-bottom:10px;
+
+}
+
+.eligibility-card span{
+
+    font-size:18px;
+    color:#666;
+
 }
 
 .eligibility-list{
-    display:inline-block;
-    text-align:left;
-    list-style:none;
-    padding:0;
-    margin:20px auto 0;
+
+    max-width:900px;
+    margin:auto;
+
 }
 
-.eligibility-list li{
-    font-size:22px;
-    margin:16px 0;
-    font-weight:600;
+.eligibility-list ol{
+
+    padding-left:24px;
+    line-height:2.1;
+    font-size:17px;
+    color:#555;
+
 }
 
+@media(max-width:900px){
 
-.requirements-section{
-    background:#1f2f73;
-    padding:70px 0;
-}
+    .eligibility-options{
 
-.requirements-section .section-label{
-    color:#fff;
-}
-
-.requirements-section h2{
-    color:#fff;
-    text-align:center;
-    margin-bottom:50px;
-}
-
-@media(max-width:768px){
-
-    .eligibility-grid{
         grid-template-columns:1fr;
+
     }
 
-    .eligibility-content h1{
-        font-size:44px;
+    .eligibility-card{
+
+        padding:45px 30px;
+
     }
 
 }
+
 /* =========================================
    ELIGIBILITY ACCORDION
 ========================================= */

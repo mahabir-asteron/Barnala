@@ -254,15 +254,14 @@
     .modern-links{
 
         position:fixed;
-        top:0;
-        right:-100%;
-
-        width:min(360px,100vw);
-        max-width:100%;
-       
-        height:100vh;
-
-        background:#111;
+    top:0;
+    right:-100%;
+    width:min(360px,100vw);
+    max-width:100%;
+    height:100vh;
+    height:100dvh;      /* fixes mobile browsers shrinking the menu */
+    min-height:100vh;
+    background:#111 !important;   /* makes sure it's always fully solid */
 
         display:flex;
         flex-direction:column;

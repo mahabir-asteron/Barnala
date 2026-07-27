@@ -704,63 +704,42 @@ ADVISOR
 <div id="site-footer"></div>
 
 <script>
+
 fetch("header.html")
-.then(response => response.text())
-.then(data => {
+.then(res => res.text())
+.then(html => {
 
-    document.getElementById("site-header").innerHTML = data;
+    document.getElementById("site-header").innerHTML = html;
 
-    // Initialize mobile menu after header loads
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".nav-links");
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener("click", () => {
-            nav.classList.toggle("active");
-            menuToggle.classList.toggle("active");
-        });
-    }
+    scripts.forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+        } else {
+            newScript.textContent = oldScript.textContent;
+        }
+
+        document.body.appendChild(newScript);
+        oldScript.remove();
+
+    });
 
 });
 
 fetch("footer.html")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("site-footer").innerHTML = data;
-});
-</script>
+.then(res => res.text())
+.then(html => {
 
-<script>
-document.querySelectorAll(".accordion-btn").forEach(button => {
-
-button.addEventListener("click", () => {
-
-const item = button.parentElement;
-const content = item.querySelector(".accordion-content");
-const openItem = document.querySelector(".accordion-item.active");
-
-if(openItem && openItem !== item){
-
-openItem.classList.remove("active");
-openItem.querySelector(".accordion-content").style.maxHeight = null;
-
-}
-
-item.classList.toggle("active");
-
-if(item.classList.contains("active")){
-
-content.style.maxHeight = content.scrollHeight + "px";
-
-}else{
-
-content.style.maxHeight = null;
-
-}
+    document.getElementById("site-footer").innerHTML = html;
 
 });
 
-});
 </script>
 
     </body>

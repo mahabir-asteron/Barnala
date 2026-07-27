@@ -252,31 +252,23 @@
     }
 
     .modern-links{
-
-        position:fixed;
+    position:fixed;
     top:0;
     right:-100%;
-    width:min(360px,100vw);
-    max-width:100%;
+    width:100%;
     height:100vh;
-    height:100dvh;      /* fixes mobile browsers shrinking the menu */
+    height:100dvh;
     min-height:100vh;
-    background:#111 !important;   /* makes sure it's always fully solid */
-
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-
-        gap:0;
-
-        padding:90px 28px 40px;
-
-        overflow-y:auto;
-
-        transition:right .35s ease;
-
-        z-index:100000;
-    }
+    background:#111 !important;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+    padding:90px 28px 40px;
+    overflow-y:auto;
+    transition:right .35s ease;
+    z-index:100000;
+}
 
     .modern-links.active{
         right:0;

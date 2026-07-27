@@ -229,9 +229,12 @@ background:#f7f8fb;
 }
 
 .pricing-grid{
-display:flex;
-justify-content:center;
-margin-top:50px;
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:30px;
+    margin-top:50px;
+    flex-wrap:wrap;
 }
 
 .price-card,
@@ -241,9 +244,11 @@ background:#fff;
 padding:40px;
 border-radius:14px;
 box-shadow:0 15px 40px rgba(0,0,0,.06);
-   
-   max-width:500px;
+
+flex:1 1 420px;
+max-width:500px;
 width:100%;
+min-width:0;
 
 }
 
@@ -273,11 +278,34 @@ color:#0057B8;
 
 @media(max-width:900px){
 
-.pricing-grid{
-grid-template-columns:1fr;
-}
+    .pricing-grid{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .price-card,
+    .fee-card{
+        max-width:100%;
+        width:100%;
+        padding:28px;
+    }
+
+    .price{
+        font-size:48px;
+    }
+
+    .fee-table{
+        table-layout:fixed;
+    }
+
+    .fee-table td{
+        padding:14px 10px;
+        font-size:16px;
+        word-break:break-word;
+    }
 
 }
+
 /* ===========================
    WHAT'S INCLUDED
 =========================== */

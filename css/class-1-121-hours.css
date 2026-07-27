@@ -213,15 +213,24 @@ HERO
 
 }
 
-.hero-overlay{
+.hero::before{
+
+    content:"";
 
     position:absolute;
 
     inset:0;
 
-    background:rgba(0,0,0,.58);
+    background:linear-gradient(
+        90deg,
+        rgba(5,23,50,.88) 0%,
+        rgba(5,23,50,.72) 45%,
+        rgba(5,23,50,.35) 75%,
+        rgba(5,23,50,.10) 100%
+    );
 
 }
+
 
 .hero .container{
 

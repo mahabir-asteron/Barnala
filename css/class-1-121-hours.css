@@ -925,9 +925,9 @@ RESPONSIVE
 }
 
 .hero-content{
-    text-align:center;
-    margin:auto;
+    margin:0;
     padding-top:70px;
+    text-align:left;
 }
 
 .hero-buttons{

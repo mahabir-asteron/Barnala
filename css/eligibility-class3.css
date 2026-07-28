@@ -165,8 +165,8 @@ Responsive
 }
 
 .hero-content{
-    text-align:center;
-    margin:auto;
+    text-align:left;
+    margin:0;
     padding-top:70px;
 }
 
@@ -176,11 +176,11 @@ Responsive
 
 .hero{
     min-height:560px;
-    text-align:center;
 }
-  .hero-content{
-    margin:auto;
-    text-align:center;
+
+.hero-content{
+    margin:0;
+    text-align:left;
 }
 
 .hero-content h1{

@@ -296,9 +296,7 @@ HERO
 }
 
 .hero h1{
-
-    font-size:58px;
-
+    font-size:clamp(42px,9vw,60px);
 }
 
 .hero p{
@@ -346,12 +344,10 @@ section{
 
 }
 
-h1{
-
+.hero h1{
     font-size:clamp(42px,9vw,60px);
-
 }
-
+  
 h2{
 
     font-size:34px;

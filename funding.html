@@ -114,37 +114,42 @@
 <div id="footer"></div>
 
 <script>
+
 fetch("header.html")
-.then(r=>r.text())
-.then(html=>{
+.then(res => res.text())
+.then(html => {
 
-document.getElementById("site-header").innerHTML=html;
+    document.getElementById("site-header").innerHTML = html;
 
-document.getElementById("site-header")
-.querySelectorAll("script")
-.forEach(old=>{
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
 
-const s=document.createElement("script");
+    scripts.forEach(oldScript => {
 
-if(old.src){
-s.src=old.src;
-}else{
-s.textContent=old.textContent;
-}
+        const newScript = document.createElement("script");
 
-document.body.appendChild(s);
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+        } else {
+            newScript.textContent = oldScript.textContent;
+        }
+
+        document.body.appendChild(newScript);
+        oldScript.remove();
+
+    });
 
 });
 
-});
-</script>
-
-<script>
 fetch("footer.html")
-.then(r=>r.text())
-.then(html=>{
-document.getElementById("site-footer").innerHTML=html;
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
 });
+
 </script>
 </body>
 </html>

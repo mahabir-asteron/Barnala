@@ -16,7 +16,7 @@
 <body>
 
 <!-- Header -->
-<div id="header"></div>
+<div id="site-header"></div>
 
 <!-- ==========================================
 HERO
@@ -184,18 +184,40 @@ CALL TO ACTION
 <script>
 
 fetch("header.html")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("header").innerHTML = data;
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-header").innerHTML = html;
+
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
+
+    scripts.forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+        } else {
+            newScript.textContent = oldScript.textContent;
+        }
+
+        document.body.appendChild(newScript);
+        oldScript.remove();
+
+    });
+
 });
 
 fetch("footer.html")
-.then(response => response.text())
-.then(data => {
-    document.getElementById("footer").innerHTML = data;
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("footer").innerHTML = html;
+
 });
 
 </script>
-
 </body>
 </html>

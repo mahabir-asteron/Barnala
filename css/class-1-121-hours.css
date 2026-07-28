@@ -934,6 +934,14 @@ RESPONSIVE
 
 }
 
+    .hero-content{
+
+    margin:0;
+
+    text-align:left;
+
+}
+
 .accordion-btn{
 
     font-size:20px;
@@ -954,13 +962,13 @@ section{
 
     min-height:70vh;
 
-    text-align:center;
-
 }
 
 .hero-content{
 
-    margin:auto;
+    margin:0;
+
+    text-align:left;
 
 }
 

@@ -682,49 +682,42 @@ Email Us
 <div id="site-footer"></div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
 
-    // Load Header
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("site-header").innerHTML = data;
-        });
+fetch("header.html")
+.then(res => res.text())
+.then(html => {
 
-    // Load Footer
-    fetch("footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("site-footer").innerHTML = data;
-        });
+    document.getElementById("site-header").innerHTML = html;
 
-    // Accordion
-    document.querySelectorAll(".accordion-btn").forEach(button => {
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
 
-        button.addEventListener("click", () => {
+    scripts.forEach(oldScript => {
 
-            const item = button.parentElement;
-            const content = item.querySelector(".accordion-content");
-            const openItem = document.querySelector(".accordion-item.active");
+        const newScript = document.createElement("script");
 
-            if (openItem && openItem !== item) {
-                openItem.classList.remove("active");
-                openItem.querySelector(".accordion-content").style.maxHeight = null;
-            }
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+        } else {
+            newScript.textContent = oldScript.textContent;
+        }
 
-            item.classList.toggle("active");
-
-            if (item.classList.contains("active")) {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = null;
-            }
-
-        });
+        document.body.appendChild(newScript);
+        oldScript.remove();
 
     });
 
 });
+
+fetch("footer.html")
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-footer").innerHTML = html;
+
+});
+
 </script>
 
 </body>

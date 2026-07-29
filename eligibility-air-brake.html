@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Air Brake Eligibility | Barnala Driver Training Academy</title>
+
+<meta name="description" content="Check the eligibility requirements for the Air Brake Endorsement Course at Barnala Driver Training Academy.">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/eligibility-air-brake.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="section-label">
+                AIR BRAKE ELIGIBILITY
+            </span>
+
+            <h1>
+                Air Brake <br>
+                Course <br>
+                Eligibility
+            </h1>
+
+            <div class="hero-buttons">
+
+                <a href="enroll-air-brake.html" class="btn">
+                    Enroll Now →
+                </a>
+
+                <a href="tel:2042152222" class="btn-outline">
+                    Call Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+ELIGIBILITY
+========================================= -->
+
+<section class="course-overview">
+
+    <div class="container">
+
+        <p class="section-label">
+            ELIGIBILITY REQUIREMENTS
+        </p>
+
+        <h2>
+            Air Brake Course Eligibility
+        </h2>
+
+        <div class="overview-grid">
+
+            <div class="overview-card">
+
+                <h3>
+                    Age
+                </h3>
+
+                <p>
+                    You must meet Manitoba Public Insurance (MPI) age requirements to obtain an Air Brake (S) Endorsement.
+                </p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <h3>
+                    Medical Fitness
+                </h3>
+
+                <p>
+                    Applicants should be medically fit to safely operate commercial vehicles equipped with air brake systems.
+                </p>
+
+            </div>
+
+            <div class="overview-card">
+
+                <h3>
+                    Knowledge Test
+                </h3>
+
+                <p>
+                    Students are required to successfully complete the MPI Air Brake Knowledge Test to receive the Air Brake (S) Endorsement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- PAGE CONTENT END -->
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-header").innerHTML = html;
+
+    const scripts = document
+        .getElementById("site-header")
+        .querySelectorAll("script");
+
+    scripts.forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if (oldScript.src){
+
+            newScript.src = oldScript.src;
+
+        } else {
+
+            newScript.textContent = oldScript.textContent;
+
+        }
+
+        document.body.appendChild(newScript);
+
+        oldScript.remove();
+
+    });
+
+});
+
+fetch("footer.html")
+.then(res => res.text())
+.then(html => {
+
+    document.getElementById("site-footer").innerHTML = html;
+
+});
+
+</script>
+
+</body>
+</html>

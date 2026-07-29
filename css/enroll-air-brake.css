@@ -1,1 +1,523 @@
+/* ==========================================
+   RESET
+========================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Arial,sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+
+    min-height:520px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:140px 20px 120px;
+
+    background:
+        linear-gradient(
+            rgba(0,38,89,.60),
+            rgba(0,38,89,.60)
+        ),
+        url("../images/class3-hero.jpg");
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.12),
+        transparent 45%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    color:#fff;
+    font-size:clamp(42px,6vw,70px);
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:22px;
+}
+
+.hero p{
+    color:rgba(255,255,255,.92);
+    font-size:19px;
+    max-width:650px;
+    margin:auto;
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.wizard-section{
+    margin-top:-90px;
+    padding:0 20px 100px;
+    position:relative;
+    z-index:20;
+}
+
+.wizard-card{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    border-radius:28px;
+    padding:45px;
+    box-shadow:
+        0 30px 80px rgba(15,23,42,.10);
+}
+
+/* ==========================================
+   PROGRESS
+========================================== */
+
+.progress-wrapper{
+    margin-bottom:45px;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+#progressFill{
+    display:block;
+    width:16%;
+    height:100%;
+    background:linear-gradient(90deg,#0057b8,#0094ff);
+    border-radius:999px;
+    transition:.4s;
+}
+
+.progress-info{
+    margin-top:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#progressText{
+    font-size:15px;
+    font-weight:700;
+    color:#6b7280;
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-btn{
+    border:none;
+    background:#eef4ff;
+    color:#0057b8;
+    padding:12px 20px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#dbeafe;
+}
+
+/* ==========================================
+   WIZARD
+========================================== */
+
+#wizardContent{
+    transition:.35s;
+    text-align:center;
+}
+
+#wizardContent h2{
+    font-size:38px;
+    line-height:1.15;
+    margin-bottom:18px;
+    color:#0f172a;
+}
+
+.question-subtitle{
+    max-width:620px;
+    margin:0 auto 40px;
+    color:#6b7280;
+    font-size:18px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button-group{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.button-group button,
+.result-btn,
+.secondary-btn{
+    min-width:180px;
+    padding:18px 28px;
+    border:none;
+    border-radius:14px;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.button-group button,
+.result-btn{
+    background:#0057b8;
+    color:#fff;
+}
+
+.button-group button:hover,
+.result-btn:hover{
+    background:#003f86;
+    transform:translateY(-2px);
+}
+
+.secondary-btn{
+    background:#eef2f7;
+    color:#1f2937;
+}
+
+.secondary-btn:hover{
+    background:#dde5ef;
+}
+
+/* ==========================================
+   LICENCE CARDS
+========================================== */
+
+.licence-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+    margin-top:35px;
+}
+
+.licence-card{
+    padding:34px 24px;
+    border:2px solid #e5e7eb;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.3s;
+    background:#fff;
+}
+
+.licence-card:hover{
+    border-color:#0057b8;
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,87,184,.10);
+}
+
+.licence-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#002d72;
+}
+
+.licence-card p{
+    color:#6b7280;
+    font-size:16px;
+}
+
+/* ==========================================
+   RESULT ICONS
+========================================== */
+
+.result-icon{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 30px;
+    font-size:48px;
+    font-weight:800;
+}
+
+.success{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.error{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ==========================================
+   ENROLLMENT FORM
+========================================== */
+
+.enrollment-form{
+    text-align:left;
+}
+
+.enrollment-form h2{
+    text-align:center;
+    margin-bottom:12px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-bottom:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    font-size:16px;
+    transition:.3s;
+    background:#fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#0057b8;
+    box-shadow:0 0 0 4px rgba(0,87,184,.12);
+}
+
+textarea{
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:20px;
+    padding:18px;
+    border:none;
+    border-radius:14px;
+    background:#0057b8;
+    color:#fff;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#003f86;
+}
+
+/* ==========================================
+   THANK YOU
+========================================== */
+
+.thank-you{
+    text-align:center;
+    padding:30px 10px;
+}
+
+.thank-you h2{
+    margin-bottom:18px;
+}
+
+.thank-you p{
+    max-width:620px;
+    margin:auto;
+    color:#6b7280;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.hero{
+    min-height:380px;
+    padding:120px 20px 70px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.wizard-card{
+    padding:30px 24px;
+}
+
+#wizardContent h2{
+    font-size:30px;
+}
+
+.licence-grid{
+    grid-template-columns:1fr;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+}
+
+.progress-info{
+    flex-direction:column;
+    gap:14px;
+}
+
+.button-group{
+    flex-direction:column;
+}
+
+.button-group button,
+.result-btn,
+.secondary-btn{
+    width:100%;
+}
+
+}
+
+/* ==========================================
+   HERO BUTTONS
+========================================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-btn,
+.hero-btn-outline{
+
+    min-width:220px;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.hero-btn{
+
+    background:#ffffff;
+
+    color:#0057b8;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#f3f4f6;
+
+}
+
+.hero-btn-outline{
+
+    border:2px solid rgba(255,255,255,.35);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    color:#ffffff;
+
+}
+
+.hero-btn{
+
+    background:#ffffff;
+
+    color:#0057b8;
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.18);
+
+}

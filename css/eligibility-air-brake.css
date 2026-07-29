@@ -7,6 +7,7 @@ HERO
     min-height:70vh;
     display:flex;
     align-items:center;
+    justify-content:flex-start;
     background:url("../images/hero/eligibility-class3-hero.webp") center center / cover no-repeat;
     overflow:hidden;
 }
@@ -32,9 +33,12 @@ HERO
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
     max-width:700px;
     color:#fff;
     padding-top:40px;
+    text-align:left;
 }
 
 .hero .section-label{

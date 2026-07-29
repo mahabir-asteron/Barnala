@@ -1,1 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Enroll in Air Brake Course | Barnala Driver Training Academy
+    </title>
+
+    <meta name="description"
+          content="Check your eligibility and enroll in Barnala Driver Training Academy's Air Brake Course.">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/enroll-air-brake.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+     HEADER
+=========================== -->
+
+<div id="site-header"></div>
+
+<main>
+
+<!-- ===========================
+     HERO
+=========================== -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+
+            AIR BRAKE COURSE
+
+        </span>
+
+        <h1>
+
+            Enroll in<br>
+            Air Brake Course
+
+        </h1>
+
+        <p>
+
+            Check your eligibility in under one minute.
+            If you qualify, complete your registration
+            immediately without leaving this page.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#wizard" class="hero-btn">
+
+                Check Eligibility
+
+            </a>
+
+            <a href="air-brake.html" class="hero-btn-outline">
+
+                Learn About Air Brake
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     ENROLLMENT WIZARD
+=========================== -->
+
+<section class="wizard-section"
+         id="wizard">
+
+    <div class="wizard-card">
+
+        <!-- Progress -->
+
+        <div class="progress-wrapper">
+
+            <div class="progress-bar">
+
+                <span id="progressFill"></span>
+
+            </div>
+
+            <div class="progress-info">
+
+                <span id="progressText">
+
+                    Step 1 of 4
+
+                </span>
+
+                <button
+                    id="backBtn"
+                    class="back-btn"
+                    style="display:none;">
+
+                    ← Back
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Dynamic Content -->
+
+        <div id="wizardContent">
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+
+<div id="site-footer"></div>
+
+<script>
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const wizard = document.getElementById("wizardContent");
+const progressFill = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
+const backBtn = document.getElementById("backBtn");
+
+const TOTAL_STEPS = 4;
+
+let history = [];
+
+/* =========================================
+   HELPERS
+========================================= */
+
+function render(html){
+
+    wizard.style.opacity="0";
+    wizard.style.transform="translateY(20px)";
+
+    setTimeout(()=>{
+
+        wizard.innerHTML=html;
+
+        wizard.style.opacity="1";
+        wizard.style.transform="translateY(0)";
+
+    },180);
+
+}
+
+function updateProgress(step){
+
+    progressFill.style.width=((step/TOTAL_STEPS)*100)+"%";
+
+    progressText.textContent=`Step ${step} of ${TOTAL_STEPS}`;
+
+}
+
+function finishWizard(){
+
+    progressFill.style.width="100%";
+
+    progressText.textContent="Completed";
+
+    backBtn.style.display="none";
+
+}
+
+function resetWizard(){
+
+    history=[];
+
+    backBtn.style.display="none";
+
+    progressFill.style.width="25%";
+
+    progressText.textContent="Step 1 of 4";
+
+}
+
+function saveStep(step){
+
+    history.push(step);
+
+    backBtn.style.display="inline-flex";
+
+}
+
+function goBack(){
+
+    if(history.length===0){
+
+        return;
+
+    }
+
+    const previous=history.pop();
+
+    previous();
+
+}
+
+backBtn.addEventListener("click",goBack);
+
+/* =========================================
+   START
+========================================= */
+
+function startWizard(){
+
+    resetWizard();
+
+    licenceQuestion();
+
+}
+
+window.addEventListener("load",startWizard);
+
+  /* =========================================
+   RESULT SCREENS
+========================================= */
+
+function eligible(){
+
+    finishWizard();
+
+    render(`
+
+        <div class="result-icon success">
+
+            ✓
+
+        </div>
+
+        <h2>
+
+            Congratulations!
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            You are eligible to enrol in
+            Air Brake Course.
+
+        </p>
+
+        <div class="button-group">
+
+            <button
+                class="result-btn"
+                onclick="showEnrollmentForm()">
+
+                Proceed with Enrollment
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function notEligible(){
+
+    finishWizard();
+
+    render(`
+
+        <div class="not-eligible-screen">
+
+            <h2>
+
+                No Worries
+
+            </h2>
+
+            <p class="question-subtitle">
+
+                Let's connect and make it possible.
+
+            </p>
+
+            <div class="button-group">
+
+                <button
+                    class="result-btn"
+                    onclick="showEnrollmentForm()">
+
+                    Let's Connect
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `);
+
+}
+
+/* =========================================
+   STEP 1
+========================================= */
+
+function licenceQuestion(){
+
+    updateProgress(1);
+
+    render(`
+
+        <h2>
+
+            Which class of License do you have?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            Select your current licence.
+
+        </p>
+
+        <div class="licence-grid">
+
+            <div class="licence-card"
+                 onclick="selectLicence()">
+
+                <h3>Class 5L</h3>
+
+                <p>Learner Licence</p>
+
+            </div>
+
+            <div class="licence-card"
+                 onclick="selectLicence()">
+
+                <h3>Class 5I</h3>
+
+                <p>Intermediate Licence</p>
+
+            </div>
+
+            <div class="licence-card"
+                 onclick="selectLicence()">
+
+                <h3>Class 5F</h3>
+
+                <p>Full Licence</p>
+
+            </div>
+
+        </div>
+
+    `);
+
+}
+
+function selectLicence(){
+
+    saveStep(licenceQuestion);
+
+    medicalQuestion();
+
+}
+
+/* =========================================
+   STEP 2
+========================================= */
+
+function medicalQuestion(){
+
+    updateProgress(2);
+
+    render(`
+
+        <h2>
+
+            Have you passed your Medical Examination?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            A valid medical examination is required before
+            enrolling in the Air Brake Course.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="medicalYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="medicalNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function medicalYes(){
+
+    saveStep(medicalQuestion);
+
+    airBrakeQuestion();
+
+}
+
+function medicalNo(){
+
+    notEligible();
+
+}
+
+/* =========================================
+   STEP 3
+========================================= */
+
+function airBrakeQuestion(){
+
+    updateProgress(3);
+
+    render(`
+
+        <h2>
+
+            Have you passed Air Brake Knowledge Test?
+
+        </h2>
+
+        <p class="question-subtitle">
+
+            Passing the Air Brake Knowledge Test is required
+            before enrolling.
+
+        </p>
+
+        <div class="button-group">
+
+            <button onclick="airBrakeYes()">
+
+                Yes
+
+            </button>
+
+            <button onclick="airBrakeNo()">
+
+                No
+
+            </button>
+
+        </div>
+
+    `);
+
+}
+
+function airBrakeYes(){
+
+    eligible();
+
+}
+
+function airBrakeNo(){
+
+    notEligible();
+
+}
+
+  /* =========================================
+   ENROLLMENT FORM
+========================================= */
+
+function showEnrollmentForm(){
+
+    finishWizard();
+
+    window.scrollTo({
+        top:document.querySelector(".wizard-section").offsetTop-80,
+        behavior:"smooth"
+    });
+
+    render(`
+
+<div class="enrollment-form">
+
+    <h2>
+
+        Registration Request
+
+    </h2>
+
+    <p class="question-subtitle">
+
+        Complete the form below and our admissions team
+        will contact you to complete your Air Brake Course
+        enrollment.
+
+    </p>
+
+    <form id="airBrakeForm">
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="firstName">
+
+                    First Name *
+
+                </label>
+
+                <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="lastName">
+
+                    Last Name *
+
+                </label>
+
+                <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    required>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="phone">
+
+                    Phone Number *
+
+                </label>
+
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">
+
+                    Email Address *
+
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="course">
+
+                    Course
+
+                </label>
+
+                <input
+                    id="course"
+                    type="text"
+                    value="Air Brake Course"
+                    readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="branch">
+
+                    Preferred Branch *
+
+                </label>
+
+                <select
+                    id="branch"
+                    required>
+
+                    <option value="">
+
+                        Select Branch
+
+                    </option>
+
+                    <option>
+
+                        Winnipeg
+
+                    </option>
+
+                    <option>
+
+                        Steinbach
+
+                    </option>
+
+                    <option>
+
+                        Portage la Prairie
+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="message">
+
+                Additional Information
+
+            </label>
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Tell us anything you'd like us to know..."></textarea>
+
+        </div>
+
+        <button
+            class="submit-btn"
+            type="submit">
+
+            Submit Registration Request
+
+        </button>
+
+    </form>
+
+</div>
+
+`);
+
+    document
+        .getElementById("airBrakeForm")
+        .addEventListener("submit",function(e){
+
+            e.preventDefault();
+
+            showThankYou();
+
+        });
+
+}
+
+/* =========================================
+   THANK YOU
+========================================= */
+
+function showThankYou(){
+
+    render(`
+
+<div class="thank-you">
+
+    <div class="result-icon success">
+
+        ✓
+
+    </div>
+
+    <h2>
+
+        Thank You!
+
+    </h2>
+
+    <p>
+
+        Your registration request has been received successfully.
+
+        A member of the Barnala Driver Training Academy team
+        will contact you shortly to complete your enrollment.
+
+    </p>
+
+    <br>
+
+    <button
+        class="result-btn"
+        onclick="startWizard()">
+
+        Return to Eligibility Checker
+
+    </button>
+
+</div>
+
+`);
+
+}
+
+</script>
+
+<script>
+
+fetch("header.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-header").innerHTML=html;
+
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old=>{
+
+const s=document.createElement("script");
+
+if(old.src){
+
+    s.src=old.src;
+
+}else{
+
+    s.textContent=old.textContent;
+
+}
+
+document.body.appendChild(s);
+
+});
+
+});
+
+</script>
+
+<script>
+
+fetch("footer.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-footer").innerHTML=html;
+
+});
+
+</script>
+
+</body>
+</html>

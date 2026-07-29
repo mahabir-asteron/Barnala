@@ -34,7 +34,7 @@ HERO
     display:flex;
     align-items:center;
     overflow:hidden;
-    background:url("../images/hero/handbooks-hero.webp") center center / cover no-repeat;
+    background:url("../images/handbooks-hero.jpg") center center / cover no-repeat;
 }
 
 .hero::before{

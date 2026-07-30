@@ -337,42 +337,43 @@
     <script>
 
 fetch("header.html")
-.then(res => res.text())
-.then(html => {
+.then(r=>r.text())
+.then(html=>{
 
-    document.getElementById("site-header").innerHTML = html;
+document.getElementById("site-header").innerHTML=html;
 
-    const scripts = document
-        .getElementById("site-header")
-        .querySelectorAll("script");
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old=>{
 
-    scripts.forEach(oldScript => {
+const s=document.createElement("script");
 
-        const newScript = document.createElement("script");
+if(old.src){
 
-        if (oldScript.src){
-            newScript.src = oldScript.src;
-        }else{
-            newScript.textContent = oldScript.textContent;
-        }
+s.src=old.src;
 
-        document.body.appendChild(newScript);
-        oldScript.remove();
+}else{
 
-    });
+s.textContent=old.textContent;
+
+}
+
+document.body.appendChild(s);
+
+});
 
 });
 
 fetch("footer.html")
-.then(res => res.text())
-.then(html => {
+.then(r=>r.text())
+.then(html=>{
 
-    document.getElementById("site-footer").innerHTML = html;
+document.getElementById("site-footer").innerHTML=html;
 
 });
 
 </script>
-
+    
 </body>
 
 </html>

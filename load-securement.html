@@ -21,7 +21,7 @@
 <body>
 
     <!-- Header -->
-    <div id="header"></div>
+    <div id="site-header"></div>
 
     <!-- Hero -->
 
@@ -332,43 +332,40 @@
 
     <!-- Footer -->
 
-    <div id="footer"></div>
+    <div id="site-footer"></div>
 
-    <script>
+    <<script>
 
 fetch("header.html")
-.then(r=>r.text())
-.then(html=>{
+.then(r => r.text())
+.then(html => {
 
-document.getElementById("site-header").innerHTML=html;
+    document.getElementById("site-header").innerHTML = html;
 
-document.getElementById("site-header")
-.querySelectorAll("script")
-.forEach(old=>{
+    document.getElementById("site-header")
+    .querySelectorAll("script")
+    .forEach(old => {
 
-const s=document.createElement("script");
+        const s = document.createElement("script");
 
-if(old.src){
+        if (old.src) {
+            s.src = old.src;
+        } else {
+            s.textContent = old.textContent;
+        }
 
-s.src=old.src;
+        document.body.appendChild(s);
+        old.remove();
 
-}else{
-
-s.textContent=old.textContent;
-
-}
-
-document.body.appendChild(s);
-
-});
+    });
 
 });
 
 fetch("footer.html")
-.then(r=>r.text())
-.then(html=>{
+.then(r => r.text())
+.then(html => {
 
-document.getElementById("site-footer").innerHTML=html;
+    document.getElementById("site-footer").innerHTML = html;
 
 });
 

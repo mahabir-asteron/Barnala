@@ -79,7 +79,6 @@ HERO
     z-index:2;
     max-width:620px;
     color:#fff;
-    padding-top:40px;
     text-align:left;
 }
 
@@ -99,7 +98,7 @@ HERO
     line-height:1.05;
     font-weight:800;
     letter-spacing:-1px;
-    margin-bottom:40px;
+    margin:22px 0 28px;
 }
 
 .hero-buttons{

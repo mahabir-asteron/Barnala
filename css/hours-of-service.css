@@ -1,1 +1,634 @@
+/* =========================================================
+   HOURS OF SERVICE COURSE PAGE
+   Matches Class 1 (244 Hours) Design System
+========================================================= */
 
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        linear-gradient(90deg,
+            rgba(7,18,36,.88) 0%,
+            rgba(7,18,36,.72) 42%,
+            rgba(7,18,36,.48) 100%),
+        url("../images/hero/hours-of-service.webp") center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right,
+            rgba(255,255,255,.08),
+            transparent 42%);
+    pointer-events:none;
+}
+
+.hero .container{
+    position:relative;
+    z-index:2;
+    width:100%;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero-label{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 18px;
+    margin-bottom:22px;
+    border-radius:999px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(12px);
+    color:#fff;
+    font-size:.9rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    color:#fff;
+    font-size:clamp(52px,6vw,82px);
+    line-height:.95;
+    letter-spacing:-2px;
+    margin:0;
+}
+
+.hero h1 span{
+    display:block;
+    color:var(--accent);
+}
+
+.hero p{
+    max-width:620px;
+    margin:22px 0 28px;
+    color:rgba(255,255,255,.92);
+    font-size:1.12rem;
+    line-height:1.8;
+}
+
+/* =========================================================
+   PAGE SECTIONS
+========================================================= */
+
+.page-section{
+    position:relative;
+    padding:100px 0;
+    overflow:hidden;
+}
+
+.page-section:nth-child(even){
+    background:#fff;
+}
+
+.page-section:nth-child(odd){
+    background:#f7f9fc;
+}
+
+.section-label{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+    color:var(--accent);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:.82rem;
+}
+
+.section-label::before{
+    content:"";
+    width:40px;
+    height:2px;
+    background:var(--accent);
+}
+
+.section-header{
+    max-width:760px;
+    margin-bottom:60px;
+}
+
+.section-header p{
+    margin-top:22px;
+    color:var(--text-light);
+    font-size:1.08rem;
+    line-height:1.9;
+}
+
+/* =========================================================
+   OVERVIEW GRID
+========================================================= */
+
+.overview-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.overview-card{
+    position:relative;
+    padding:40px 34px;
+    border-radius:24px;
+    background:#fff;
+    border:1px solid rgba(12,35,64,.08);
+    box-shadow:0 18px 50px rgba(12,35,64,.08);
+    transition:.35s ease;
+}
+
+.overview-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 28px 60px rgba(12,35,64,.14);
+}
+
+.overview-card h3{
+    margin-bottom:18px;
+    color:var(--primary);
+    font-size:1.35rem;
+}
+
+.overview-card p{
+    margin:0;
+    color:var(--text-light);
+    line-height:1.8;
+}
+
+/* =========================================================
+   DIVIDER IMAGE
+========================================================= */
+
+.section-divider{
+    position:relative;
+    height:420px;
+    overflow:hidden;
+}
+
+.section-divider img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* =========================================================
+   PROGRAM DETAILS
+========================================================= */
+
+.program-details{
+    position:relative;
+    padding:100px 0;
+    background:#fff;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+    align-items:start;
+}
+
+.program-card{
+    position:relative;
+    background:#fff;
+    border:1px solid rgba(12,35,64,.08);
+    border-radius:24px;
+    padding:42px 36px;
+    box-shadow:0 18px 50px rgba(12,35,64,.08);
+    transition:.35s ease;
+}
+
+.program-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 28px 60px rgba(12,35,64,.14);
+}
+
+.program-card h3{
+    margin-bottom:24px;
+    color:var(--primary);
+    font-size:1.55rem;
+}
+
+.program-card p{
+    margin-bottom:20px;
+    color:var(--text-light);
+    line-height:1.9;
+}
+
+.program-card p:last-child{
+    margin-bottom:0;
+}
+
+/* =========================================================
+   COURSE HIGHLIGHTS
+========================================================= */
+
+.highlights-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+}
+
+.highlight-card{
+    position:relative;
+    background:#fff;
+    border-radius:22px;
+    padding:36px 30px;
+    border:1px solid rgba(12,35,64,.08);
+    box-shadow:0 16px 45px rgba(12,35,64,.08);
+    transition:.35s ease;
+}
+
+.highlight-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 24px 55px rgba(12,35,64,.14);
+}
+
+.highlight-card h3{
+    margin-bottom:18px;
+    color:var(--primary);
+    font-size:1.28rem;
+}
+
+.highlight-card p{
+    margin:0;
+    color:var(--text-light);
+    line-height:1.85;
+}
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.feature-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:28px;
+}
+
+.feature-item{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+}
+
+.feature-item i{
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(var(--accent-rgb),.12);
+    color:var(--accent);
+    flex-shrink:0;
+}
+
+.feature-item h4{
+    margin-bottom:6px;
+    color:var(--primary);
+    font-size:1.05rem;
+}
+
+.feature-item p{
+    margin:0;
+    color:var(--text-light);
+    line-height:1.75;
+}
+
+/* =========================================================
+   CONTENT BLOCK
+========================================================= */
+
+.content-block{
+    max-width:900px;
+}
+
+.content-block p{
+    margin-bottom:24px;
+    color:var(--text-light);
+    line-height:1.9;
+}
+
+.content-block p:last-child{
+    margin-bottom:0;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    position:relative;
+    padding:100px 0;
+    overflow:hidden;
+}
+
+.cta-box{
+    position:relative;
+    overflow:hidden;
+    padding:70px 60px;
+    border-radius:32px;
+    background:linear-gradient(135deg,var(--primary),#17365d);
+    color:#fff;
+    text-align:center;
+    box-shadow:0 30px 70px rgba(12,35,64,.18);
+}
+
+.cta-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.12),
+        transparent 42%);
+    pointer-events:none;
+}
+
+.cta-box>*{
+    position:relative;
+    z-index:2;
+}
+
+.cta-box h2{
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.cta-box p{
+    max-width:720px;
+    margin:0 auto 35px;
+    color:rgba(255,255,255,.88);
+    line-height:1.9;
+    font-size:1.08rem;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+/* =========================================================
+   ADVISOR SECTION
+========================================================= */
+
+.advisor-section{
+    padding:100px 0;
+    background:#f7f9fc;
+}
+
+.advisor-card{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:50px;
+    align-items:center;
+    background:#fff;
+    border-radius:28px;
+    padding:45px;
+    border:1px solid rgba(12,35,64,.08);
+    box-shadow:0 22px 60px rgba(12,35,64,.08);
+}
+
+.advisor-image img{
+    width:100%;
+    border-radius:24px;
+    display:block;
+}
+
+.advisor-content h2{
+    margin-bottom:20px;
+}
+
+.advisor-content p{
+    color:var(--text-light);
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.advisor-content p:last-child{
+    margin-bottom:0;
+}
+
+.advisor-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:35px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.overview-card,
+.program-card,
+.highlight-card,
+.advisor-card,
+.cta-box{
+    animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px){
+
+    .hero{
+        min-height:65vh;
+    }
+
+    .hero-content{
+        max-width:640px;
+    }
+
+    .section-divider{
+        height:360px;
+    }
+
+    .advisor-card{
+        grid-template-columns:280px 1fr;
+        gap:40px;
+    }
+
+}
+
+@media (max-width:992px){
+
+    .hero{
+        min-height:60vh;
+    }
+
+    .hero h1{
+        font-size:clamp(46px,7vw,68px);
+    }
+
+    .page-section,
+    .program-details,
+    .advisor-section,
+    .final-cta{
+        padding:80px 0;
+    }
+
+    .section-header{
+        margin-bottom:45px;
+    }
+
+    .overview-grid,
+    .program-grid,
+    .highlights-grid{
+        grid-template-columns:1fr;
+    }
+
+    .advisor-card{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .advisor-image{
+        max-width:320px;
+        margin:0 auto;
+    }
+
+    .advisor-actions{
+        justify-content:center;
+    }
+
+    .cta-box{
+        padding:60px 40px;
+    }
+
+    .section-divider{
+        height:300px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero{
+        min-height:56vh;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-label{
+        font-size:.8rem;
+        letter-spacing:1.5px;
+    }
+
+    .hero h1{
+        font-size:clamp(40px,9vw,56px);
+        line-height:1;
+    }
+
+    .hero p{
+        font-size:1rem;
+        line-height:1.75;
+    }
+
+    .page-section,
+    .program-details,
+    .advisor-section,
+    .final-cta{
+        padding:70px 0;
+    }
+
+    .overview-card,
+    .program-card,
+    .highlight-card{
+        padding:32px 26px;
+    }
+
+    .cta-box{
+        padding:50px 28px;
+    }
+
+    .cta-buttons,
+    .advisor-actions{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .cta-buttons .btn,
+    .advisor-actions .btn{
+        width:100%;
+        max-width:320px;
+        justify-content:center;
+    }
+
+    .section-divider{
+        height:240px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .hero{
+        min-height:52vh;
+    }
+
+    .hero-label{
+        padding:7px 16px;
+    }
+
+    .hero h1{
+        font-size:clamp(34px,10vw,46px);
+    }
+
+    .section-header{
+        margin-bottom:35px;
+    }
+
+    .overview-card,
+    .program-card,
+    .highlight-card{
+        border-radius:20px;
+        padding:28px 22px;
+    }
+
+    .advisor-card{
+        padding:30px 22px;
+        border-radius:22px;
+    }
+
+    .cta-box{
+        border-radius:24px;
+        padding:42px 22px;
+    }
+
+    .section-divider{
+        height:200px;
+    }
+
+}

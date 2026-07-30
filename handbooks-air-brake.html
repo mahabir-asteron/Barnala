@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Driving Handbooks | Barnala Driver Training Academy</title>
+
+<meta name="description"
+content="Access the official Manitoba driving handbooks including the Driver's Handbook, Professional Driver's Manual and Air Brake Manual.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/handbooks-class5.css">
+
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<!-- =========================
+Hero Section
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="section-label">
+
+                OFFICIAL MPI STUDY MATERIAL
+
+            </span>
+
+            <h1>
+
+                Air Brake<br>
+                Handbooks
+
+            </h1>
+
+            <div class="hero-buttons">
+
+                <a href="#handbooks" class="btn">
+
+                    Explore Handbooks
+
+                </a>
+
+                <a href="contact.html" class="btn-outline">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+HANDBOOKS
+========================================== -->
+
+<section class="handbooks-section" id="handbooks">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-label">
+
+                STUDY RESOURCES
+
+            </span>
+
+            <h2>
+
+                Official Manitoba Driving Handbooks
+
+            </h2>
+
+            <p>
+
+                Download the official Manitoba Public Insurance (MPI) study materials
+                recommended by Barnala Driver Training Academy.
+
+            </p>
+
+        </div>
+
+        <div class="handbooks-grid">
+
+            <!-- Air Brake -->
+
+            <article class="handbook-card">
+
+                <div class="handbook-icon">
+
+                    🚛
+
+                </div>
+
+                <h3>
+
+                    Air Brake Manual
+
+                </h3>
+
+                <p>
+
+                    Study air brake systems, inspections, maintenance requirements,
+                    safety procedures and commercial vehicle operation.
+
+                </p>
+
+                <a
+                    href="https://www.mpi.mb.ca/wp-content/uploads/2022/10/AirBrakeManualNEW.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn">
+
+                    View Manual
+
+                </a>
+
+            </article>
+
+            <!-- Professional Driver -->
+
+            <article class="handbook-card">
+
+                <div class="handbook-icon">
+
+                    📘
+
+                </div>
+
+                <h3>
+
+                    Professional Driver's Manual
+
+                </h3>
+
+                <p>
+
+                    Learn commercial driving techniques, inspections,
+                    trip planning, cargo safety and Manitoba regulations.
+
+                </p>
+
+                <a
+                    href="https://www.mpi.mb.ca/wp-content/uploads/2022/10/ProfDriverHBookComp.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn">
+
+                    View Manual
+
+                </a>
+
+            </article>
+
+            <!-- Driver Handbook -->
+
+            <article class="handbook-card">
+
+                <div class="handbook-icon">
+
+                    🚗
+
+                </div>
+
+                <h3>
+
+                    Driver's Handbook
+
+                </h3>
+
+                <p>
+
+                    Learn Manitoba traffic laws, road signs,
+                    licensing requirements and safe driving practices.
+
+                </p>
+
+                <a
+                    href="https://apps.mpi.mb.ca/comms/drivershandbook/"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn">
+
+                    Open Handbook
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-header").innerHTML=html;
+
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old=>{
+
+const s=document.createElement("script");
+
+if(old.src){
+
+s.src=old.src;
+
+}else{
+
+s.textContent=old.textContent;
+
+}
+
+document.body.appendChild(s);
+
+});
+
+});
+
+fetch("footer.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-footer").innerHTML=html;
+
+});
+
+</script>
+
+</body>
+
+</html>

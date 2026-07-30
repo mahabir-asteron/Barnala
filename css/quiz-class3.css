@@ -48,6 +48,7 @@ HERO
     min-height:88vh;
     display:flex;
     align-items:center;
+    justify-content:flex-start;
     overflow:hidden;
     background:url("../images/quiz-practice-hero.png") center center / cover no-repeat;
 }
@@ -71,6 +72,7 @@ HERO
     max-width:620px;
     color:#fff;
     text-align:left;
+    margin-left:0;
 }
 
 .hero .section-label{

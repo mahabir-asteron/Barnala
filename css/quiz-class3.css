@@ -94,7 +94,7 @@ HERO
 
 .hero h1{
     color:#fff;
-    font-size:clamp(42px, 6vw, 70px)
+    font-size:clamp(42px,6vw,70px);
     font-weight:800;
     line-height:1.05;
     letter-spacing:-1px;

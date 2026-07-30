@@ -6,7 +6,7 @@ HOURS OF SERVICE HERO
     position:relative;
     min-height:70vh;
     display:flex;
-    align-items:center
+    align-items:center;
     justify-content:flex-start;
     overflow:hidden;
     background:url("../images/hero/hours-of-service.webp") center center / cover no-repeat;

@@ -38,37 +38,55 @@ body{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.55);
+    background:linear-gradient(
+        90deg,
+        rgba(5,23,50,.88) 0%,
+        rgba(5,23,50,.72) 45%,
+        rgba(5,23,50,.35) 75%,
+        rgba(5,23,50,.10) 100%
+    );
 }
+
+   .container{
+    width:min(92%,1320px);
+    margin:auto;
+}   
 
 .hero-content{
     position:relative;
     max-width:700px;
-    margin:auto;
     color:#fff;
     text-align:left;
 }
 
-.hero span{
-    color:#0d6efd;
+.section-label{
+    display:inline-block;
+    color:#4da3ff;
+    font-size:15px;
     font-weight:700;
     letter-spacing:2px;
     text-transform:uppercase;
+    margin-bottom:20px;
 }
 
 .hero h1{
-    margin-top:20px;
-    font-size:clamp(42px,6vw,78px);
+    font-size:clamp(42px,6vw,70px);
     line-height:1.05;
+    letter-spacing:-1px;
+    margin-bottom:24px;
+    color:#fff;
 }
 
+    
 .hero p{
-    margin-top:20px;
-    max-width:700px;
-    font-size:20px;
+    max-width:600px;
+    font-size:18px;
     line-height:1.8;
+    color:rgba(255,255,255,.92);
+    margin-bottom:36px;
 }
 
+    
 .compare-section{
     max-width:1200px;
     margin:90px auto;
@@ -139,24 +157,67 @@ tr:nth-child(even){
     line-height:1.8;
 }
 
-.btn{
+.hero-btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:100%;
-    padding:16px 28px;
+    padding:16px 34px;
     background:#0d6efd;
     color:#fff;
-    text-decoration:none;
-    border-radius:10px;
+    border-radius:12px;
     font-weight:700;
-    font-size:17px;
     transition:.3s;
 }
 
-.btn:hover{
+.hero-btn:hover{
     background:#0957cc;
+    transform:translateY(-3px);
 }
+
+.hero-btn-outline{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 34px;
+    border:2px solid #fff;
+    color:#fff;
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.hero-btn-outline:hover{
+    background:#fff;
+    color:#071936;
+}
+
+
+  /*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:768px){
+
+.hero{
+    min-height:650px;
+}
+
+.hero h1{
+    font-size:clamp(36px,9vw,52px);
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.hero-btn,
+.hero-btn-outline{
+    width:100%;
+}
+
+}
+
+    
     /*=========================================
 RESPONSIVE TABLE
 =========================================*/
@@ -211,19 +272,54 @@ RESPONSIVE TABLE
 
 <div id="site-header"></div>
 
+<!-- =========================================
+HERO
+========================================= -->
+
 <section class="hero">
 
-<div class="hero-content">
+    <div class="container">
 
-<span>CLASS 1 PROGRAMS</span>
+        <div class="hero-content">
 
-<h1>Compare<br>Class 1 Training</h1>
+            <span class="section-label">
 
-<p>
-Compare our 121.5 Hour and 244 Hour Class 1 MELT programs to find the training that best fits your career goals.
-</p>
+                CLASS 1 MELT PROGRAMS
 
-</div>
+            </span>
+
+            <h1>
+
+                Compare<br>
+                Class 1 Training
+
+            </h1>
+
+            <p>
+
+                Compare our 121.5 Hour and 244 Hour Class 1 MELT programs to find the training option that best matches your career goals, schedule, and funding opportunities.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#comparison" class="hero-btn">
+
+                    Compare Programs
+
+                </a>
+
+                <a href="contact.html" class="hero-btn-outline">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 

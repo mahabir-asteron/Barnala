@@ -45,7 +45,7 @@ HERO
 
 .hero{
     position:relative;
-    min-height:88vh;
+    min-height:70vh;
     display:flex;
     align-items:center;
     justify-content:flex-start;

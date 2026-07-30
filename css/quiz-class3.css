@@ -94,11 +94,11 @@ HERO
 
 .hero h1{
     color:#fff;
-    font-size:clamp(42px,5vw,64px);
-    line-height:1.05;
+    font-size:clamp(42px,6vw,70px);
     font-weight:800;
+    line-height:1.05;
     letter-spacing:-1px;
-    margin:22px 0 28px;
+    margin-bottom:36px;
 }
 
 .hero-buttons{

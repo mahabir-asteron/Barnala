@@ -4,232 +4,22 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Driving Handbooks | Barnala Driver Training Academy</title>
 
+<meta name="description"
+content="Access the official Manitoba driving handbooks including the Driver's Handbook, Professional Driver's Manual and Air Brake Manual.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-:root{
-
---blue:#0057B8;
---dark:#171817;
---light:#f7f3ed;
---white:#ffffff;
---grey:#666666;
-
-}
-
-body{
-
-font-family:"Inter",sans-serif;
-background:var(--light);
-color:var(--dark);
-
-}
-
-.container{
-
-width:min(92%,1400px);
-margin:auto;
-
-}
-
-h1,h2,h3{
-
-font-family:"Manrope",sans-serif;
-
-}
-
-/* =========================
-HERO
-========================= */
-
-.hero{
-
-background:#171817;
-color:#fff;
-
-padding:110px 0 90px;
-
-}
-
-.hero-content{
-
-max-width:900px;
-
-}
-
-.hero-label{
-
-color:var(--blue);
-
-font-size:14px;
-font-weight:800;
-
-letter-spacing:1px;
-text-transform:uppercase;
-
-margin-bottom:20px;
-
-}
-
-.hero h1{
-
-font-size:clamp(42px,5vw,68px);
-
-line-height:1.05;
-
-margin-bottom:25px;
-
-text-transform:uppercase;
-
-}
-
-.hero p{
-
-max-width:760px;
-
-font-size:18px;
-
-line-height:1.8;
-
-color:#d4d4d4;
-
-}
-  /*=========================
-MANUALS
-=========================*/
-
-.manuals-section{
-
-padding:100px 0;
-
-}
-
-.manual-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:35px;
-
-}
-
-.manual-card{
-
-background:#fff;
-
-border-radius:24px;
-
-padding:40px;
-
-box-shadow:0 18px 40px rgba(0,0,0,.08);
-
-transition:.35s;
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-.manual-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.manual-icon{
-
-width:72px;
-height:72px;
-
-border-radius:18px;
-
-background:#0057B8;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:34px;
-
-margin-bottom:25px;
-
-}
-
-.manual-card h2{
-
-font-size:30px;
-
-margin-bottom:18px;
-
-}
-
-.manual-card p{
-
-color:#666;
-
-line-height:1.9;
-
-margin-bottom:35px;
-
-flex:1;
-
-}
-
-.manual-btn{
-
-display:inline-flex;
-
-justify-content:center;
-
-padding:16px 28px;
-
-background:#0057B8;
-
-color:#fff;
-
-text-decoration:none;
-
-border-radius:12px;
-
-font-weight:700;
-
-transition:.3s;
-
-}
-
-.manual-btn:hover{
-
-background:#171817;
-
-}
-
-@media(max-width:1000px){
-
-.manual-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="css/handbooks-class5.css">
 
 </head>
 
@@ -237,108 +27,192 @@ grid-template-columns:1fr;
 
 <div id="site-header"></div>
 
+<!-- =========================
+Hero Section
+========================= -->
+
 <section class="hero">
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-content">
+        <div class="hero-content">
 
-<div class="hero-label">
-Class 1 Resources
-</div>
+            <span class="section-label">
 
-<h1>
-Driving Handbooks
-</h1>
+                OFFICIAL MPI STUDY MATERIAL
 
-<p>
-A series of handbooks, manuals, and other educational tools has been created to help you prepare for a Class 1 knowledge test, driving test, and learn the rules of the road for all types of vehicles.
-</p>
+            </span>
 
-</div>
+            <h1>
 
-</div>
+                Driving<br>
+                Handbooks
+
+            </h1>
+
+            <div class="hero-buttons">
+
+                <a href="#handbooks" class="btn">
+
+                    Explore Handbooks
+
+                </a>
+
+                <a href="contact.html" class="btn-outline">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="manuals-section">
+<!-- ==========================================
+HANDBOOKS
+========================================== -->
 
-<div class="container">
+<section class="handbooks-section" id="handbooks">
 
-<div class="manual-grid">
+    <div class="container">
 
-<!-- Air Brake -->
+        <div class="section-header">
 
-<div class="manual-card">
+            <span class="section-label">
 
-<div class="manual-icon">
-🛑
-</div>
+                STUDY RESOURCES
 
-<h2>Air Brake Manual</h2>
+            </span>
 
-<p>
-The Air Brake Manual is a vital resource for Class 1 drivers, offering comprehensive guidance on the operation, maintenance, and troubleshooting of air brake systems essential for safe vehicle handling and regulatory compliance.
-</p>
+            <h2>
 
-<a class="manual-btn"
-   href="https://www.mpi.mb.ca/wp-content/uploads/2022/10/AirBrakeManualNEW.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-    Go to Air Brake Manual
-</a>
+                Official Manitoba Driving Handbooks
 
-</div>
+            </h2>
 
-<!-- Professional Driver -->
+            <p>
 
-<div class="manual-card">
+                Download the official Manitoba Public Insurance (MPI) study materials
+                recommended by Barnala Driver Training Academy.
 
-<div class="manual-icon">
-🚛
-</div>
+            </p>
 
-<h2>Professional Driver's Manual</h2>
+        </div>
 
-<p>
-The Professional Driver's Manual is an essential guide tailored for Class 1 drivers, providing comprehensive insights into vehicle operation, safety protocols, and regulatory compliance, crucial for maintaining professional standards and ensuring road safety.
-</p>
+        <div class="handbooks-grid">
 
-<a class="manual-btn"
-   href="https://www.mpi.mb.ca/wp-content/uploads/2022/10/ProfDriverHBookComp.pdf"
-   target="_blank"
-   rel="noopener noreferrer">
-    Go to Professional Driver's Manual
-</a>
+            <!-- Air Brake -->
 
-</div>
+            <article class="handbook-card">
 
-<!-- Driver Handbook -->
+                <div class="handbook-icon">
 
-<div class="manual-card">
+                    🚛
 
-<div class="manual-icon">
-📘
-</div>
+                </div>
 
-<h2>Driver's Handbook</h2>
+                <h3>
 
-<p>
-The Driver's Handbook serves as a comprehensive guide essential for all drivers, offering vital information on road regulations, safe driving practices, and vehicle operation. It is designed to equip drivers with the knowledge needed to navigate roads safely and responsibly, regardless of their level of experience.
-</p>
+                    Air Brake Manual
 
-<a class="manual-btn"
-   href="https://apps.mpi.mb.ca/comms/drivershandbook/"
-   target="_blank"
-   rel="noopener noreferrer">
-    Go to Driver's Handbook
-</a>
+                </h3>
 
-</div>
+                <p>
 
-</div>
+                    Study air brake systems, inspections, maintenance requirements,
+                    safety procedures and commercial vehicle operation.
 
-</div>
+                </p>
+
+                <a
+                    href="https://www.mpi.mb.ca/wp-content/uploads/2022/10/AirBrakeManualNEW.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn">
+
+                    View Manual
+
+                </a>
+
+            </article>
+
+            <!-- Professional Driver -->
+
+            <article class="handbook-card">
+
+                <div class="handbook-icon">
+
+                    📘
+
+                </div>
+
+                <h3>
+
+                    Professional Driver's Manual
+
+                </h3>
+
+                <p>
+
+                    Learn commercial driving techniques, inspections,
+                    trip planning, cargo safety and Manitoba regulations.
+
+                </p>
+
+                <a
+                    href="https://www.mpi.mb.ca/wp-content/uploads/2022/10/ProfDriverHBookComp.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn">
+
+                    View Manual
+
+                </a>
+
+            </article>
+
+            <!-- Driver Handbook -->
+
+            <article class="handbook-card">
+
+                <div class="handbook-icon">
+
+                    🚗
+
+                </div>
+
+                <h3>
+
+                    Driver's Handbook
+
+                </h3>
+
+                <p>
+
+                    Learn Manitoba traffic laws, road signs,
+                    licensing requirements and safe driving practices.
+
+                </p>
+
+                <a
+                    href="https://apps.mpi.mb.ca/comms/drivershandbook/"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn">
+
+                    Open Handbook
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -347,41 +221,43 @@ The Driver's Handbook serves as a comprehensive guide essential for all drivers,
 <script>
 
 fetch("header.html")
-.then(res => res.text())
-.then(html => {
+.then(r=>r.text())
+.then(html=>{
 
-    document.getElementById("site-header").innerHTML = html;
+document.getElementById("site-header").innerHTML=html;
 
-    const scripts = document
-        .getElementById("site-header")
-        .querySelectorAll("script");
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old=>{
 
-    scripts.forEach(oldScript => {
+const s=document.createElement("script");
 
-        const newScript = document.createElement("script");
+if(old.src){
 
-        if (oldScript.src) {
-            newScript.src = oldScript.src;
-        } else {
-            newScript.textContent = oldScript.textContent;
-        }
+s.src=old.src;
 
-        document.body.appendChild(newScript);
-        oldScript.remove();
+}else{
 
-    });
+s.textContent=old.textContent;
+
+}
+
+document.body.appendChild(s);
+
+});
 
 });
 
 fetch("footer.html")
-.then(res => res.text())
-.then(html => {
+.then(r=>r.text())
+.then(html=>{
 
-    document.getElementById("site-footer").innerHTML = html;
+document.getElementById("site-footer").innerHTML=html;
 
 });
 
 </script>
 
 </body>
+
 </html>

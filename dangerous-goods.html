@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dangerous Goods Course | Barnala Driver Training Academy</title>
+
+    <meta name="description"
+        content="Dangerous Goods training at Barnala Driver Training Academy in Winnipeg, Manitoba. Learn the knowledge required for the safe transportation of dangerous goods.">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dangerous-goods.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    EXCLUSIVE COURSES
+                </span>
+
+                <h1>
+                    Dangerous Goods
+                    Course
+                </h1>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Course Overview -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <span class="section-label">
+                DANGEROUS GOODS
+            </span>
+
+            <h2>
+                Course Overview
+            </h2>
+
+            <p class="section-intro">
+                Transporting dangerous goods demands strict adherence to safety protocols and
+                regulatory standards. Specialized knowledge in hazardous material handling
+                ensures environmental protection and public safety, crucial for the logistics
+                industry's integrity and reliability.
+            </p>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <h3>
+                        Critical Knowledge
+                    </h3>
+
+                    <p>
+                        Acquiring expertise in transporting dangerous goods ensures compliance
+                        with stringent safety regulations, minimizing risks and promoting
+                        responsible handling practices.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <h3>
+                        Career Advancement
+                    </h3>
+
+                    <p>
+                        Mastery of dangerous goods transport opens doors to specialized roles,
+                        offering opportunities for career growth and advancement in the logistics
+                        and transportation sectors.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <h3>
+                        Industry Demand
+                    </h3>
+
+                    <p>
+                        Meeting the demand for skilled professionals in hazardous materials
+                        transport contributes to fulfilling essential supply chain needs,
+                        supporting vital industries while prioritizing safety and efficiency.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <h3>
+                        Enhanced Safety Protocols
+                    </h3>
+
+                    <p>
+                        Specializing in transporting dangerous goods involves rigorous training
+                        in safety protocols, fostering a culture of safety consciousness that
+                        benefits both the driver and the community.
+                    </p>
+
+                </article>
+
+                              <article class="feature-card">
+
+                    <h3>
+                        Regulatory Compliance
+                    </h3>
+
+                    <p>
+                        Understanding and adhering to complex regulatory frameworks for dangerous
+                        goods transportation ensures legal compliance, reducing the risk of fines
+                        and penalties for both drivers and employers.
+                    </p>
+
+                </article>
+
+                <article class="feature-card">
+
+                    <h3>
+                        Job Stability and Security
+                    </h3>
+
+                    <p>
+                        Proficiency in transporting hazardous materials enhances job stability,
+                        as specialized skills in this sector are consistently in demand,
+                        providing long-term career prospects in a resilient industry.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Divider Image -->
+
+    <section class="divider-image">
+
+        <img src="images/hero/dangerous-goods.webp"
+             alt="Dangerous Goods Course">
+
+    </section>
+
+    <!-- Footer -->
+
+    <div id="site-footer"></div>
+
+    <script>
+
+    fetch("header.html")
+    .then(r => r.text())
+    .then(html => {
+
+        document.getElementById("site-header").innerHTML = html;
+
+        document.getElementById("site-header")
+        .querySelectorAll("script")
+        .forEach(old => {
+
+            const s = document.createElement("script");
+
+            if (old.src) {
+                s.src = old.src;
+            } else {
+                s.textContent = old.textContent;
+            }
+
+            document.body.appendChild(s);
+            old.remove();
+
+        });
+
+    });
+
+    fetch("footer.html")
+    .then(r => r.text())
+    .then(html => {
+
+        document.getElementById("site-footer").innerHTML = html;
+
+    });
+
+    </script>
+
+</body>
+
+</html>

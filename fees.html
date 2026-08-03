@@ -334,3 +334,111 @@ COURSE FEES
     </div>
 
 </section>
+
+    <!--======================================
+FINAL CTA
+=======================================-->
+
+<section class="final-cta">
+
+    <div class="container">
+
+        <span class="section-label">
+
+            START YOUR JOURNEY
+
+        </span>
+
+        <h2>
+
+            Invest in Your Future
+            With Professional
+            Driver Training
+
+        </h2>
+
+        <p>
+
+            Whether you're beginning a new career or upgrading
+            your commercial driving qualifications, Barnala Driver
+            Training Academy provides industry-recognized training
+            at competitive prices with experienced instructors and
+            hands-on learning.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="contact.html"
+               class="btn">
+
+                Contact Us
+
+            </a>
+
+            <a href="enroll.html"
+               class="btn-outline">
+
+                Enroll Today
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--======================================
+FOOTER
+=======================================-->
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-header").innerHTML=html;
+
+document.getElementById("site-header")
+.querySelectorAll("script")
+.forEach(old=>{
+
+const s=document.createElement("script");
+
+if(old.src){
+
+s.src=old.src;
+
+}else{
+
+s.textContent=old.textContent;
+
+}
+
+document.body.appendChild(s);
+
+old.remove();
+
+});
+
+});
+
+fetch("footer.html")
+.then(r=>r.text())
+.then(html=>{
+
+document.getElementById("site-footer").innerHTML=html;
+
+});
+
+</script>
+
+</body>
+
+</html>

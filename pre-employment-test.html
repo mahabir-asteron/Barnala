@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pre Employment Test | Barnala Driver Training Academy</title>
+
+    <meta name="description"
+          content="Pre Employment Testing program by Barnala Driver Training Academy helps employers evaluate prospective commercial drivers through comprehensive assessments of driving skills, safety knowledge, and regulatory compliance.">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pre-employment-test.css">
+
+</head>
+
+<body>
+
+<!--======================================
+HEADER
+=======================================-->
+
+<div id="site-header"></div>
+
+<main>
+
+<!--======================================
+HERO
+=======================================-->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Pre Employment Test
+
+            </h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+PROGRAM OVERVIEW
+=======================================-->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="content-box">
+
+            <h2>
+
+                Pre Employment
+
+            </h2>
+
+            <h3 class="course-duration">
+
+                1 Day Program
+
+            </h3>
+
+            <p>
+
+                Our Pre-Employment Testing program helps companies ensure that prospective drivers meet high standards before joining their team. This comprehensive assessment evaluates driving skills, safety knowledge, and regulatory compliance. Guarantee your new hires are ready to contribute to your fleet's success from day one.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+BENEFITS
+=======================================-->
+
+<section class="section alt-section">
+
+    <div class="container">
+
+        <div class="benefit">
+
+            <h3>
+
+                Skill Proficiency
+
+            </h3>
+
+            <p>
+
+                Verify that potential hires possess the necessary driving skills and expertise before they join your team.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Safety Assurance
+
+            </h3>
+
+            <p>
+
+                Assess candidates' understanding of safety protocols to ensure they can operate vehicles safely and responsibly.
+
+            </p>
+
+        </div>
+
+              <div class="benefit">
+
+            <h3>
+
+                Regulatory Compliance
+
+            </h3>
+
+            <p>
+
+                Confirm that prospective drivers are knowledgeable about industry regulations and can adhere to legal standards.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Reduce Turnover
+
+            </h3>
+
+            <p>
+
+                By selecting qualified drivers from the start, reduce the likelihood of turnover and associated training costs.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Optimize Hiring Process
+
+            </h3>
+
+            <p>
+
+                Streamline your hiring process with a reliable assessment that helps you make informed decisions quickly and efficiently.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--======================================
+FOOTER
+=======================================-->
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-header").innerHTML = data;
+
+    document.getElementById("site-header")
+    .querySelectorAll("script")
+    .forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if(oldScript.src){
+
+            newScript.src = oldScript.src;
+
+        }else{
+
+            newScript.textContent = oldScript.textContent;
+
+        }
+
+        document.body.appendChild(newScript);
+
+        oldScript.remove();
+
+    });
+
+});
+
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-footer").innerHTML = data;
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Corporate | Barnala Driver Training Academy</title>
+
+    <meta name="description"
+          content="Corporate driver training programs by Barnala Driver Training Academy including Pre-Employment Testing and Driver Improvement Services.">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/corporate.css">
+
+</head>
+
+<body>
+
+<!--======================================
+HEADER
+=======================================-->
+
+<div id="site-header"></div>
+
+<main>
+
+<!--======================================
+HERO
+=======================================-->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Corporate
+
+            </h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+CORPORATE
+=======================================-->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="content-box">
+
+            <h2>
+
+                Corporate
+
+            </h2>
+
+            <p>
+
+                Specially designed services include two key programs: Pre-Employment Testing, ensuring new hires meet your standards before joining your team, and Driver Improvement Services, which address and enhance existing drivers' skills to eliminate weaknesses and promote excellence. These programs are designed to ensure your fleet operates at its highest potential.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+BENEFITS
+=======================================-->
+
+<section class="section alt-section">
+
+    <div class="container">
+
+        <div class="benefit">
+
+            <h3>
+
+                Enhanced Safety
+
+            </h3>
+
+            <p>
+
+                Our training programs focus on comprehensive safety practices, reducing the risk of accidents and ensuring the well-being of your drivers and others on the road.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Improved Performance
+
+            </h3>
+
+            <p>
+
+                By addressing and improving weak points in driving skills, our services help your drivers perform more efficiently and confidently, boosting overall fleet productivity.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Enhance Driving Skills
+
+            </h3>
+
+            <p>
+
+                Gain comprehensive driving knowledge and skills that ensure safety and confidence on the road, both personally and professionally.
+
+            </p>
+
+        </div>
+
+              <div class="benefit">
+
+            <h3>
+
+                Regulatory Compliance
+
+            </h3>
+
+            <p>
+
+                Our training ensures that your drivers are up-to-date with the latest regulations and industry standards, helping you avoid legal issues and penalties.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Cost Savings
+
+            </h3>
+
+            <p>
+
+                Investing in driver improvement reduces vehicle wear and tear, lowers maintenance costs, and minimizes the likelihood of costly accidents.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Enhanced Reputation
+
+            </h3>
+
+            <p>
+
+                Demonstrating a commitment to high standards in driver training enhances your company's reputation for reliability and professionalism, attracting more business opportunities.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--======================================
+FOOTER
+=======================================-->
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-header").innerHTML = data;
+
+    document.getElementById("site-header")
+    .querySelectorAll("script")
+    .forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if (oldScript.src) {
+
+            newScript.src = oldScript.src;
+
+        } else {
+
+            newScript.textContent = oldScript.textContent;
+
+        }
+
+        document.body.appendChild(newScript);
+
+        oldScript.remove();
+
+    });
+
+});
+
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-footer").innerHTML = data;
+
+});
+
+</script>
+
+</body>
+
+</html>

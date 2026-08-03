@@ -40,11 +40,10 @@ HERO
 
 .hero{
     position:relative;
-    min-height:65vh;
+    min-height:70vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
     overflow:hidden;
     background:
         linear-gradient(rgba(7,23,51,.65),rgba(7,23,51,.65)),
@@ -64,13 +63,15 @@ HERO
 .hero-content{
     position:relative;
     z-index:2;
+    text-align:left;
 }
 
 .hero h1{
     color:#fff;
-    font-size:clamp(54px,7vw,88px);
+    font-size:clamp(52px,6vw,82px);
     font-weight:800;
-    line-height:1.05;
+    line-height:1.05
+    margin:22px 0 28px;
 }
 
 /*======================================

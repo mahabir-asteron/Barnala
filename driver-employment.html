@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Driver Improvement | Barnala Driver Training Academy</title>
+
+    <meta name="description"
+          content="Driver Improvement Services by Barnala Driver Training Academy help improve driver performance, safety, regulatory compliance, and overall fleet efficiency.">
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pre-employment-test.css">
+
+</head>
+
+<body>
+
+<!--======================================
+HEADER
+=======================================-->
+
+<div id="site-header"></div>
+
+<main>
+
+<!--======================================
+HERO
+=======================================-->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+
+                Driver Improvement
+
+            </h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+PROGRAM OVERVIEW
+=======================================-->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="content-box">
+
+            <h2>
+
+                Driver Improvement
+
+            </h2>
+
+            <h3 class="course-duration">
+
+                1 Day Program
+
+            </h3>
+
+            <p>
+
+                Our Driver Improvement Services are designed to elevate your existing drivers' skills by addressing and enhancing their weak points. This comprehensive program focuses on advanced techniques, safety protocols, and regulatory compliance. Ensure your drivers reach their full potential, contributing to a safer and more efficient fleet.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+BENEFITS
+=======================================-->
+
+<section class="section alt-section">
+
+    <div class="container">
+
+        <div class="benefit">
+
+            <h3>
+
+                Skill Enhancement
+
+            </h3>
+
+            <p>
+
+                Identify and address weaknesses to improve overall driving performance, ensuring drivers are equipped with advanced techniques.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Increased Safety
+
+            </h3>
+
+            <p>
+
+                Focus on safety protocols and best practices to reduce accidents and enhance road safety for drivers and others.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Regulatory Compliance
+
+            </h3>
+
+            <p>
+
+                Ensure drivers are up-to-date with the latest industry regulations, minimizing the risk of legal issues and penalties.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Boosted Efficiency
+
+            </h3>
+
+            <p>
+
+                Improve driving habits and techniques to increase fuel efficiency, reduce vehicle wear and tear, and optimize route management.
+
+            </p>
+
+        </div>
+
+        <div class="benefit">
+
+            <h3>
+
+                Employee Development
+
+            </h3>
+
+            <p>
+
+                Invest in your drivers' professional growth, leading to increased job satisfaction, retention, and a stronger, more committed workforce.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--======================================
+FOOTER
+=======================================-->
+
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-header").innerHTML = data;
+
+    document.getElementById("site-header")
+    .querySelectorAll("script")
+    .forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if(oldScript.src){
+
+            newScript.src = oldScript.src;
+
+        }else{
+
+            newScript.textContent = oldScript.textContent;
+
+        }
+
+        document.body.appendChild(newScript);
+
+        oldScript.remove();
+
+    });
+
+});
+
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-footer").innerHTML = data;
+
+});
+
+</script>
+
+</body>
+
+</html>
+
 

@@ -1,1 +1,399 @@
+/*======================================
+RESET
+======================================*/
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Manrope',sans-serif;
+    background:#fff;
+    color:#171717;
+    line-height:1.8;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(92%,1320px);
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+/*======================================
+HERO
+======================================*/
+
+.hero{
+    position:relative;
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    overflow:hidden;
+    background:url("../images/hero/winnipeg-driving.webp") center center/cover no-repeat;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(5,23,50,.88) 0%,
+        rgba(5,23,50,.72) 45%,
+        rgba(5,23,50,.35) 75%,
+        rgba(5,23,50,.10) 100%
+    );
+}
+
+.hero .container{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:700px;
+    color:#fff;
+}
+
+.hero h1{
+    color:#fff;
+    font-size:clamp(52px,6vw,82px);
+    font-weight:800;
+    line-height:1.05;
+}
+
+/*======================================
+COMMON
+======================================*/
+
+.section h2{
+    font-size:clamp(32px,3.5vw,52px);
+    line-height:1.08;
+    letter-spacing:-1px;
+    margin-bottom:22px;
+    text-transform:uppercase;
+}
+
+.section h3{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.section h4{
+    font-size:20px;
+    margin-bottom:16px;
+}
+
+.section p{
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+}
+
+.alt-section{
+    background:#f8fafc;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:35px;
+    padding:16px 34px;
+    background:#0057B8;
+    color:#fff;
+    border-radius:10px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#003d82;
+}
+
+/*======================================
+INTRO
+======================================*/
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:60px;
+    align-items:center;
+}
+
+.intro-image img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+/*======================================
+FEATURES
+======================================*/
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.feature-card h3{
+    color:#0057B8;
+    font-size:24px;
+}
+
+/*======================================
+COURSES
+======================================*/
+
+.course-list{
+    display:flex;
+    flex-direction:column;
+    gap:90px;
+}
+
+.course-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.course-row.reverse .course-image{
+    order:2;
+}
+
+.course-row.reverse .course-content{
+    order:1;
+}
+
+.course-image img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.course-content ul{
+    margin-top:25px;
+    padding-left:22px;
+}
+
+.course-content li{
+    margin-bottom:14px;
+    color:#555;
+}
+
+/*======================================
+SCHEDULE
+======================================*/
+
+.section-text{
+    max-width:760px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.schedule-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.schedule-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.schedule-card h3{
+    color:#0057B8;
+    font-size:22px;
+}
+
+.center-btn{
+    text-align:center;
+    margin-top:45px;
+}
+
+/*======================================
+LOCATION
+======================================*/
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.location-map iframe{
+    width:100%;
+    height:500px;
+    border:none;
+    border-radius:24px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/*======================================
+TESTIMONIAL
+======================================*/
+
+.testimonial-card{
+    max-width:850px;
+    margin:auto;
+    padding:55px;
+    border-radius:24px;
+    background:#fff;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.stars{
+    font-size:28px;
+    color:#f5b400;
+    margin-bottom:20px;
+}
+
+.testimonial{
+    font-size:22px;
+    color:#171717;
+    margin-bottom:25px;
+}
+
+/*======================================
+FAQ
+======================================*/
+
+.faq-container{
+    max-width:950px;
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid #e5e7eb;
+}
+
+.faq-question{
+    width:100%;
+    border:none;
+    background:none;
+    padding:28px 0;
+    text-align:left;
+    font-size:20px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.faq-answer{
+    display:none;
+    padding-bottom:28px;
+}
+
+.faq-answer p{
+    margin:0;
+}
+
+/*======================================
+RESPONSIVE
+======================================*/
+
+@media(max-width:992px){
+
+.hero{
+    min-height:620px;
+}
+
+.hero-content{
+    margin:auto;
+    text-align:center;
+}
+
+.intro-grid,
+.course-row,
+.location-grid,
+.feature-grid,
+.schedule-grid{
+    grid-template-columns:1fr;
+}
+
+.course-row.reverse .course-image,
+.course-row.reverse .course-content{
+    order:unset;
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+    padding:70px 0;
+}
+
+.hero{
+    min-height:520px;
+}
+
+.hero-content{
+    text-align:left;
+}
+
+.hero h1{
+    font-size:44px;
+}
+
+.feature-card,
+.schedule-card,
+.testimonial-card{
+    padding:28px;
+}
+
+.section p{
+    font-size:16px;
+}
+
+.section h3{
+    font-size:24px;
+}
+
+.faq-question{
+    font-size:18px;
+}
+
+}

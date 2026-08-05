@@ -17,13 +17,13 @@ content="Professional truck driver training in Winnipeg with Class 1, Class 3, C
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/locations.css">
+<link rel="stylesheet" href="css/winnipeg-driving-courses.css">
 
 </head>
 
 <body>
 
-<div id="header"></div>
+<div id="site-header"></div>
 
 <!--==================================
 HERO
@@ -73,7 +73,7 @@ INTRODUCTION
                     At Barnala Driver Training Academy in Winnipeg, we provide industry-leading commercial driver training programs, including Class 1, Class 3, Class 5, Air Brake Endorsement, and Safety Compliance Courses. Whether you're beginning your career or upgrading your license, we offer certified programs trusted across Manitoba.
                 </p>
 
-                <a href="enroll.html" class="btn">
+                <a href="check-enroll.html" class="btn">
                     Enroll Now
                 </a>
 
@@ -81,7 +81,7 @@ INTRODUCTION
 
             <div class="intro-image">
 
-                <img src="images/locations/winnipeg-intro.webp"
+                <img src="images/winnipeg-driving-courses/winnipeg-intro.webp"
                      alt="Truck Driver Training in Winnipeg">
 
             </div>
@@ -216,7 +216,7 @@ OUR TRUCK DRIVING & SAFETY COURSES
 
                 <div class="course-image">
 
-                    <img src="images/locations/class-1.webp"
+                    <img src="images/winnipeg-driving-courses/class-1.webp"
                         alt="Class 1 Driver Training">
 
                 </div>
@@ -259,7 +259,7 @@ OUR TRUCK DRIVING & SAFETY COURSES
 
                 <div class="course-image">
 
-                    <img src="images/locations/class-3.webp"
+                    <img src="images/winnipeg-driving-courses/class-3.webp"
                         alt="Class 3 Driver Training">
 
                 </div>
@@ -300,7 +300,7 @@ OUR TRUCK DRIVING & SAFETY COURSES
 
                 <div class="course-image">
 
-                    <img src="images/locations/class-5.webp"
+                    <img src="images/winnipeg-driving-courses/class-5.webp"
                         alt="Class 5 Driving Lessons">
 
                 </div>
@@ -341,7 +341,7 @@ OUR TRUCK DRIVING & SAFETY COURSES
 
                 <div class="course-image">
 
-                    <img src="images/locations/air-brake.webp"
+                    <img src="images/winnipeg-driving-courses/air-brake.webp"
                         alt="Air Brake Endorsement">
 
                 </div>
@@ -382,7 +382,7 @@ OUR TRUCK DRIVING & SAFETY COURSES
 
                 <div class="course-image">
 
-                    <img src="images/locations/safety-courses.webp"
+                    <img src="images/winnipeg-driving-courses/safety-courses.webp"
                         alt="Safety & Compliance Courses">
 
                 </div>
@@ -858,10 +858,81 @@ FAQ
 
 </main>
 
-<div id="footer"></div>
+<!--======================================
+FOOTER
+=======================================-->
 
-<script src="js/include.js"></script>
-<script src="js/faq.js"></script>
+<div id="site-footer"></div>
+
+<script>
+
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-header").innerHTML = data;
+
+    document.getElementById("site-header")
+    .querySelectorAll("script")
+    .forEach(oldScript => {
+
+        const newScript = document.createElement("script");
+
+        if(oldScript.src){
+
+            newScript.src = oldScript.src;
+
+        }else{
+
+            newScript.textContent = oldScript.textContent;
+
+        }
+
+        document.body.appendChild(newScript);
+
+        oldScript.remove();
+
+    });
+
+});
+
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+
+    document.getElementById("site-footer").innerHTML = data;
+
+});
+
+</script>
+
+<script>
+
+document.querySelectorAll(".faq-question").forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const answer=button.nextElementSibling;
+
+        const isOpen=answer.style.display==="block";
+
+        document.querySelectorAll(".faq-answer").forEach(item=>{
+
+            item.style.display="none";
+
+        });
+
+        if(!isOpen){
+
+            answer.style.display="block";
+
+        }
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>

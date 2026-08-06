@@ -18,10 +18,10 @@ html{
 }
 
 body{
-    font-family:'Manrope',sans-serif;
-    background:#fff;
+    font-family:Arial, Helvetica,sans-serif;
+    background:#ffffff;
     color:#171717;
-    line-height:1.7;
+    line-height:1.6;
     overflow-x:hidden;
 }
 
@@ -55,7 +55,7 @@ TYPOGRAPHY
     color:#0057B8;
 
     font-size:14px;
-    font-weight:800;
+    font-weight:700;
 
     letter-spacing:1.5px;
     text-transform:uppercase;

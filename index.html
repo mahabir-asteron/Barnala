@@ -40,7 +40,7 @@
 
     .header {
       background: #111211;
-      height: 86px;
+      height: 82px;
       display: flex;
       align-items: center;
       position: relative;
@@ -48,8 +48,7 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1400px;
+      width:min(94%,1450px);
       margin: auto;
     }
 
@@ -105,7 +104,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 22px;
     }
 
     .nav-links a {
@@ -124,7 +123,7 @@
       background: var(--orange);
       color: white;
       padding: 15px 24px;
-      border-radius: 4px;
+      border-radius: 8px;
       text-decoration: none;
       font-size: 13px;
       font-weight: 700;
@@ -132,15 +131,6 @@
 
     .hero {
       min-height: 620px;
-      background:
-  linear-gradient(
-    90deg,
-    rgba(15, 16, 15, 1) 0%,
-    rgba(15, 16, 15, 0.95) 32%,
-    rgba(15, 16, 15, 0.72) 52%,
-    rgba(15, 16, 15, 0.18) 100%
-  ),
-  url("hero-trucks.webp");
 
 background-size: cover;
 background-position: center;
@@ -150,6 +140,15 @@ background-repeat: no-repeat;
       color: white;
       position: relative;
       overflow: hidden;
+      url("hero-trucks.webp");
+      background:linear-gradient(
+        90deg,
+        rgba(5,23,50,.88) 0%,
+        rgba(5,23,50,.72) 45%,
+        rgba(5,23,50,.35) 75%,
+        rgba(5,23,50,.10) 100%
+    );
+      
     }
 
     .hero::after {
@@ -179,7 +178,7 @@ background-repeat: no-repeat;
     }
 
     .hero h1 {
-      font-size: 64px;
+      font-size:clamp(52px,6vw,82px);
       line-height: 1.05;
       font-weight: 800;
       text-transform: uppercase;
@@ -209,7 +208,7 @@ background-repeat: no-repeat;
       text-decoration: none;
       font-size: 13px;
       font-weight: 700;
-      border-radius: 4px;
+      border-radius: 8px;
     }
 
     .primary-btn {
@@ -292,13 +291,13 @@ background-repeat: no-repeat;
       margin-bottom: 12px;
     }
 
-    .section-top h2 {
-      font-size: 42px;
-      line-height: 1.15;
-      text-transform: uppercase;
-      max-width: 600px;
-    }
-
+    .section-top h2{
+    font-size:clamp(32px,3.5vw,52px);
+    line-height:1.08;
+    text-transform:uppercase;
+    letter-spacing:-1px;
+}
+    
     .view-btn {
       background: var(--orange);
       color: white;
@@ -317,7 +316,7 @@ background-repeat: no-repeat;
 
     .program-card {
       background: white;
-      border-radius: 8px;
+      border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
       transition: 0.3s;

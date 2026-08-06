@@ -18,10 +18,10 @@ html{
 }
 
 body{
-    font-family:'Manrope',sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#ffffff;
     color:#171717;
-    line-height:1.7;
+    line-height:1.6;
     overflow-x:hidden;
 }
 
@@ -125,6 +125,8 @@ p{
 
     color:#666;
 
+   font-size:18px;
+
 }
 
 /*========================
@@ -152,11 +154,11 @@ BUTTONS
 
     justify-content:center;
 
-    min-width:200px;
+    min-width:190px;
 
     padding:16px 34px;
 
-    border-radius:12px;
+    border-radius:10px;
 
     font-weight:700;
 
@@ -196,8 +198,6 @@ BUTTONS
 
     color:#fff;
 
-    transform:translateY(-3px);
-
 }
 
 /*========================
@@ -208,7 +208,7 @@ HERO
 
     position:relative;
 
-    min-height:90vh;
+    min-height:70vh;
 
     display:flex;
 
@@ -226,7 +226,13 @@ HERO
 
     inset:0;
 
-    background:rgba(0,0,0,.58);
+    background:linear-gradient(
+        90deg,
+        rgba(5,23,50,.88) 0%,
+        rgba(5,23,50,.72) 45%,
+        rgba(5,23,50,.35) 75%,
+        rgba(5,23,50,.10) 100%
+    );
 
 }
 
@@ -250,6 +256,8 @@ HERO
 
     padding-top:40px;
 
+    text-align:left;
+
 }
 
 
@@ -268,6 +276,8 @@ HERO
     line-height:1.05;
 
     margin:22px 0 28px;
+
+   text-align:left;
 
 }
 
